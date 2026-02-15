@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="slideshow_texture_dark_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slideshow_texture_dark_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="atlanticsalmon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atlanticsalmon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lake_Sturgeon_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lake_Sturgeon_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Frame_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Frame_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="slideshow_texture_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slideshow_texture_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mayfly_nymph_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mayfly_nymph_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zooplankton_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Zooplankton_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Atlantic_Salmon_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Atlantic_Salmon_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sea_Lamprey_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sea_Lamprey_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoBright_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoBright_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

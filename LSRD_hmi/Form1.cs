@@ -30,6 +30,8 @@ namespace LSRD_hmi
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
+            this.WindowState = FormWindowState.Maximized;
 
             try
             {
@@ -49,14 +51,11 @@ namespace LSRD_hmi
             {
                 System.Diagnostics.Debug.WriteLine("Connection to " + PLC_IP + " on port " + port + " failed...");
                 System.Diagnostics.Debug.WriteLine("ERROR: ", ex.Message);
-                throw;
+                //throw;
             }
         }
 
-        private void PB_wave_Click(object sender, EventArgs e)
-        {
 
-        }
 
 
         private void timer_Modbus_Com_Tick(object sender, EventArgs e)
@@ -83,6 +82,35 @@ namespace LSRD_hmi
         {
             //QX_Coils[17] = true; //set 2.1
             modbusClient.WriteSingleCoil(17, true);
+        }
+
+        private void PB_doorman_mode_Click(object sender, EventArgs e)
+        {
+            Form_doorman form_doorman = new Form_doorman();
+
+            form_doorman.ShowDialog();
+            //Free form2 from memory
+            form_doorman = null;
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PB_drawing_mode_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+
+            form2.ShowDialog();
+            //Free form2 from memory
+            form2 = null;
+        }
+
+        private void PB_Quit_Program_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
