@@ -143,6 +143,76 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PB_gray_back_to_home2 {
+            get {
+                object obj = ResourceManager.GetObject("PB gray back to home2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PB_gray_Staff_Settings {
+            get {
+                object obj = ResourceManager.GetObject("PB gray Staff Settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PB_square_cancel {
+            get {
+                object obj = ResourceManager.GetObject("PB square cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PB_square_enter {
+            get {
+                object obj = ResourceManager.GetObject("PB square enter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap push_button_dark_gray {
+            get {
+                object obj = ResourceManager.GetObject("push button dark gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap push_button_light_gray_drawing_demo {
+            get {
+                object obj = ResourceManager.GetObject("push button light gray drawing demo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap push_button_light_gray_scavenger_demo {
+            get {
+                object obj = ResourceManager.GetObject("push button light gray scavenger demo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sea_Lamprey_250_180 {
             get {
                 object obj = ResourceManager.GetObject("Sea_Lamprey_250_180", resourceCulture);
@@ -166,6 +236,16 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap slideshow_texture_gray {
             get {
                 object obj = ResourceManager.GetObject("slideshow_texture_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Title_text_light_green_fish_machine3 {
+            get {
+                object obj = ResourceManager.GetObject("Title text light green fish machine3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

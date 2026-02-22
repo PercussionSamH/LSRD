@@ -112,5 +112,14 @@ namespace LSRD_hmi
         {
             Close();
         }
+
+        private void PB_staff_controls_Click(object sender, EventArgs e)
+        {
+
+            Form_Pass_popup form_Settings_Popup = new Form_Pass_popup();
+            form_Settings_Popup.ShowDialog();
+            form_Settings_Popup = null;
+
+        }
     }
 }
