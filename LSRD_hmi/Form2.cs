@@ -37,11 +37,7 @@ namespace LSRD_hmi
 
         }
 
-        private void PB_Screen_Main_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+  
         private void PB_fish_select_right_Click(object sender, EventArgs e)
         {
             fish_selection += 1;
@@ -63,6 +59,11 @@ namespace LSRD_hmi
             }
             Fish_preview_picture.Image = fish_pictures[fish_selection];
             Label_Fish_Type_Text.Text = fish_names[fish_selection];
+        }
+
+        private void PB_Back_To_Home_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
