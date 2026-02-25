@@ -23,7 +23,7 @@ namespace LSRD_hmi
         public Form2()
         {
             //Initializations
-            this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
+            //this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
             this.WindowState = FormWindowState.Maximized;            
             InitializeComponent();
 

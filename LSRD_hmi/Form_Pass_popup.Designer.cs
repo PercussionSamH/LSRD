@@ -86,7 +86,7 @@
             // PB_confirm_pass
             // 
             this.PB_confirm_pass.BackColor = System.Drawing.Color.Transparent;
-            this.PB_confirm_pass.Image = global::LSRD_hmi.Properties.Resources.PB_square_enter;
+            this.PB_confirm_pass.Image = ((System.Drawing.Image)(resources.GetObject("PB_confirm_pass.Image")));
             this.PB_confirm_pass.Location = new System.Drawing.Point(223, 175);
             this.PB_confirm_pass.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_confirm_pass.MinimumSize = new System.Drawing.Size(130, 60);
