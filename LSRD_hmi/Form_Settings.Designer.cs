@@ -1,4 +1,4 @@
-﻿namespace LSRD_hmi
+﻿﻿namespace LSRD_hmi
 {
     partial class Form_Settings
     {
@@ -35,7 +35,7 @@
             // PB_Back_To_Home
             // 
             this.PB_Back_To_Home.BackColor = System.Drawing.Color.Transparent;
-            this.PB_Back_To_Home.Image = global::LSRD_hmi.Properties.Resources.PB_gray_back_to_home2;
+            this.PB_Back_To_Home.Image = global::LSRD_hmi.Properties.Resources.PB_gray_back_to_home;
             this.PB_Back_To_Home.Location = new System.Drawing.Point(27, 30);
             this.PB_Back_To_Home.MaximumSize = new System.Drawing.Size(124, 80);
             this.PB_Back_To_Home.MinimumSize = new System.Drawing.Size(124, 80);
@@ -50,8 +50,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 553);
+            this.BackgroundImage = global::LSRD_hmi.Properties.Resources.slideshow_texture_white1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1024, 600);
             this.Controls.Add(this.PB_Back_To_Home);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1024, 600);
             this.MinimumSize = new System.Drawing.Size(1024, 600);
             this.Name = "Form_Settings";

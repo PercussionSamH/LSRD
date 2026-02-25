@@ -255,5 +255,80 @@
   <ItemGroup>
     <None Include="Resources\PB square enter.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish_drawing_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slideshow_texture_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doorman_bkg_blueish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doorman_bkg_blueish1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doorman_bkg_blueish2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish_drawing_background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish_drawing_background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray Scavenger hunt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray Scavenger hunt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray Drawing demo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray doorman demo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slideshow_texture_white1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray Staff Settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray back to home3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square enter1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray back to home4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray back to home5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square enter2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square cancel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square enter3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square cancel3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square enter4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square enter5.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

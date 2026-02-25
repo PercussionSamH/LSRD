@@ -121,35 +121,44 @@
   <data name="Frame_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="slideshow_texture_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slideshow_texture_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PB square cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB square cancel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="push button dark gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\push button dark gray3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="push button light gray scavenger demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\push button light gray scavenger demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PB square cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB square cancel3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PB gray Drawing demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB gray Drawing demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PB gray Staff Settings1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB gray Staff Settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Atlantic_Salmon_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Atlantic_Salmon_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="atlanticsalmon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atlanticsalmon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="push button dark gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\push button dark gray3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="slideshow_texture_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slideshow_texture_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LogoBright_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoBright_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PB gray back to home2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB gray back to home2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home_background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB gray Staff Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB gray Staff Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fish_drawing_background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fish_drawing_background2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slideshow_texture_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slideshow_texture_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="atlanticsalmon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atlanticsalmon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mayfly_nymph_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mayfly_nymph_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +169,11 @@
   <data name="Lake_Sturgeon_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lake_Sturgeon_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="slideshow_texture_dark_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slideshow_texture_dark_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="doorman_bkg_blueish2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doorman_bkg_blueish2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PB gray Scavenger hunt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB gray Scavenger hunt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="push button light gray drawing demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\push button light gray drawing demo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,10 +184,16 @@
   <data name="button left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PB gray back to home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB gray back to home5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zooplankton_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Zooplankton_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PB gray doorman demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB gray doorman demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PB square enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB square enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\PB square enter5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
