@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,17 @@ namespace LSRD_hmi
 {
     public partial class Form_Settings : Form
     {
+        // ------ Public vars ------
+        //Enabling toggle switches
+        public bool enabled_doorman;
+        public bool enabled_drawing;
+        public bool enabled_scavenger;
+        //Wave demo
+        public bool wave_scheduled;
+        public int wave_time_start;
+        public int wave_time_end;
+        public string wave_time_string;
+
         public Form_Settings()
         {
             //Initializations
@@ -19,11 +31,129 @@ namespace LSRD_hmi
             this.WindowState = FormWindowState.Maximized;
 
             InitializeComponent();
+
+            //Start timer to update clock
+            tmr_upd_clock.Enabled = true;
+
+            //Set toggles
+            enabled_doorman = Form1.enabled_doorman;
+            enabled_drawing = Form1.enabled_drawing;
+            enabled_scavenger = Form1.enabled_scavenger;
+
+            wave_time_start = Form1.wave_t_start;
+            wave_time_end = Form1.wave_t_end;
+            wave_scheduled = Form1.wave_scheduled;
+            wave_time_string = Form1.wave_t_string;
+
+            text_scheduled_time.Text = wave_time_string;
+
+
+            Toggle_doorman.Image = (enabled_doorman) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
+            Toggle_drawing.Image = (enabled_drawing) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
+            Toggle_scavenger.Image = (enabled_scavenger) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
+            
+
         }
 
         private void PB_Back_To_Home_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Toggle_doorman_Click(object sender, EventArgs e)
+        {
+            if (enabled_doorman)
+            {
+                enabled_doorman = false;
+                Toggle_doorman.Image = LSRD_hmi.Properties.Resources.toggle_off;
+            }
+            else
+            {
+                enabled_doorman = true;
+                Toggle_doorman.Image = LSRD_hmi.Properties.Resources.toggle_on;
+            }
+        }
+
+        private void Toggle_drawing_Click(object sender, EventArgs e)
+        {
+            if (enabled_drawing)
+            {
+                enabled_drawing = false;
+                Toggle_drawing.Image = LSRD_hmi.Properties.Resources.toggle_off;
+            }
+            else 
+            { 
+                enabled_drawing = true;
+                Toggle_drawing.Image = LSRD_hmi.Properties.Resources.toggle_on;
+            }
+        }
+
+        private void Toggle_scavenger_Click(object sender, EventArgs e)
+        {
+            if (enabled_scavenger)
+            {
+                enabled_scavenger = false;
+                Toggle_scavenger.Image = LSRD_hmi.Properties.Resources.toggle_off;
+            }
+            else 
+            { 
+                enabled_scavenger = true;
+                Toggle_scavenger.Image = LSRD_hmi.Properties.Resources.toggle_on;
+            }
+            
+        }
+
+        private void tmr_upd_clock_Tick(object sender, EventArgs e)
+        {
+            text_clock.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+        private void start_time_hr_select(object sender, EventArgs e)
+        {
+            i_start_time_hr.Text = "";
+        }
+        private void start_time_hr_textchanged(object sender, EventArgs e)
+        {
+            if (i_start_time_hr.Text.Length == 2)
+            {
+                i_start_time_min.Focus();
+                i_start_time_min.Text = "";
+            }
+        }
+        private void start_time_min_textchanged(object sender, EventArgs e)
+        {
+            if (i_start_time_min.Text.Length == 2)
+            {
+                i_start_time_AM_PM.Focus();
+                i_start_time_AM_PM.DroppedDown = true;
+            }
+        }
+
+        private void PB_schedule_wave_Click(object sender, EventArgs e)
+        {
+            //parse values
+            int hours;
+            int minutes;
+            int duration = (int)i_num_duration.Value;
+            bool parse_hr = int.TryParse(i_start_time_hr.Text,out hours);
+            bool is_pm = (i_start_time_AM_PM.Text == "PM");
+            //convert to military time
+            if (hours == 12) hours = 0;
+            if (is_pm) hours = hours + 12;
+
+            bool parse_min = int.TryParse(i_start_time_min.Text, out minutes);
+            
+            //If all values are valid, set vars
+            if (parse_hr && parse_min && (duration>0))
+            {
+                wave_time_start = minutes + (hours * 60);
+                wave_time_end = wave_time_start + duration;
+
+                wave_scheduled = true;
+                wave_time_string = (i_start_time_hr.Text + ":" + i_start_time_min.Text + " " + i_start_time_AM_PM.Text);
+                text_scheduled_time.Text = wave_time_string;
+            }
+
+
         }
     }
 }

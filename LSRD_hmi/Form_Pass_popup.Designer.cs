@@ -69,6 +69,7 @@
             this.text_entry_pass.PasswordChar = '*';
             this.text_entry_pass.Size = new System.Drawing.Size(186, 30);
             this.text_entry_pass.TabIndex = 2;
+            this.text_entry_pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form_Pass_popup_KeyPress);
             // 
             // text_wrong_pass
             // 

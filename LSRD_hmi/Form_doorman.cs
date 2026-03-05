@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LSRD_hmi.Room_popups;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +28,7 @@ namespace LSRD_hmi
             //Upcoming events container
 
             //fetch events ((fix))
-            String[] Event_text = { "Event #1, Room 111, fish people", "Event #2, Room 110, fish people", "Event #3000","Event 4000"};
+            String[] Event_text = { "Event #1, Room 111, fish people thing thing thing thing", "Event #2, Room 110, fish people", "Event #3000","Event 4000","1000100100","Event #22, Room 131, fish people thing thing thing thing"};
 
             //Propage events
             for (int i = 0; i < Event_text.Length; i++)
@@ -44,26 +45,20 @@ namespace LSRD_hmi
                 Scrollable_Events_Box.Controls.Add(b); //add each item to list
             }
 
-            //Rich text boxes
-            //box1 Upstairs room
-            richtext_room1.SelectionIndent = 5;
-            //text_area1.SelectionRightIndent = 5;
+            ////Rich text boxes
+            ////-------  #1 Upstairs room -------
+            //richtext_room1.SelectionIndent = 5;
+            ////text_area1.SelectionRightIndent = 5;
 
-            richtext_room1.SelectionColor = Color.Black;
+            //richtext_room1.SelectionColor = Color.Black;
 
-            richtext_room1.SelectionFont = new Font(richtext_room1.Font.FontFamily, 2f);
-            richtext_room1.AppendText("\r\n");
+            //richtext_room1.SelectionIndent = 10;
+            //richtext_room1.SelectionFont = new Font(richtext_room1.Font.FontFamily, 10f);
+            //richtext_room1.AppendText("Test test test" + "\r\n");
 
-            richtext_room1.SelectionFont = new Font(richtext_room1.Font.FontFamily, 14f);
-            richtext_room1.AppendText("Test test test\r\n");
-
-            richtext_room1.SelectionIndent = 10;
-            richtext_room1.SelectionFont = new Font(richtext_room1.Font.FontFamily, 10f);
-            richtext_room1.AppendText("Test test test" + "\r\n");
-
-            //box 2
-            richtext_room2.SelectionIndent = 10;
-            richtext_room2.SelectionRightIndent = 10;
+            ////-------  #2 Upstairs room -------
+            //richtext_room2.SelectionIndent = 10;
+            //richtext_room2.SelectionRightIndent = 10;
 
 
         }
@@ -77,6 +72,12 @@ namespace LSRD_hmi
         private void PB_Back_To_Home_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void PB_area_upstairs_class_Click(object sender, EventArgs e)
+        {
+            Form_area_up_class form_Area_Up_Class = new Form_area_up_class();
+            form_Area_Up_Class.ShowDialog();
         }
     }
 }
