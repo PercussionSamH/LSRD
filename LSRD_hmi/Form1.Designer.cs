@@ -34,7 +34,6 @@
             this.PB_Draw_Fish1 = new System.Windows.Forms.Button();
             this.PB_Draw_Square = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.test_textbox = new System.Windows.Forms.Label();
             this.PB_Quit_Program = new System.Windows.Forms.Button();
             this.Picture_LSRD_Logo = new System.Windows.Forms.PictureBox();
             this.PB_doorman_mode = new System.Windows.Forms.PictureBox();
@@ -43,6 +42,10 @@
             this.Picturebox_logo = new System.Windows.Forms.PictureBox();
             this.PB_staff_controls = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.test_textbox = new System.Windows.Forms.Label();
+            this.tmr_update_vars = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_LSRD_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_doorman_mode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_drawing_mode)).BeginInit();
@@ -88,26 +91,16 @@
             this.PB_Draw_Square.Visible = false;
             this.PB_Draw_Square.Click += new System.EventHandler(this.PB_Draw_Square_Click);
             // 
-            // test_textbox
-            // 
-            this.test_textbox.AutoSize = true;
-            this.test_textbox.Location = new System.Drawing.Point(23, 523);
-            this.test_textbox.Name = "test_textbox";
-            this.test_textbox.Size = new System.Drawing.Size(44, 16);
-            this.test_textbox.TabIndex = 4;
-            this.test_textbox.Text = "label1";
-            this.test_textbox.Visible = false;
-            // 
             // PB_Quit_Program
             // 
             this.PB_Quit_Program.BackColor = System.Drawing.Color.Gainsboro;
             this.PB_Quit_Program.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PB_Quit_Program.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PB_Quit_Program.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.PB_Quit_Program.Location = new System.Drawing.Point(14, 358);
+            this.PB_Quit_Program.Location = new System.Drawing.Point(13, 324);
             this.PB_Quit_Program.Margin = new System.Windows.Forms.Padding(4);
             this.PB_Quit_Program.Name = "PB_Quit_Program";
-            this.PB_Quit_Program.Size = new System.Drawing.Size(133, 77);
+            this.PB_Quit_Program.Size = new System.Drawing.Size(128, 76);
             this.PB_Quit_Program.TabIndex = 6;
             this.PB_Quit_Program.Text = "Quit program\r\n(debug only)";
             this.PB_Quit_Program.UseVisualStyleBackColor = false;
@@ -164,6 +157,7 @@
             this.PB_scavenger_mode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_scavenger_mode.TabIndex = 12;
             this.PB_scavenger_mode.TabStop = false;
+            this.PB_scavenger_mode.Click += new System.EventHandler(this.PB_scavenger_mode_Click);
             // 
             // Picturebox_logo
             // 
@@ -180,7 +174,7 @@
             // PB_staff_controls
             // 
             this.PB_staff_controls.BackColor = System.Drawing.Color.Transparent;
-            this.PB_staff_controls.Image = global::LSRD_hmi.Properties.Resources.PB_gray_Staff_Settings1;
+            this.PB_staff_controls.Image = ((System.Drawing.Image)(resources.GetObject("PB_staff_controls.Image")));
             this.PB_staff_controls.Location = new System.Drawing.Point(794, 12);
             this.PB_staff_controls.MaximumSize = new System.Drawing.Size(200, 100);
             this.PB_staff_controls.MinimumSize = new System.Drawing.Size(200, 100);
@@ -202,6 +196,39 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // test_textbox
+            // 
+            this.test_textbox.AutoSize = true;
+            this.test_textbox.Location = new System.Drawing.Point(23, 523);
+            this.test_textbox.Name = "test_textbox";
+            this.test_textbox.Size = new System.Drawing.Size(44, 16);
+            this.test_textbox.TabIndex = 4;
+            this.test_textbox.Text = "label1";
+            this.test_textbox.Visible = false;
+            // 
+            // tmr_update_vars
+            // 
+            this.tmr_update_vars.Enabled = true;
+            this.tmr_update_vars.Tick += new System.EventHandler(this.tmr_update_vars_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(748, 239);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(748, 273);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,6 +236,8 @@
             this.BackgroundImage = global::LSRD_hmi.Properties.Resources.home_background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.PB_staff_controls);
             this.Controls.Add(this.Picture_LSRD_Logo);
             this.Controls.Add(this.Picturebox_logo);
@@ -246,7 +275,6 @@
         private System.Windows.Forms.Button PB_Draw_Fish1;
         private System.Windows.Forms.Button PB_Draw_Square;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label test_textbox;
         private System.Windows.Forms.Button PB_Quit_Program;
         private System.Windows.Forms.PictureBox Picture_LSRD_Logo;
         private System.Windows.Forms.PictureBox PB_doorman_mode;
@@ -255,6 +283,10 @@
         private System.Windows.Forms.PictureBox Picturebox_logo;
         private System.Windows.Forms.PictureBox PB_staff_controls;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label test_textbox;
+        private System.Windows.Forms.Timer tmr_update_vars;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

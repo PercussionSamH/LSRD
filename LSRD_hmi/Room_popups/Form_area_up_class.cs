@@ -4,19 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net.Security;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LSRD_hmi
+namespace LSRD_hmi.Room_popups
 {
-    public partial class Form_Pass_popup : Form
+    public partial class Form_area_up_class : Form
     {
-        public bool login;
-
-
         //Rounded form corners
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -30,55 +26,26 @@ namespace LSRD_hmi
         );
         //end rounded corners
 
-        public Form_Pass_popup()
+
+        public Form_area_up_class()
         {
             //Initializations
             this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
             //this.WindowState = FormWindowState.Maximized;
             this.StartPosition = FormStartPosition.CenterScreen;
-            login = false;
 
             InitializeComponent();
 
             //rounded form corners call
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            text_wrong_pass.Visible = false;
-            
+
+
         }
 
         private void PB_Back_To_Home_Click(object sender, EventArgs e)
         {
             Close();
         }
-        
-        public void PB_confirm_pass_Click(object sender, EventArgs e)
-        {
-            login_check();
-        }
-
-        private void Form_Pass_popup_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                e.Handled = true;
-                login_check();
-            }
-        }
-
-        public void login_check()
-        {
-            if (text_entry_pass.Text == "lsrd")
-            {
-                login = true;
-                Close();
-            }
-            else
-            {
-                text_wrong_pass.Visible = true;
-            }
-        }
-
-        
     }
 }

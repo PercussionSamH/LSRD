@@ -12,7 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\percu\Desktop\Debug\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,6 +48,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>55982D05CCC98B4F0D3A078189B8596618F5B683</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LSRD_hmi_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EasyModbus, Version=5.6.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -96,6 +110,30 @@
     <Compile Include="Form_Pass_popup.Designer.cs">
       <DependentUpon>Form_Pass_popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Room_popups\Form_area_dwn_glass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Room_popups\Form_area_dwn_glass.Designer.cs">
+      <DependentUpon>Form_area_dwn_glass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Room_popups\Form_area_staff_desk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Room_popups\Form_area_staff_desk.Designer.cs">
+      <DependentUpon>Form_area_staff_desk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Room_popups\Form_area_up_class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Room_popups\Form_area_up_class.Designer.cs">
+      <DependentUpon>Form_area_up_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Room_popups\Form_area_up_meet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Room_popups\Form_area_up_meet.Designer.cs">
+      <DependentUpon>Form_area_up_meet.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +154,19 @@
     <EmbeddedResource Include="Form_Pass_popup.resx">
       <DependentUpon>Form_Pass_popup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Room_popups\Form_area_dwn_glass.resx">
+      <DependentUpon>Form_area_dwn_glass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room_popups\Form_area_staff_desk.resx">
+      <DependentUpon>Form_area_staff_desk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room_popups\Form_area_up_class.resx">
+      <DependentUpon>Form_area_up_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room_popups\Form_area_up_meet.resx">
+      <DependentUpon>Form_area_up_meet.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="LSRD_hmi_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -329,6 +380,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PB square enter5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish_drawing_background3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish_drawing_background4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB back wide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB back wide1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle on1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB wave demo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle off2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle on2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB disabled drawing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB disabled doorman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB disabled scavenger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doorman_bkg_blueish_plain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door staff desk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray Staff Settings2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door staff desk1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door staff desk2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB gray Staff Settings3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

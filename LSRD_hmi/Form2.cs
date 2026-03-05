@@ -14,7 +14,7 @@ namespace LSRD_hmi
     public partial class Form2 : Form
     {
         //Global vars
-        public Form1 _opener; //pointer back to form 1
+        //public Form1 _opener; //pointer back to form 1
 
         int fish_selection = 0;
         int backgnd_selection = 0;
