@@ -187,7 +187,7 @@
             this.label1.MinimumSize = new System.Drawing.Size(200, 100);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(8);
-            this.label1.Size = new System.Drawing.Size(200, 147);
+            this.label1.Size = new System.Drawing.Size(200, 145);
             this.label1.TabIndex = 15;
             this.label1.Text = "{{FISH DESCRIPTION}}";
             // 

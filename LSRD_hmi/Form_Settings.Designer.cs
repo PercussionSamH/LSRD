@@ -55,6 +55,8 @@
             this.i_start_time_AM_PM = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.text_scheduled_length = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Back_To_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Toggle_doorman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Toggle_drawing)).BeginInit();
@@ -247,6 +249,7 @@
             this.text_clock.Location = new System.Drawing.Point(542, 44);
             this.text_clock.MaxLength = 2;
             this.text_clock.Name = "text_clock";
+            this.text_clock.ReadOnly = true;
             this.text_clock.Size = new System.Drawing.Size(229, 45);
             this.text_clock.TabIndex = 27;
             this.text_clock.Text = "00:00:00 PM";
@@ -262,11 +265,11 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(595, 270);
+            this.label7.Location = new System.Drawing.Point(599, 270);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(176, 25);
+            this.label7.Size = new System.Drawing.Size(190, 25);
             this.label7.TabIndex = 29;
-            this.label7.Text = "Format as HH:MM";
+            this.label7.Text = "(Format as HH:MM)";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
@@ -275,33 +278,32 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(791, 270);
+            this.label8.Location = new System.Drawing.Point(819, 270);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(178, 25);
+            this.label8.Size = new System.Drawing.Size(114, 25);
             this.label8.TabIndex = 30;
-            this.label8.Text = "Duration in minutes";
+            this.label8.Text = "(in minutes)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(666, 343);
+            this.label9.Location = new System.Drawing.Point(637, 324);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(253, 25);
+            this.label9.Size = new System.Drawing.Size(148, 51);
             this.label9.TabIndex = 31;
-            this.label9.Text = "Wave Demo Scheduled for:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label9.Text = "Wave Demo\r\nScheduled for:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // text_scheduled_time
             // 
-            this.text_scheduled_time.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.text_scheduled_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_scheduled_time.Location = new System.Drawing.Point(714, 371);
+            this.text_scheduled_time.Location = new System.Drawing.Point(637, 380);
             this.text_scheduled_time.MaxLength = 5;
             this.text_scheduled_time.Name = "text_scheduled_time";
+            this.text_scheduled_time.ReadOnly = true;
             this.text_scheduled_time.Size = new System.Drawing.Size(148, 38);
             this.text_scheduled_time.TabIndex = 32;
             this.text_scheduled_time.Text = "00:00 AM";
@@ -376,6 +378,30 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 38;
             // 
+            // text_scheduled_length
+            // 
+            this.text_scheduled_length.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_scheduled_length.Location = new System.Drawing.Point(796, 380);
+            this.text_scheduled_length.MaxLength = 5;
+            this.text_scheduled_length.Name = "text_scheduled_length";
+            this.text_scheduled_length.ReadOnly = true;
+            this.text_scheduled_length.Size = new System.Drawing.Size(148, 38);
+            this.text_scheduled_length.TabIndex = 39;
+            this.text_scheduled_length.Text = "44 min";
+            this.text_scheduled_length.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(796, 324);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(148, 51);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Length:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form_Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -383,6 +409,8 @@
             this.BackgroundImage = global::LSRD_hmi.Properties.Resources.slideshow_texture_white1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.text_scheduled_length);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.i_start_time_AM_PM);
             this.Controls.Add(this.textBox1);
@@ -452,5 +480,7 @@
         private System.Windows.Forms.ComboBox i_start_time_AM_PM;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox text_scheduled_length;
+        private System.Windows.Forms.Label label10;
     }
 }
