@@ -21,8 +21,10 @@ namespace LSRD_hmi
         //Wave demo
         public bool wave_scheduled;
         public int wave_time_start;
+        public int wave_duration;
         public int wave_time_end;
         public string wave_time_string;
+        
 
         public Form_Settings()
         {
@@ -39,16 +41,25 @@ namespace LSRD_hmi
             enabled_doorman = Form1.enabled_doorman;
             enabled_drawing = Form1.enabled_drawing;
             enabled_scavenger = Form1.enabled_scavenger;
-
+            //load mains wave vars (to preserve them after close)
             wave_time_start = Form1.wave_t_start;
             wave_time_end = Form1.wave_t_end;
             wave_scheduled = Form1.wave_scheduled;
             wave_time_string = Form1.wave_t_string;
+            wave_duration = Form1.wave_duration;
+            //set text
+            if (Form1.wave_active||Form1.wave_scheduled)
+            {
+                text_scheduled_time.Text = wave_time_string;
+                text_scheduled_length.Text = wave_duration.ToString();
+            }
+            else //nothing scheduled
+            {
+                text_scheduled_time.Text = "No wave";
+                text_scheduled_length.Text = "scheduled";
+            }
 
-            text_scheduled_time.Text = wave_time_string;
-
-
-            Toggle_doorman.Image = (enabled_doorman) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
+                Toggle_doorman.Image = (enabled_doorman) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
             Toggle_drawing.Image = (enabled_drawing) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
             Toggle_scavenger.Image = (enabled_scavenger) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
             
@@ -151,6 +162,8 @@ namespace LSRD_hmi
                 wave_scheduled = true;
                 wave_time_string = (i_start_time_hr.Text + ":" + i_start_time_min.Text + " " + i_start_time_AM_PM.Text);
                 text_scheduled_time.Text = wave_time_string;
+                text_scheduled_length.Text = duration.ToString();
+                wave_duration = duration;
             }
 
 

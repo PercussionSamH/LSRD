@@ -4,11 +4,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Schema;
+
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Calendar.v3;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
+
 
 namespace LSRD_hmi
 {
@@ -16,8 +24,9 @@ namespace LSRD_hmi
     {
         //Global vars
         //public Form1 _opener; //pointer back to form 1
+        //public String[] Event_strings;
+        public List<string> Event_strings = new List<string>();
 
-      
         public Form_doorman()
         {
             //Initializations
@@ -27,14 +36,15 @@ namespace LSRD_hmi
 
             //Upcoming events container
 
-            //fetch events ((fix))
-            String[] Event_text = { "Event #1, Room 111, fish people thing thing thing thing", "Event #2, Room 110, fish people", "Event #3000","Event 4000","1000100100","Event #22, Room 131, fish people thing thing thing thing"};
-
+            //fetch events
+            
+            //Event_text = new String[] {"","","",""};
+            Get_Calendar_Events();
             //Propage events
-            for (int i = 0; i < Event_text.Length; i++)
+            for (int i = 0; i < Event_strings.Count; i++)
             {
                 Label b = new Label();
-                b.Text = Event_text[i]; //sets text
+                b.Text = Event_strings[i]; //sets text
                 b.Font = new Font(b.Font.FontFamily, 12, b.Font.Style); //font and text size
                 b.AutoSize = true;
                 b.BorderStyle = BorderStyle.FixedSingle;
@@ -44,22 +54,6 @@ namespace LSRD_hmi
                 
                 Scrollable_Events_Box.Controls.Add(b); //add each item to list
             }
-
-            ////Rich text boxes
-            ////-------  #1 Upstairs room -------
-            //richtext_room1.SelectionIndent = 5;
-            ////text_area1.SelectionRightIndent = 5;
-
-            //richtext_room1.SelectionColor = Color.Black;
-
-            //richtext_room1.SelectionIndent = 10;
-            //richtext_room1.SelectionFont = new Font(richtext_room1.Font.FontFamily, 10f);
-            //richtext_room1.AppendText("Test test test" + "\r\n");
-
-            ////-------  #2 Upstairs room -------
-            //richtext_room2.SelectionIndent = 10;
-            //richtext_room2.SelectionRightIndent = 10;
-
 
         }
 
@@ -78,6 +72,96 @@ namespace LSRD_hmi
         {
             Form_area_up_class form_Area_Up_Class = new Form_area_up_class();
             form_Area_Up_Class.ShowDialog();
+        }
+
+
+        private async void Get_Calendar_Events()
+        {
+            try
+            {
+                System.Diagnostics.Debug.WriteLine("Trying to read events");
+                string[] Scopes = { CalendarService.Scope.CalendarReadonly };
+                string ApplicationName = "Calendar Export";
+
+                UserCredential credential;
+                
+                string credPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "credentials.json");
+                System.Diagnostics.Debug.WriteLine("Trying to fetch credentials...");
+                using (var stream = new FileStream(credPath, FileMode.Open, FileAccess.Read))
+                {
+                    credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
+                        GoogleClientSecrets.FromStream(stream).Secrets,
+                        Scopes,
+                        "user",
+                        CancellationToken.None,
+                        new FileDataStore("token.json", true));
+                }
+                System.Diagnostics.Debug.WriteLine("Credentials found");
+                var service = new CalendarService(new BaseClientService.Initializer()
+                {
+                    HttpClientInitializer = credential,
+                    ApplicationName = ApplicationName,
+                });
+
+                // Request events
+                var request = service.Events.List("primary");
+                request.TimeMin = DateTime.Now;
+                request.ShowDeleted = false;
+                request.SingleEvents = true;
+                request.MaxResults = 50;
+                request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
+
+                var events = request.Execute().Items;
+                
+                ////For writing to a .txt file
+                //System.Diagnostics.Debug.WriteLine("Getting File path");
+                //string downloadsPath = Path.Combine(
+                //Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                //"Downloads");
+                //System.Diagnostics.Debug.WriteLine("filepath at: " + downloadsPath);
+                //string outputPath = Path.Combine(downloadsPath, "calendar_events.txt");
+                //System.Diagnostics.Debug.WriteLine("outputPath at: " + outputPath);
+                //using (StreamWriter writer = new StreamWriter(outputPath))
+
+                {
+                    if (events != null && events.Count > 0)
+                    {
+                        int i = 0; //event number
+                        foreach (var ev in events)
+                        {                    
+                            string title = ev.Summary ?? "No Title";
+                            string description = ev.Description ?? "No Description";
+
+                            System.Diagnostics.Debug.WriteLine("event found with name: " + title);
+                            Event_strings.Add(title +"\n\r"+ description);
+                            //writer.WriteLine($"Title: {title}");
+                            //writer.WriteLine($"Description: {description}");
+                            //writer.WriteLine(new string('-', 40));
+                            
+                            i++;
+                        }
+                    }
+                    else
+                    {
+                        //writer.WriteLine("No upcoming events found.");
+                        System.Diagnostics.Debug.WriteLine("No events found :(");
+                        Event_strings.Add("No upcoming events");
+
+                    }
+                }
+
+                //Optional message box for confirmation
+                //MessageBox.Show("Export complete!", "Success",
+                //MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            catch (Exception ex)
+            {
+                //Optional message box for confirmation
+                //MessageBox.Show(ex.Message, "Error",
+                //MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Diagnostics.Debug.WriteLine("An error occured with exception:"+ex);
+            }
         }
     }
 }

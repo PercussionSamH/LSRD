@@ -38,6 +38,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Scrollable_Events_Box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Back_To_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_upstairs_class)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -51,10 +53,10 @@
             this.Scrollable_Events_Box.AutoScroll = true;
             this.Scrollable_Events_Box.BackColor = System.Drawing.Color.White;
             this.Scrollable_Events_Box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Scrollable_Events_Box.Controls.Add(this.label2);
             this.Scrollable_Events_Box.Location = new System.Drawing.Point(714, 33);
             this.Scrollable_Events_Box.Margin = new System.Windows.Forms.Padding(10);
             this.Scrollable_Events_Box.Name = "Scrollable_Events_Box";
-            this.Scrollable_Events_Box.Padding = new System.Windows.Forms.Padding(5);
             this.Scrollable_Events_Box.Size = new System.Drawing.Size(279, 532);
             this.Scrollable_Events_Box.TabIndex = 6;
             // 
@@ -62,7 +64,7 @@
             // 
             this.label_doorman_title.BackColor = System.Drawing.Color.Transparent;
             this.label_doorman_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_doorman_title.Location = new System.Drawing.Point(241, 33);
+            this.label_doorman_title.Location = new System.Drawing.Point(240, 39);
             this.label_doorman_title.Name = "label_doorman_title";
             this.label_doorman_title.Size = new System.Drawing.Size(402, 42);
             this.label_doorman_title.TabIndex = 17;
@@ -147,14 +149,26 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(241, 115);
+            this.label1.Location = new System.Drawing.Point(241, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(401, 72);
+            this.label1.Size = new System.Drawing.Size(402, 72);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Please select a meeting area\r\nto get directions\r\n";
+            this.label1.Text = "Please click on a meeting area\r\nbelow to get directions\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(275, 66);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Upcoming Events:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form_doorman
             // 
@@ -179,6 +193,7 @@
             this.Name = "Form_doorman";
             this.Text = "Form_doorman";
             this.Load += new System.EventHandler(this.Form_doorman_Load);
+            this.Scrollable_Events_Box.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Back_To_Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_upstairs_class)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -199,5 +214,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

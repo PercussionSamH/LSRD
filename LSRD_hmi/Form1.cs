@@ -36,6 +36,7 @@ namespace LSRD_hmi
         public static int wave_t_start = 0;
         public static int wave_t_end = 0;
         public static string wave_t_string = null;
+        public static int wave_duration = 0;
 
         public Form1()
         {
@@ -170,6 +171,7 @@ namespace LSRD_hmi
                 wave_t_end = form_Settings.wave_time_end;
                 wave_scheduled = form_Settings.wave_scheduled;
                 wave_t_string = form_Settings.wave_time_string;
+                wave_duration = form_Settings.wave_duration;
 
                 //sets button graphics to enable/disabled
                 PB_doorman_mode.Image = (enabled_doorman) ? LSRD_hmi.Properties.Resources.PB_gray_doorman_demo : LSRD_hmi.Properties.Resources.PB_disabled_doorman;
