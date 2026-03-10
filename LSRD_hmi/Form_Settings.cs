@@ -120,38 +120,60 @@ namespace LSRD_hmi
         }
         private void start_time_hr_select(object sender, EventArgs e)
         {
-            i_start_time_hr.Text = "";
+            start_t_hr.Text = "";
         }
         private void start_time_hr_textchanged(object sender, EventArgs e)
         {
-            if (i_start_time_hr.Text.Length == 2)
+            if (start_t_hr.Text.Length == 2)
             {
-                i_start_time_min.Focus();
-                i_start_time_min.Text = "";
+                start_t_min.Focus();
+                start_t_min.Text = "";
             }
         }
         private void start_time_min_textchanged(object sender, EventArgs e)
         {
-            if (i_start_time_min.Text.Length == 2)
+            if (start_t_min.Text.Length == 2)
             {
-                i_start_time_AM_PM.Focus();
-                i_start_time_AM_PM.DroppedDown = true;
+                start_t_PM.Focus();
+                start_t_PM.DroppedDown = true;
             }
+        }
+
+        private void start_time_AM_PM_verify()
+        {
+            if ((start_t_PM.Text != "AM") && (start_t_PM.Text != "PM"))
+            {
+                if ((start_t_PM.Text.Contains("P")) || (start_t_PM.Text.Contains("p")))
+                {
+                    start_t_PM.Text = "PM";
+                }
+                else
+                {
+                    start_t_PM.Text = "AM";
+                }
+            }
+        }
+        private void start_time_AM_PM_unfocused(object sender, EventArgs e)
+        {
+            start_time_AM_PM_verify();
         }
 
         private void PB_schedule_wave_Click(object sender, EventArgs e)
         {
+            //Verify AM/PM
+            start_time_AM_PM_verify();
+
             //parse values
             int hours;
             int minutes;
-            int duration = (int)i_num_duration.Value;
-            bool parse_hr = int.TryParse(i_start_time_hr.Text,out hours);
-            bool is_pm = (i_start_time_AM_PM.Text == "PM");
+            int duration = (int)t_duration.Value;
+            bool parse_hr = int.TryParse(start_t_hr.Text,out hours);
+            bool is_pm = (start_t_PM.Text == "PM");
             //convert to military time
             if (hours == 12) hours = 0;
             if (is_pm) hours = hours + 12;
 
-            bool parse_min = int.TryParse(i_start_time_min.Text, out minutes);
+            bool parse_min = int.TryParse(start_t_min.Text, out minutes);
             
             //If all values are valid, set vars
             if (parse_hr && parse_min && (duration>0))
@@ -160,7 +182,7 @@ namespace LSRD_hmi
                 wave_time_end = wave_time_start + duration;
 
                 wave_scheduled = true;
-                wave_time_string = (i_start_time_hr.Text + ":" + i_start_time_min.Text + " " + i_start_time_AM_PM.Text);
+                wave_time_string = (start_t_hr.Text + ":" + start_t_min.Text + " " + start_t_PM.Text);
                 text_scheduled_time.Text = wave_time_string;
                 text_scheduled_length.Text = duration.ToString();
                 wave_duration = duration;

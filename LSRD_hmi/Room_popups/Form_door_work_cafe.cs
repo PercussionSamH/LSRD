@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace LSRD_hmi.Room_popups
 {
-    public partial class Form_area_up_class : Form
+    public partial class Form_door_work_cafe : Form
     {
         //Rounded form corners
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -26,8 +26,7 @@ namespace LSRD_hmi.Room_popups
         );
         //end rounded corners
 
-
-        public Form_area_up_class()
+        public Form_door_work_cafe()
         {
             //Initializations
             this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
@@ -39,8 +38,6 @@ namespace LSRD_hmi.Room_popups
             //rounded form corners call
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
-
         }
 
         private void PB_Back_To_Home_Click(object sender, EventArgs e)

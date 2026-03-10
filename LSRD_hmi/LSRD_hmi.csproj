@@ -126,29 +126,29 @@
     <Compile Include="Form_Pass_popup.Designer.cs">
       <DependentUpon>Form_Pass_popup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Room_popups\Form_area_dwn_glass.cs">
+    <Compile Include="Room_popups\Form_door_discovery_lab.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room_popups\Form_area_dwn_glass.Designer.cs">
-      <DependentUpon>Form_area_dwn_glass.cs</DependentUpon>
+    <Compile Include="Room_popups\Form_door_discovery_lab.Designer.cs">
+      <DependentUpon>Form_door_discovery_lab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Room_popups\Form_area_staff_desk.cs">
+    <Compile Include="Room_popups\Form_door_partner_suites.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room_popups\Form_area_staff_desk.Designer.cs">
-      <DependentUpon>Form_area_staff_desk.cs</DependentUpon>
+    <Compile Include="Room_popups\Form_door_partner_suites.Designer.cs">
+      <DependentUpon>Form_door_partner_suites.cs</DependentUpon>
     </Compile>
-    <Compile Include="Room_popups\Form_area_up_class.cs">
+    <Compile Include="Room_popups\Form_door_seminar_room.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room_popups\Form_area_up_class.Designer.cs">
-      <DependentUpon>Form_area_up_class.cs</DependentUpon>
+    <Compile Include="Room_popups\Form_door_seminar_room.Designer.cs">
+      <DependentUpon>Form_door_seminar_room.cs</DependentUpon>
     </Compile>
-    <Compile Include="Room_popups\Form_area_up_meet.cs">
+    <Compile Include="Room_popups\Form_door_work_cafe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room_popups\Form_area_up_meet.Designer.cs">
-      <DependentUpon>Form_area_up_meet.cs</DependentUpon>
+    <Compile Include="Room_popups\Form_door_work_cafe.Designer.cs">
+      <DependentUpon>Form_door_work_cafe.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -170,17 +170,17 @@
     <EmbeddedResource Include="Form_Pass_popup.resx">
       <DependentUpon>Form_Pass_popup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Room_popups\Form_area_dwn_glass.resx">
-      <DependentUpon>Form_area_dwn_glass.cs</DependentUpon>
+    <EmbeddedResource Include="Room_popups\Form_door_discovery_lab.resx">
+      <DependentUpon>Form_door_discovery_lab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Room_popups\Form_area_staff_desk.resx">
-      <DependentUpon>Form_area_staff_desk.cs</DependentUpon>
+    <EmbeddedResource Include="Room_popups\Form_door_partner_suites.resx">
+      <DependentUpon>Form_door_partner_suites.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Room_popups\Form_area_up_class.resx">
-      <DependentUpon>Form_area_up_class.cs</DependentUpon>
+    <EmbeddedResource Include="Room_popups\Form_door_seminar_room.resx">
+      <DependentUpon>Form_door_seminar_room.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Room_popups\Form_area_up_meet.resx">
-      <DependentUpon>Form_area_up_meet.cs</DependentUpon>
+    <EmbeddedResource Include="Room_popups\Form_door_work_cafe.resx">
+      <DependentUpon>Form_door_work_cafe.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LSRD_hmi_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -456,6 +456,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PB gray Staff Settings3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eng_logo_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cfre_logo_circle_notext_fix1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door seminar room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door discovery lab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door partner suites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door work cafe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door seminar room1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door discovery lab1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door work cafe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door seminar room2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door discovery lab2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door partner suites1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door staff desk3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

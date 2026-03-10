@@ -50,8 +50,6 @@ namespace LSRD_hmi
                 b.BorderStyle = BorderStyle.FixedSingle;
                 b.Margin = new Padding(5, 5, 5, 5);
                 
-                
-                
                 Scrollable_Events_Box.Controls.Add(b); //add each item to list
             }
 
@@ -68,10 +66,27 @@ namespace LSRD_hmi
             Close();
         }
 
-        private void PB_area_upstairs_class_Click(object sender, EventArgs e)
+        private void PB_door_work_cafe_Click(object sender, EventArgs e)
         {
-            Form_area_up_class form_Area_Up_Class = new Form_area_up_class();
-            form_Area_Up_Class.ShowDialog();
+            Form_door_work_cafe form_Door_Work_Cafe= new Form_door_work_cafe();
+            form_Door_Work_Cafe.ShowDialog();
+        }
+
+        private void PB_door_seminar_room_Click(object sender, EventArgs e)
+        {
+            Form_door_seminar_room form_Door_Seminar_Room = new Form_door_seminar_room();
+            form_Door_Seminar_Room.ShowDialog();
+        }
+
+        private void PB_door_discovery_lab_Click(object sender, EventArgs e)
+        {
+            Form_door_discovery_lab form_Door_Discovery_Lab = new Form_door_discovery_lab();
+            form_Door_Discovery_Lab.ShowDialog();
+        }
+        private void PB_door_partner_suites_Click(object sender, EventArgs e)
+        {
+            Form_door_partner_suites form_Door_Partner_Suites = new Form_door_partner_suites();
+            form_Door_Partner_Suites.ShowDialog();
         }
 
 
