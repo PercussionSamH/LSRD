@@ -45,7 +45,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(399, 185);
             this.richTextBox1.TabIndex = 21;
-            this.richTextBox1.Text = " • Classroom (course number?)\n • Conference Room";
+            this.richTextBox1.Text = "(instructions)";
             // 
             // label1
             // 
@@ -95,7 +95,7 @@
             this.Controls.Add(this.PB_confirm_pass);
             this.Controls.Add(this.PB_Back_To_Home);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_door_discovery_lab";
             this.Text = "Form_door_discovery_lab";
             ((System.ComponentModel.ISupportInitialize)(this.PB_confirm_pass)).EndInit();

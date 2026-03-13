@@ -95,7 +95,7 @@
             this.PB_area_work_cafe.Location = new System.Drawing.Point(111, 215);
             this.PB_area_work_cafe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PB_area_work_cafe.Name = "PB_area_work_cafe";
-            this.PB_area_work_cafe.Size = new System.Drawing.Size(189, 100);
+            this.PB_area_work_cafe.Size = new System.Drawing.Size(190, 100);
             this.PB_area_work_cafe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_area_work_cafe.TabIndex = 31;
             this.PB_area_work_cafe.TabStop = false;
@@ -106,10 +106,10 @@
             this.PB_area_seminar_room.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_seminar_room.Image = ((System.Drawing.Image)(resources.GetObject("PB_area_seminar_room.Image")));
             this.PB_area_seminar_room.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_seminar_room.InitialImage")));
-            this.PB_area_seminar_room.Location = new System.Drawing.Point(327, 215);
+            this.PB_area_seminar_room.Location = new System.Drawing.Point(320, 337);
             this.PB_area_seminar_room.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PB_area_seminar_room.Name = "PB_area_seminar_room";
-            this.PB_area_seminar_room.Size = new System.Drawing.Size(189, 100);
+            this.PB_area_seminar_room.Size = new System.Drawing.Size(190, 100);
             this.PB_area_seminar_room.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_area_seminar_room.TabIndex = 32;
             this.PB_area_seminar_room.TabStop = false;
@@ -123,7 +123,7 @@
             this.PB_area_discovery_lab.Location = new System.Drawing.Point(111, 337);
             this.PB_area_discovery_lab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PB_area_discovery_lab.Name = "PB_area_discovery_lab";
-            this.PB_area_discovery_lab.Size = new System.Drawing.Size(189, 100);
+            this.PB_area_discovery_lab.Size = new System.Drawing.Size(190, 100);
             this.PB_area_discovery_lab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_area_discovery_lab.TabIndex = 33;
             this.PB_area_discovery_lab.TabStop = false;
@@ -132,12 +132,12 @@
             // PB_area_partner_suites
             // 
             this.PB_area_partner_suites.BackColor = System.Drawing.Color.Transparent;
-            this.PB_area_partner_suites.Image = ((System.Drawing.Image)(resources.GetObject("PB_area_partner_suites.Image")));
+            this.PB_area_partner_suites.Image = global::LSRD_hmi.Properties.Resources.PB_square_door_partner_suites_singleLine;
             this.PB_area_partner_suites.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_partner_suites.InitialImage")));
-            this.PB_area_partner_suites.Location = new System.Drawing.Point(327, 337);
+            this.PB_area_partner_suites.Location = new System.Drawing.Point(320, 215);
             this.PB_area_partner_suites.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PB_area_partner_suites.Name = "PB_area_partner_suites";
-            this.PB_area_partner_suites.Size = new System.Drawing.Size(189, 100);
+            this.PB_area_partner_suites.Size = new System.Drawing.Size(190, 100);
             this.PB_area_partner_suites.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_area_partner_suites.TabIndex = 34;
             this.PB_area_partner_suites.TabStop = false;
@@ -176,7 +176,7 @@
             this.PB_get_directions.Location = new System.Drawing.Point(215, 455);
             this.PB_get_directions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PB_get_directions.Name = "PB_get_directions";
-            this.PB_get_directions.Size = new System.Drawing.Size(189, 100);
+            this.PB_get_directions.Size = new System.Drawing.Size(190, 100);
             this.PB_get_directions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_get_directions.TabIndex = 39;
             this.PB_get_directions.TabStop = false;

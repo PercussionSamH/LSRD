@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_door_work_cafe));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.PB_confirm_pass = new System.Windows.Forms.PictureBox();
             this.PB_Back_To_Home = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_confirm_pass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Back_To_Home)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,8 +43,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(399, 198);
             this.richTextBox1.TabIndex = 25;
-            this.richTextBox1.Text = " • Reception\n • Faculty and Administative\n   Offices\n • Conference Room 110\n • Al" +
-    "l deliveries \n";
+            this.richTextBox1.Text = "Instructions:\n1)\n2)\n3)\n";
             // 
             // label1
             // 
@@ -58,26 +55,12 @@
             this.label1.Text = "Work Cafe";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PB_confirm_pass
-            // 
-            this.PB_confirm_pass.BackColor = System.Drawing.Color.Transparent;
-            this.PB_confirm_pass.Image = ((System.Drawing.Image)(resources.GetObject("PB_confirm_pass.Image")));
-            this.PB_confirm_pass.Location = new System.Drawing.Point(284, 322);
-            this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PB_confirm_pass.MaximumSize = new System.Drawing.Size(169, 78);
-            this.PB_confirm_pass.MinimumSize = new System.Drawing.Size(131, 60);
-            this.PB_confirm_pass.Name = "PB_confirm_pass";
-            this.PB_confirm_pass.Size = new System.Drawing.Size(169, 78);
-            this.PB_confirm_pass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_confirm_pass.TabIndex = 23;
-            this.PB_confirm_pass.TabStop = false;
-            // 
             // PB_Back_To_Home
             // 
             this.PB_Back_To_Home.BackColor = System.Drawing.Color.Transparent;
             this.PB_Back_To_Home.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.PB_Back_To_Home.Image = ((System.Drawing.Image)(resources.GetObject("PB_Back_To_Home.Image")));
-            this.PB_Back_To_Home.Location = new System.Drawing.Point(53, 322);
+            this.PB_Back_To_Home.Location = new System.Drawing.Point(168, 316);
             this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PB_Back_To_Home.MaximumSize = new System.Drawing.Size(169, 78);
             this.PB_Back_To_Home.MinimumSize = new System.Drawing.Size(131, 60);
@@ -95,13 +78,11 @@
             this.ClientSize = new System.Drawing.Size(507, 425);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.PB_confirm_pass);
             this.Controls.Add(this.PB_Back_To_Home);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_door_work_cafe";
             this.Text = "Form_door_work_cafe";
-            ((System.ComponentModel.ISupportInitialize)(this.PB_confirm_pass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Back_To_Home)).EndInit();
             this.ResumeLayout(false);
 
@@ -111,7 +92,6 @@
 
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox PB_confirm_pass;
         private System.Windows.Forms.PictureBox PB_Back_To_Home;
     }
 }

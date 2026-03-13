@@ -216,7 +216,7 @@
             // 
             this.PB_schedule_wave.BackColor = System.Drawing.Color.Transparent;
             this.PB_schedule_wave.Image = global::LSRD_hmi.Properties.Resources.PB_wave_demo1;
-            this.PB_schedule_wave.Location = new System.Drawing.Point(695, 465);
+            this.PB_schedule_wave.Location = new System.Drawing.Point(695, 477);
             this.PB_schedule_wave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PB_schedule_wave.MaximumSize = new System.Drawing.Size(188, 89);
             this.PB_schedule_wave.Name = "PB_schedule_wave";
@@ -424,11 +424,11 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.PB_cancel_small_wave_demo1;
-            this.pictureBox1.Location = new System.Drawing.Point(680, 422);
+            this.pictureBox1.Location = new System.Drawing.Point(660, 420);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(188, 89);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;

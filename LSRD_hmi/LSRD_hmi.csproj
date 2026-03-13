@@ -520,5 +520,11 @@
   <ItemGroup>
     <None Include="Resources\PB cancel small wave demo1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door partner suites singleLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB door highlight.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
