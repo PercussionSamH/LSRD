@@ -157,11 +157,40 @@ namespace LSRD_hmi
         {
             start_time_AM_PM_verify();
         }
+        private void start_time_minute_unfocused(object sender, EventArgs e)
+        {
+            start_time_minute_verify();
+        }
+        private void start_time_hour_unfocused(object sender, EventArgs e)
+        {
+            start_time_hour_verify();
+        }
+
+        private void start_time_minute_verify()
+        {
+            int time_int;
+            bool is_int = int.TryParse(start_t_min.Text,out time_int);
+            if (!is_int || (time_int > 59))
+            {
+                    start_t_min.Text = "00";
+            }
+        }
+        private void start_time_hour_verify()
+        {
+            int time_int;
+            bool is_int = int.TryParse(start_t_hr.Text, out time_int);
+            if (!is_int || (time_int > 12))
+            {
+                    start_t_hr.Text = "12";                
+            }
+        }
 
         private void PB_schedule_wave_Click(object sender, EventArgs e)
         {
             //Verify AM/PM
             start_time_AM_PM_verify();
+            start_time_minute_verify();
+            start_time_hour_verify();
 
             //parse values
             int hours;

@@ -113,6 +113,36 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap doorman_bkg_blueish_2 {
+            get {
+                object obj = ResourceManager.GetObject("doorman_bkg_blueish_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doorman_bkg_blueish_21 {
+            get {
+                object obj = ResourceManager.GetObject("doorman_bkg_blueish_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doorman_bkg_blueish_22 {
+            get {
+                object obj = ResourceManager.GetObject("doorman_bkg_blueish_22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doorman_bkg_blueish_plain {
             get {
                 object obj = ResourceManager.GetObject("doorman_bkg_blueish_plain", resourceCulture);
@@ -206,6 +236,36 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap PB_back_wide1 {
             get {
                 object obj = ResourceManager.GetObject("PB back wide1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PB_cancel_small_wave_demo {
+            get {
+                object obj = ResourceManager.GetObject("PB cancel small wave demo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PB_cancel_small_wave_demo1 {
+            get {
+                object obj = ResourceManager.GetObject("PB cancel small wave demo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PB_cancel_wave_demo {
+            get {
+                object obj = ResourceManager.GetObject("PB cancel wave demo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,6 +373,16 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PB_square_door_get_directions {
+            get {
+                object obj = ResourceManager.GetObject("PB square door get directions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PB_square_door_partner_suites {
             get {
                 object obj = ResourceManager.GetObject("PB square door partner suites", resourceCulture);
@@ -366,6 +436,16 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap PB_wave_demo {
             get {
                 object obj = ResourceManager.GetObject("PB wave demo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PB_wave_demo1 {
+            get {
+                object obj = ResourceManager.GetObject("PB wave demo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

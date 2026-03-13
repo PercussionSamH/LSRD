@@ -496,5 +496,29 @@
   <ItemGroup>
     <None Include="Resources\PB square door staff desk3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door get directions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doorman_bkg_blueish_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doorman_bkg_blueish_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doorman_bkg_blueish_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB wave demo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB cancel wave demo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB cancel small wave demo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB cancel small wave demo1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

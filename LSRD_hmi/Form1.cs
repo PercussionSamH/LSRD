@@ -85,15 +85,17 @@ namespace LSRD_hmi
             //Reenable timer
             timer_Modbus_Com.Enabled = true;
         }
-
+        
+        //This function runs every tick (10/sec) and checks if the wave event has been triggered
         private void tmr_update_vars_Tick(object sender, EventArgs e)
         {
             tmr_update_vars.Enabled = false;
             //Check for wave demo
-            int current_time_min = DateTime.Now.Minute + (60 * DateTime.Now.Hour);
-            label1.Text = wave_active.ToString();
-            label2.Text = wave_scheduled.ToString();
-            if (current_time_min >= wave_t_start && current_time_min < wave_t_end)
+            int c_t_min = DateTime.Now.Minute + (60 * DateTime.Now.Hour); //curent time in minutes
+            label1.Text = "wave active: " + wave_active.ToString();
+            label2.Text = "wave scheduled: " + wave_scheduled.ToString();
+            if ((c_t_min >= wave_t_start && c_t_min < wave_t_end && wave_t_end >= wave_t_start) //normal case
+              ^ (c_t_min <= wave_t_start && c_t_min > wave_t_end && wave_t_end < wave_t_start)) //past midnight (the ^ is an XOR)
             {
                 if (wave_scheduled)
                 {
@@ -126,6 +128,7 @@ namespace LSRD_hmi
         {
             if (enabled_doorman == true)
             {
+                //Open new window
                 Form_doorman form_doorman = new Form_doorman();
                 form_doorman.ShowDialog();
                 form_doorman = null;
