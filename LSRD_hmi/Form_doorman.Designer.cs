@@ -106,7 +106,7 @@
             this.PB_area_seminar_room.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_seminar_room.Image = ((System.Drawing.Image)(resources.GetObject("PB_area_seminar_room.Image")));
             this.PB_area_seminar_room.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_seminar_room.InitialImage")));
-            this.PB_area_seminar_room.Location = new System.Drawing.Point(320, 337);
+            this.PB_area_seminar_room.Location = new System.Drawing.Point(327, 215);
             this.PB_area_seminar_room.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PB_area_seminar_room.Name = "PB_area_seminar_room";
             this.PB_area_seminar_room.Size = new System.Drawing.Size(190, 100);
@@ -134,7 +134,7 @@
             this.PB_area_partner_suites.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_partner_suites.Image = global::LSRD_hmi.Properties.Resources.PB_square_door_partner_suites_singleLine;
             this.PB_area_partner_suites.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_partner_suites.InitialImage")));
-            this.PB_area_partner_suites.Location = new System.Drawing.Point(320, 215);
+            this.PB_area_partner_suites.Location = new System.Drawing.Point(327, 337);
             this.PB_area_partner_suites.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PB_area_partner_suites.Name = "PB_area_partner_suites";
             this.PB_area_partner_suites.Size = new System.Drawing.Size(190, 100);
@@ -160,7 +160,7 @@
             // 
             this.lbl_room_info.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_room_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_room_info.Location = new System.Drawing.Point(560, 510);
+            this.lbl_room_info.Location = new System.Drawing.Point(464, 494);
             this.lbl_room_info.Name = "lbl_room_info";
             this.lbl_room_info.Padding = new System.Windows.Forms.Padding(5, 15, 0, 7);
             this.lbl_room_info.Size = new System.Drawing.Size(320, 222);
@@ -186,7 +186,7 @@
             // 
             this.lbl_room_info_back.BackColor = System.Drawing.Color.White;
             this.lbl_room_info_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_room_info_back.Location = new System.Drawing.Point(545, 489);
+            this.lbl_room_info_back.Location = new System.Drawing.Point(450, 478);
             this.lbl_room_info_back.Name = "lbl_room_info_back";
             this.lbl_room_info_back.Padding = new System.Windows.Forms.Padding(5, 20, 0, 7);
             this.lbl_room_info_back.Size = new System.Drawing.Size(347, 398);

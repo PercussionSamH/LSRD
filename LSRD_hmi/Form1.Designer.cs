@@ -44,8 +44,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.test_textbox = new System.Windows.Forms.Label();
             this.tmr_update_vars = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.debug_wave_active = new System.Windows.Forms.Label();
+            this.debug_wave_scheduled = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -72,7 +72,7 @@
             this.PB_Draw_Fish1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PB_Draw_Fish1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.PB_Draw_Fish1.Location = new System.Drawing.Point(13, 543);
-            this.PB_Draw_Fish1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PB_Draw_Fish1.Margin = new System.Windows.Forms.Padding(4);
             this.PB_Draw_Fish1.Name = "PB_Draw_Fish1";
             this.PB_Draw_Fish1.Size = new System.Drawing.Size(60, 34);
             this.PB_Draw_Fish1.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.PB_Draw_Square.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PB_Draw_Square.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.PB_Draw_Square.Location = new System.Drawing.Point(81, 543);
-            this.PB_Draw_Square.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PB_Draw_Square.Margin = new System.Windows.Forms.Padding(4);
             this.PB_Draw_Square.Name = "PB_Draw_Square";
             this.PB_Draw_Square.Size = new System.Drawing.Size(60, 34);
             this.PB_Draw_Square.TabIndex = 3;
@@ -104,12 +104,13 @@
             this.PB_Quit_Program.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PB_Quit_Program.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.PB_Quit_Program.Location = new System.Drawing.Point(13, 430);
-            this.PB_Quit_Program.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PB_Quit_Program.Margin = new System.Windows.Forms.Padding(4);
             this.PB_Quit_Program.Name = "PB_Quit_Program";
             this.PB_Quit_Program.Size = new System.Drawing.Size(128, 76);
             this.PB_Quit_Program.TabIndex = 6;
             this.PB_Quit_Program.Text = "Quit program\r\n(debug only)";
             this.PB_Quit_Program.UseVisualStyleBackColor = false;
+            this.PB_Quit_Program.Visible = false;
             this.PB_Quit_Program.Click += new System.EventHandler(this.PB_Quit_Program_Click);
             // 
             // Picture_LSRD_Logo
@@ -212,35 +213,36 @@
             // test_textbox
             // 
             this.test_textbox.AutoSize = true;
-            this.test_textbox.Location = new System.Drawing.Point(23, 523);
+            this.test_textbox.Location = new System.Drawing.Point(12, 543);
             this.test_textbox.Name = "test_textbox";
             this.test_textbox.Size = new System.Drawing.Size(44, 16);
             this.test_textbox.TabIndex = 4;
             this.test_textbox.Text = "label1";
-            this.test_textbox.Visible = false;
             // 
             // tmr_update_vars
             // 
             this.tmr_update_vars.Enabled = true;
             this.tmr_update_vars.Tick += new System.EventHandler(this.tmr_update_vars_Tick);
             // 
-            // label1
+            // debug_wave_active
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 386);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "label1";
+            this.debug_wave_active.AutoSize = true;
+            this.debug_wave_active.Location = new System.Drawing.Point(13, 386);
+            this.debug_wave_active.Name = "debug_wave_active";
+            this.debug_wave_active.Size = new System.Drawing.Size(44, 16);
+            this.debug_wave_active.TabIndex = 16;
+            this.debug_wave_active.Text = "label1";
+            this.debug_wave_active.Visible = false;
             // 
-            // label2
+            // debug_wave_scheduled
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 410);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "label2";
+            this.debug_wave_scheduled.AutoSize = true;
+            this.debug_wave_scheduled.Location = new System.Drawing.Point(13, 410);
+            this.debug_wave_scheduled.Name = "debug_wave_scheduled";
+            this.debug_wave_scheduled.Size = new System.Drawing.Size(44, 16);
+            this.debug_wave_scheduled.TabIndex = 17;
+            this.debug_wave_scheduled.Text = "label2";
+            this.debug_wave_scheduled.Visible = false;
             // 
             // label3
             // 
@@ -303,8 +305,8 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.debug_wave_scheduled);
+            this.Controls.Add(this.debug_wave_active);
             this.Controls.Add(this.PB_staff_controls);
             this.Controls.Add(this.Picture_LSRD_Logo);
             this.Controls.Add(this.Picturebox_logo);
@@ -318,7 +320,7 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1024, 601);
             this.MinimumSize = new System.Drawing.Size(1024, 601);
             this.Name = "Form1";
@@ -354,8 +356,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label test_textbox;
         private System.Windows.Forms.Timer tmr_update_vars;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label debug_wave_active;
+        private System.Windows.Forms.Label debug_wave_scheduled;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

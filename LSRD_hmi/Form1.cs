@@ -1,16 +1,22 @@
 ﻿//Library includes
 using EasyModbus;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Calendar.v3;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Xml.Schema;
 
 
 namespace LSRD_hmi
@@ -18,6 +24,9 @@ namespace LSRD_hmi
 
     public partial class Form1 : Form
     {
+        //Debug
+        public static bool DEBUG_MODE = true; //turn on to enable debug mode
+
         //IP address
         static string PLC_IP = "10.104.5.184"; static int port = 502;
         public ModbusClient modbusClient = new ModbusClient(PLC_IP, port);
@@ -32,18 +41,51 @@ namespace LSRD_hmi
         public static bool enabled_scavenger = true;
 
         public static bool wave_scheduled = false;
-        public static bool wave_active = false;
         public static int wave_t_start = 0;
         public static int wave_t_end = 0;
         public static string wave_t_string = null;
         public static int wave_duration = 0;
 
+        //Google cal events
+        public static List<string> Event_strings = new List<string>();
+        public static List<string> Event_times = new List<string>();
+        public static DateTime t_event_start;
+        public static DateTime t_event_end;
+
+        //io bits
+        public static bool demo_idle = true;
+        public static bool demo_active_drawing = false;
+        public static bool demo_active_doorman = false;
+        public static bool demo_active_scavenger = false;
+        public static bool demo_active_wave = false;
+        //Process bits
+        //Cancel
+        public static bool cancel_active_demo = false; //[TODO:] hold this to true until robot at home, then set idle
+        //user confirm
+        public static bool drawing_paper_in_place = false;
+        public static bool door_next_step = false;
+        //Selections
+        public static byte B_fish_selection;
+        public static byte B_room_selection;
+        public static byte B_flag_selection;
+        public static byte B_first_initial;
+        public static byte B_last_initial;
+
+        
+
         public Form1()
         {
 
             InitializeComponent();
+            
             this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
             this.WindowState = FormWindowState.Maximized;
+
+            //debug stuff
+            debug_wave_active.Visible = DEBUG_MODE;
+            debug_wave_scheduled.Visible = DEBUG_MODE;
+            PB_Quit_Program.Visible = DEBUG_MODE;
+            test_textbox.Visible = DEBUG_MODE;
 
             try
             {
@@ -57,7 +99,9 @@ namespace LSRD_hmi
 
                 //read initial QX vars
                 QX_Coils = modbusClient.ReadCoils(0, QX_length); //read all variables off of PLC
-        
+
+                Get_Calendar_Events();
+
             }
             catch (Exception ex)
             {
@@ -73,68 +117,212 @@ namespace LSRD_hmi
 
         }
 
+
+        //Update all bits onto PLC
+        //Modbus clock update rate = 10ms
         private void timer_Modbus_Com_Tick(object sender, EventArgs e)
         {
             timer_Modbus_Com.Enabled = false; //prevents multiple timer signals per read
 
-            //Read inputs
+            //Fetch all inputs
             QX_Coils = modbusClient.ReadCoils(0, QX_length);
-            //test_textbox.Text = string.Join(" ", QX_Coils.Select(b => b.ToString())); ;
-            modbusClient.WriteSingleCoil(99, wave_active); //Wave mode enabled
+
+            if (DEBUG_MODE)
+            {
+                test_textbox.Text = string.Join(" ", QX_Coils.Select(b => b.ToString()));
+            }
+
+            //Set all individual outputs, see google sheet for full list
+            modbusClient.WriteSingleCoil(10, demo_idle);
+            modbusClient.WriteSingleCoil(11, demo_active_drawing);
+            modbusClient.WriteSingleCoil(12, demo_active_doorman);
+            modbusClient.WriteSingleCoil(13, demo_active_scavenger);
+            modbusClient.WriteSingleCoil(14, demo_active_wave); //Wave should be active
+
+            modbusClient.WriteSingleCoil(20, cancel_active_demo);
+            modbusClient.WriteSingleCoil(22, drawing_paper_in_place);
+            modbusClient.WriteSingleCoil(23, door_next_step);
+
 
             //Reenable timer
             timer_Modbus_Com.Enabled = true;
         }
         
-        //This function runs every tick (10/sec) and checks if the wave event has been triggered
+        //Check for Wave triggered
+        //This function runs every tick (10/sec)
         private void tmr_update_vars_Tick(object sender, EventArgs e)
         {
             tmr_update_vars.Enabled = false;
             //Check for wave demo
             int c_t_min = DateTime.Now.Minute + (60 * DateTime.Now.Hour); //curent time in minutes
-            label1.Text = "wave active: " + wave_active.ToString();
-            label2.Text = "wave scheduled: " + wave_scheduled.ToString();
-            if ((c_t_min >= wave_t_start && c_t_min < wave_t_end && wave_t_end >= wave_t_start) //normal case
-              ^ (c_t_min <= wave_t_start && c_t_min > wave_t_end && wave_t_end < wave_t_start)) //past midnight (the ^ is an XOR)
+
+            if (DEBUG_MODE)
+            {   
+                debug_wave_active.Text = "wave active: " + demo_active_wave.ToString();
+                debug_wave_scheduled.Text = "wave scheduled: " + wave_scheduled.ToString();
+            }
+            DateTime t_now = DateTime.Now;
+            DateTime t_10_min = t_now.AddMinutes(10);
+            DateTime t_event_pre = t_event_start.AddMinutes(5);
+            DateTime t_event_post = t_event_end.AddMinutes(10);
+            //check if a wave is manually scheuled
+            if (((c_t_min >= wave_t_start && c_t_min < wave_t_end && wave_t_end >= wave_t_start) //normal case
+                 ^ (c_t_min <= wave_t_start && c_t_min > wave_t_end && wave_t_end < wave_t_start) //past midnight (the ^ is an XOR)
+               ) && wave_scheduled)
             {
-                if (wave_scheduled)
+                start_wave_demo();
+            }
+            else //if an event is scheduled
+            {
+                //This could be a single if statement but the mess of having a 4 line if condidition makes it hardly readable
+                if (((t_event_start <= t_10_min) && (t_event_pre > t_now)) //10 minutes before an event til 5 minutes after start
+                   || ((t_event_end < t_10_min) && (t_event_post > t_now))) //10 minutes after event ends til 10 minutes after)
                 {
-                    wave_scheduled = false;
-                    wave_active = true;
+                    start_wave_demo();
+                }
+                else //no event active
+                {
+                    if (demo_active_wave) wave_scheduled = false;
+                    demo_active_wave = false;
+                    demo_idle = true;
                 }
             }
-            else
-            {
-                if (wave_active) wave_scheduled = false;
-                wave_active = false;
-            }
-            tmr_update_vars.Enabled = true;
+            tmr_update_vars.Enabled = true; //reenable timer
+
         }
 
+        private void start_wave_demo()
+        {
+            if (demo_idle)
+            {
+                wave_scheduled = false;
+                demo_idle = false;
+                demo_active_wave = true;
+            }
+        }
+
+        //Old tests
         private void PB_Draw_Fish1_Click(object sender, EventArgs e)
         {
             //QX_Coils[16] = true; //set 2.0
             modbusClient.WriteSingleCoil(16, true);
         
         }
-
         private void PB_Draw_Square_Click(object sender, EventArgs e)
         {
             //QX_Coils[17] = true; //set 2.1
             modbusClient.WriteSingleCoil(17, true);
-        }
+        } 
+
 
         private void PB_doorman_mode_Click(object sender, EventArgs e)
         {
             if (enabled_doorman == true)
             {
                 //Open new window
+                Get_Calendar_Events(); //fetch events
                 Form_doorman form_doorman = new Form_doorman();
                 form_doorman.ShowDialog();
                 form_doorman = null;
             }
         }
 
+
+
+        private async void Get_Calendar_Events()
+        {
+            try
+            {
+                System.Diagnostics.Debug.WriteLine("Trying to read events");
+                string[] Scopes = { CalendarService.Scope.CalendarReadonly };
+                string ApplicationName = "Calendar Export";
+
+                UserCredential credential;
+
+                string credPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "credentials.json");
+                System.Diagnostics.Debug.WriteLine("Trying to fetch credentials...");
+                using (var stream = new FileStream(credPath, FileMode.Open, FileAccess.Read))
+                {
+                    credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
+                        GoogleClientSecrets.FromStream(stream).Secrets,
+                        Scopes,
+                        "user",
+                        CancellationToken.None,
+                        new FileDataStore("token.json", true));
+                }
+                System.Diagnostics.Debug.WriteLine("Credentials found");
+                var service = new CalendarService(new BaseClientService.Initializer()
+                {
+                    HttpClientInitializer = credential,
+                    ApplicationName = ApplicationName,
+                });
+
+                // Request events
+                var request = service.Events.List("primary");
+                request.TimeMin = DateTime.Now;
+                request.ShowDeleted = false;
+                request.SingleEvents = true;
+                request.MaxResults = 50;
+                request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
+
+                var events = request.Execute().Items;
+
+                ////For writing to a .txt file
+                //System.Diagnostics.Debug.WriteLine("Getting File path");
+                //string downloadsPath = Path.Combine(
+                //Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                //"Downloads");
+                //System.Diagnostics.Debug.WriteLine("filepath at: " + downloadsPath);
+                //string outputPath = Path.Combine(downloadsPath, "calendar_events.txt");
+                //System.Diagnostics.Debug.WriteLine("outputPath at: " + outputPath);
+                //using (StreamWriter writer = new StreamWriter(outputPath))
+                Event_strings.Clear();
+                {
+                    if (events != null && events.Count > 0)
+                    {
+                        int i = 0; //event number
+                        foreach (var ev in events)
+                        {
+                            string title = ev.Summary ?? "No Title";
+                            string description = ev.Description ?? "No Description";
+                            if (i==0)
+                            {
+                                DateTime t10 = t_event_end.AddMinutes(10);
+                                if (t10 < DateTime.Now)
+                                {
+                                    t_event_start = DateTime.Parse(ev.Start.DateTimeDateTimeOffset.ToString());
+                                    t_event_end = DateTime.Parse(ev.End.DateTimeDateTimeOffset.ToString());
+                                }
+                                
+                            }         
+                            if (DEBUG_MODE) System.Diagnostics.Debug.WriteLine("event found with name: " + title);
+
+                            Event_strings.Add(title + "\n\r" + description);
+                            i++;
+                        }
+                    }
+                    else
+                    {
+                        //writer.WriteLine("No upcoming events found.");
+                        System.Diagnostics.Debug.WriteLine("No events found :(");
+                        Event_strings.Add("No upcoming events");
+
+                    }
+                }
+
+                //Optional message box for confirmation
+                //MessageBox.Show("Export complete!", "Success",
+                //MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            catch (Exception ex)
+            {
+                //Optional message box for confirmation
+                //MessageBox.Show(ex.Message, "Error",
+                //MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Diagnostics.Debug.WriteLine("An error occured with exception:" + ex);
+            }
+        }
 
 
         private void PB_drawing_mode_Click(object sender, EventArgs e)
@@ -196,6 +384,10 @@ namespace LSRD_hmi
                 //form2 = null;
             }
         }
+
+
+
+
 
     }
 }

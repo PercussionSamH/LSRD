@@ -313,6 +313,16 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PB_door_highlight1 {
+            get {
+                object obj = ResourceManager.GetObject("PB door highlight1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PB_gray_back_to_home {
             get {
                 object obj = ResourceManager.GetObject("PB gray back to home", resourceCulture);
@@ -376,6 +386,16 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap PB_square_door_discovery_lab {
             get {
                 object obj = ResourceManager.GetObject("PB square door discovery lab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PB_square_door_discovery_lab1 {
+            get {
+                object obj = ResourceManager.GetObject("PB square door discovery lab1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

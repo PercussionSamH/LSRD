@@ -423,7 +423,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.PB_cancel_small_wave_demo1;
+            this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.PB_square_door_discovery_lab1;
             this.pictureBox1.Location = new System.Drawing.Point(660, 420);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(188, 89);

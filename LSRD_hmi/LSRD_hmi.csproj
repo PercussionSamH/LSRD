@@ -526,5 +526,11 @@
   <ItemGroup>
     <None Include="Resources\PB door highlight.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square door discovery lab3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB door highlight1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

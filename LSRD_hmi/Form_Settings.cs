@@ -48,7 +48,7 @@ namespace LSRD_hmi
             wave_time_string = Form1.wave_t_string;
             wave_duration = Form1.wave_duration;
             //set text
-            if (Form1.wave_active||Form1.wave_scheduled)
+            if (Form1.demo_active_wave||Form1.wave_scheduled)
             {
                 text_scheduled_time.Text = wave_time_string;
                 text_scheduled_length.Text = wave_duration.ToString();
@@ -59,7 +59,7 @@ namespace LSRD_hmi
                 text_scheduled_length.Text = "scheduled";
             }
 
-                Toggle_doorman.Image = (enabled_doorman) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
+            Toggle_doorman.Image = (enabled_doorman) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
             Toggle_drawing.Image = (enabled_drawing) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
             Toggle_scavenger.Image = (enabled_scavenger) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
             
