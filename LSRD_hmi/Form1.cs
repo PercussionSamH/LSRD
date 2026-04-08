@@ -24,8 +24,8 @@ namespace LSRD_hmi
 
     public partial class Form1 : Form
     {
-        //Debug
-        public static bool DEBUG_MODE = true; //turn on to enable debug mode
+        // ----Debug---- 
+        public static bool DEBUG_MODE = false; //turn on to enable debug mode
 
         //IP address
         static string PLC_IP = "10.104.5.184"; static int port = 502;

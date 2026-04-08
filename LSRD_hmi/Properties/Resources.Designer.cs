@@ -113,9 +113,9 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap doorman_bkg_blueish_2 {
+        internal static System.Drawing.Bitmap colored_LogoBright {
             get {
-                object obj = ResourceManager.GetObject("doorman_bkg_blueish_2", resourceCulture);
+                object obj = ResourceManager.GetObject("colored_LogoBright", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap doorman_bkg_blueish_21 {
+        internal static System.Drawing.Bitmap colored_LogoBright1 {
             get {
-                object obj = ResourceManager.GetObject("doorman_bkg_blueish_21", resourceCulture);
+                object obj = ResourceManager.GetObject("colored_LogoBright1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,16 +196,6 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap Lake_Sturgeon_250_180 {
             get {
                 object obj = ResourceManager.GetObject("Lake_Sturgeon_250_180", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap LogoBright_transparent {
-            get {
-                object obj = ResourceManager.GetObject("LogoBright_transparent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -543,9 +533,19 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Title_text_light_green_fish_machine3 {
+        internal static System.Drawing.Bitmap slideshow_texture_white2 {
             get {
-                object obj = ResourceManager.GetObject("Title text light green fish machine3", resourceCulture);
+                object obj = ResourceManager.GetObject("slideshow_texture_white2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Title_text_CFREGOLD_fish_machine {
+            get {
+                object obj = ResourceManager.GetObject("Title text CFREGOLD fish machine", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

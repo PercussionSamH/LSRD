@@ -71,10 +71,9 @@
             this.PB_Draw_Fish1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PB_Draw_Fish1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PB_Draw_Fish1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.PB_Draw_Fish1.Location = new System.Drawing.Point(13, 543);
-            this.PB_Draw_Fish1.Margin = new System.Windows.Forms.Padding(4);
+            this.PB_Draw_Fish1.Location = new System.Drawing.Point(61, 515);
             this.PB_Draw_Fish1.Name = "PB_Draw_Fish1";
-            this.PB_Draw_Fish1.Size = new System.Drawing.Size(60, 34);
+            this.PB_Draw_Fish1.Size = new System.Drawing.Size(93, 33);
             this.PB_Draw_Fish1.TabIndex = 2;
             this.PB_Draw_Fish1.Text = "Draw Fish One";
             this.PB_Draw_Fish1.UseVisualStyleBackColor = false;
@@ -87,10 +86,9 @@
             this.PB_Draw_Square.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PB_Draw_Square.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PB_Draw_Square.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.PB_Draw_Square.Location = new System.Drawing.Point(81, 543);
-            this.PB_Draw_Square.Margin = new System.Windows.Forms.Padding(4);
+            this.PB_Draw_Square.Location = new System.Drawing.Point(61, 470);
             this.PB_Draw_Square.Name = "PB_Draw_Square";
-            this.PB_Draw_Square.Size = new System.Drawing.Size(60, 34);
+            this.PB_Draw_Square.Size = new System.Drawing.Size(94, 39);
             this.PB_Draw_Square.TabIndex = 3;
             this.PB_Draw_Square.Text = "Draw Square";
             this.PB_Draw_Square.UseVisualStyleBackColor = false;
@@ -103,10 +101,9 @@
             this.PB_Quit_Program.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PB_Quit_Program.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PB_Quit_Program.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.PB_Quit_Program.Location = new System.Drawing.Point(13, 430);
-            this.PB_Quit_Program.Margin = new System.Windows.Forms.Padding(4);
+            this.PB_Quit_Program.Location = new System.Drawing.Point(12, 419);
             this.PB_Quit_Program.Name = "PB_Quit_Program";
-            this.PB_Quit_Program.Size = new System.Drawing.Size(128, 76);
+            this.PB_Quit_Program.Size = new System.Drawing.Size(96, 45);
             this.PB_Quit_Program.TabIndex = 6;
             this.PB_Quit_Program.Text = "Quit program\r\n(debug only)";
             this.PB_Quit_Program.UseVisualStyleBackColor = false;
@@ -116,11 +113,11 @@
             // Picture_LSRD_Logo
             // 
             this.Picture_LSRD_Logo.BackColor = System.Drawing.Color.Transparent;
-            this.Picture_LSRD_Logo.Image = global::LSRD_hmi.Properties.Resources.LogoBright_transparent;
-            this.Picture_LSRD_Logo.Location = new System.Drawing.Point(48, 167);
-            this.Picture_LSRD_Logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Picture_LSRD_Logo.Image = global::LSRD_hmi.Properties.Resources.colored_LogoBright1;
+            this.Picture_LSRD_Logo.Location = new System.Drawing.Point(61, 184);
+            this.Picture_LSRD_Logo.Margin = new System.Windows.Forms.Padding(2);
             this.Picture_LSRD_Logo.Name = "Picture_LSRD_Logo";
-            this.Picture_LSRD_Logo.Size = new System.Drawing.Size(191, 162);
+            this.Picture_LSRD_Logo.Size = new System.Drawing.Size(200, 195);
             this.Picture_LSRD_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture_LSRD_Logo.TabIndex = 9;
             this.Picture_LSRD_Logo.TabStop = false;
@@ -129,12 +126,12 @@
             // 
             this.PB_doorman_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_doorman_mode.Image = global::LSRD_hmi.Properties.Resources.PB_gray_doorman_demo;
-            this.PB_doorman_mode.Location = new System.Drawing.Point(169, 443);
-            this.PB_doorman_mode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PB_doorman_mode.MaximumSize = new System.Drawing.Size(200, 100);
-            this.PB_doorman_mode.MinimumSize = new System.Drawing.Size(200, 100);
+            this.PB_doorman_mode.Location = new System.Drawing.Point(214, 456);
+            this.PB_doorman_mode.Margin = new System.Windows.Forms.Padding(2);
+            this.PB_doorman_mode.MaximumSize = new System.Drawing.Size(180, 97);
+            this.PB_doorman_mode.MinimumSize = new System.Drawing.Size(180, 97);
             this.PB_doorman_mode.Name = "PB_doorman_mode";
-            this.PB_doorman_mode.Size = new System.Drawing.Size(200, 100);
+            this.PB_doorman_mode.Size = new System.Drawing.Size(180, 97);
             this.PB_doorman_mode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_doorman_mode.TabIndex = 10;
             this.PB_doorman_mode.TabStop = false;
@@ -144,12 +141,12 @@
             // 
             this.PB_drawing_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_drawing_mode.Image = global::LSRD_hmi.Properties.Resources.PB_gray_Drawing_demo;
-            this.PB_drawing_mode.Location = new System.Drawing.Point(421, 443);
-            this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PB_drawing_mode.MaximumSize = new System.Drawing.Size(200, 100);
-            this.PB_drawing_mode.MinimumSize = new System.Drawing.Size(200, 100);
+            this.PB_drawing_mode.Location = new System.Drawing.Point(422, 456);
+            this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2);
+            this.PB_drawing_mode.MaximumSize = new System.Drawing.Size(180, 97);
+            this.PB_drawing_mode.MinimumSize = new System.Drawing.Size(180, 97);
             this.PB_drawing_mode.Name = "PB_drawing_mode";
-            this.PB_drawing_mode.Size = new System.Drawing.Size(200, 100);
+            this.PB_drawing_mode.Size = new System.Drawing.Size(180, 97);
             this.PB_drawing_mode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_drawing_mode.TabIndex = 11;
             this.PB_drawing_mode.TabStop = false;
@@ -159,12 +156,12 @@
             // 
             this.PB_scavenger_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_scavenger_mode.Image = ((System.Drawing.Image)(resources.GetObject("PB_scavenger_mode.Image")));
-            this.PB_scavenger_mode.Location = new System.Drawing.Point(667, 443);
-            this.PB_scavenger_mode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PB_scavenger_mode.MaximumSize = new System.Drawing.Size(200, 100);
-            this.PB_scavenger_mode.MinimumSize = new System.Drawing.Size(200, 100);
+            this.PB_scavenger_mode.Location = new System.Drawing.Point(631, 456);
+            this.PB_scavenger_mode.Margin = new System.Windows.Forms.Padding(2);
+            this.PB_scavenger_mode.MaximumSize = new System.Drawing.Size(180, 97);
+            this.PB_scavenger_mode.MinimumSize = new System.Drawing.Size(180, 97);
             this.PB_scavenger_mode.Name = "PB_scavenger_mode";
-            this.PB_scavenger_mode.Size = new System.Drawing.Size(200, 100);
+            this.PB_scavenger_mode.Size = new System.Drawing.Size(180, 97);
             this.PB_scavenger_mode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_scavenger_mode.TabIndex = 12;
             this.PB_scavenger_mode.TabStop = false;
@@ -173,12 +170,12 @@
             // Picturebox_logo
             // 
             this.Picturebox_logo.BackColor = System.Drawing.Color.Transparent;
-            this.Picturebox_logo.Image = global::LSRD_hmi.Properties.Resources.Title_text_light_green_fish_machine3;
-            this.Picturebox_logo.Location = new System.Drawing.Point(305, 79);
-            this.Picturebox_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Picturebox_logo.MinimumSize = new System.Drawing.Size(277, 126);
+            this.Picturebox_logo.Image = global::LSRD_hmi.Properties.Resources.Title_text_CFREGOLD_fish_machine;
+            this.Picturebox_logo.Location = new System.Drawing.Point(330, 69);
+            this.Picturebox_logo.Margin = new System.Windows.Forms.Padding(2);
+            this.Picturebox_logo.MinimumSize = new System.Drawing.Size(208, 102);
             this.Picturebox_logo.Name = "Picturebox_logo";
-            this.Picturebox_logo.Size = new System.Drawing.Size(429, 187);
+            this.Picturebox_logo.Size = new System.Drawing.Size(365, 177);
             this.Picturebox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picturebox_logo.TabIndex = 13;
             this.Picturebox_logo.TabStop = false;
@@ -187,12 +184,12 @@
             // 
             this.PB_staff_controls.BackColor = System.Drawing.Color.Transparent;
             this.PB_staff_controls.Image = ((System.Drawing.Image)(resources.GetObject("PB_staff_controls.Image")));
-            this.PB_staff_controls.Location = new System.Drawing.Point(795, 12);
-            this.PB_staff_controls.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PB_staff_controls.MaximumSize = new System.Drawing.Size(200, 100);
-            this.PB_staff_controls.MinimumSize = new System.Drawing.Size(200, 100);
+            this.PB_staff_controls.Location = new System.Drawing.Point(812, 23);
+            this.PB_staff_controls.Margin = new System.Windows.Forms.Padding(2);
+            this.PB_staff_controls.MaximumSize = new System.Drawing.Size(180, 97);
+            this.PB_staff_controls.MinimumSize = new System.Drawing.Size(180, 97);
             this.PB_staff_controls.Name = "PB_staff_controls";
-            this.PB_staff_controls.Size = new System.Drawing.Size(200, 100);
+            this.PB_staff_controls.Size = new System.Drawing.Size(180, 97);
             this.PB_staff_controls.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_staff_controls.TabIndex = 14;
             this.PB_staff_controls.TabStop = false;
@@ -202,10 +199,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.atlanticsalmon;
-            this.pictureBox1.Location = new System.Drawing.Point(339, 272);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(365, 264);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(295, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -213,9 +210,10 @@
             // test_textbox
             // 
             this.test_textbox.AutoSize = true;
-            this.test_textbox.Location = new System.Drawing.Point(12, 543);
+            this.test_textbox.Location = new System.Drawing.Point(15, 470);
+            this.test_textbox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.test_textbox.Name = "test_textbox";
-            this.test_textbox.Size = new System.Drawing.Size(44, 16);
+            this.test_textbox.Size = new System.Drawing.Size(41, 15);
             this.test_textbox.TabIndex = 4;
             this.test_textbox.Text = "label1";
             // 
@@ -227,9 +225,10 @@
             // debug_wave_active
             // 
             this.debug_wave_active.AutoSize = true;
-            this.debug_wave_active.Location = new System.Drawing.Point(13, 386);
+            this.debug_wave_active.Location = new System.Drawing.Point(7, 494);
+            this.debug_wave_active.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.debug_wave_active.Name = "debug_wave_active";
-            this.debug_wave_active.Size = new System.Drawing.Size(44, 16);
+            this.debug_wave_active.Size = new System.Drawing.Size(41, 15);
             this.debug_wave_active.TabIndex = 16;
             this.debug_wave_active.Text = "label1";
             this.debug_wave_active.Visible = false;
@@ -237,9 +236,10 @@
             // debug_wave_scheduled
             // 
             this.debug_wave_scheduled.AutoSize = true;
-            this.debug_wave_scheduled.Location = new System.Drawing.Point(13, 410);
+            this.debug_wave_scheduled.Location = new System.Drawing.Point(7, 513);
+            this.debug_wave_scheduled.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.debug_wave_scheduled.Name = "debug_wave_scheduled";
-            this.debug_wave_scheduled.Size = new System.Drawing.Size(44, 16);
+            this.debug_wave_scheduled.Size = new System.Drawing.Size(41, 15);
             this.debug_wave_scheduled.TabIndex = 17;
             this.debug_wave_scheduled.Text = "label2";
             this.debug_wave_scheduled.Visible = false;
@@ -249,9 +249,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(48, 308);
+            this.label3.Location = new System.Drawing.Point(56, 353);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 59);
+            this.label3.Size = new System.Drawing.Size(205, 64);
             this.label3.TabIndex = 18;
             this.label3.Text = "Designed by\r\nTeam LSRD";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -260,10 +261,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LSRD_hmi.Properties.Resources.cfre_logo_circle_notext_fix1;
-            this.pictureBox2.Location = new System.Drawing.Point(805, 169);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(772, 201);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(176, 135);
+            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
@@ -272,10 +273,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::LSRD_hmi.Properties.Resources.Eng_logo_blue;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 5);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(28, 23);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(265, 119);
+            this.pictureBox3.Size = new System.Drawing.Size(269, 116);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
@@ -286,21 +287,21 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(755, 304);
+            this.label4.Location = new System.Drawing.Point(741, 353);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(283, 97);
+            this.label4.Size = new System.Drawing.Size(212, 64);
             this.label4.TabIndex = 21;
             this.label4.Text = "In Collaboration\r\nWith CFRE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LSRD_hmi.Properties.Resources.home_background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1024, 601);
+            this.ClientSize = new System.Drawing.Size(1024, 600);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -320,9 +321,8 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(1024, 601);
-            this.MinimumSize = new System.Drawing.Size(1024, 601);
+            this.MaximumSize = new System.Drawing.Size(1024, 600);
+            this.MinimumSize = new System.Drawing.Size(1024, 600);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

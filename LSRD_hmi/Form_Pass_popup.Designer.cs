@@ -41,20 +41,21 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(87, 25);
+            this.label1.Location = new System.Drawing.Point(11, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 50);
+            this.label1.Size = new System.Drawing.Size(437, 56);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Please enter password to\r\naccess staff settings";
+            this.label1.Text = "Please enter password to access\r\n staff settings";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 106);
+            this.label2.Location = new System.Drawing.Point(98, 114);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 1;
@@ -63,11 +64,12 @@
             // text_entry_pass
             // 
             this.text_entry_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_entry_pass.Location = new System.Drawing.Point(166, 106);
+            this.text_entry_pass.Location = new System.Drawing.Point(213, 114);
+            this.text_entry_pass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.text_entry_pass.MaxLength = 6;
             this.text_entry_pass.Name = "text_entry_pass";
             this.text_entry_pass.PasswordChar = '*';
-            this.text_entry_pass.Size = new System.Drawing.Size(186, 30);
+            this.text_entry_pass.Size = new System.Drawing.Size(140, 30);
             this.text_entry_pass.TabIndex = 2;
             this.text_entry_pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form_Pass_popup_KeyPress);
             // 
@@ -76,7 +78,8 @@
             this.text_wrong_pass.AutoSize = true;
             this.text_wrong_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_wrong_pass.ForeColor = System.Drawing.Color.Red;
-            this.text_wrong_pass.Location = new System.Drawing.Point(107, 142);
+            this.text_wrong_pass.Location = new System.Drawing.Point(105, 162);
+            this.text_wrong_pass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.text_wrong_pass.Name = "text_wrong_pass";
             this.text_wrong_pass.Size = new System.Drawing.Size(245, 20);
             this.text_wrong_pass.TabIndex = 14;
@@ -88,7 +91,8 @@
             // 
             this.PB_confirm_pass.BackColor = System.Drawing.Color.Transparent;
             this.PB_confirm_pass.Image = ((System.Drawing.Image)(resources.GetObject("PB_confirm_pass.Image")));
-            this.PB_confirm_pass.Location = new System.Drawing.Point(223, 175);
+            this.PB_confirm_pass.Location = new System.Drawing.Point(249, 204);
+            this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(2);
             this.PB_confirm_pass.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_confirm_pass.MinimumSize = new System.Drawing.Size(130, 60);
             this.PB_confirm_pass.Name = "PB_confirm_pass";
@@ -102,7 +106,8 @@
             // 
             this.PB_Back_To_Home.BackColor = System.Drawing.Color.Transparent;
             this.PB_Back_To_Home.Image = ((System.Drawing.Image)(resources.GetObject("PB_Back_To_Home.Image")));
-            this.PB_Back_To_Home.Location = new System.Drawing.Point(40, 175);
+            this.PB_Back_To_Home.Location = new System.Drawing.Point(74, 204);
+            this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Back_To_Home.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_Back_To_Home.MinimumSize = new System.Drawing.Size(130, 60);
             this.PB_Back_To_Home.Name = "PB_Back_To_Home";
@@ -114,9 +119,9 @@
             // 
             // Form_Pass_popup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 275);
+            this.ClientSize = new System.Drawing.Size(459, 300);
             this.Controls.Add(this.text_wrong_pass);
             this.Controls.Add(this.PB_confirm_pass);
             this.Controls.Add(this.PB_Back_To_Home);
@@ -124,10 +129,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(400, 275);
+            this.MaximumSize = new System.Drawing.Size(500, 300);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(400, 275);
+            this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "Form_Pass_popup";
             this.ShowIcon = false;
             this.Text = "Settings Popup";

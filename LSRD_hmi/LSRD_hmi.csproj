@@ -532,5 +532,23 @@
   <ItemGroup>
     <None Include="Resources\PB door highlight1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title text GOLD fish machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title text CFREGOLD fish machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colored_LogoBright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colored_LogoBright1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title text LSRDGOLD fish machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slideshow_texture_white2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -58,7 +58,7 @@ namespace LSRD_hmi
 
             //set room desc position
             lbl_room_info_back.Location = new Point(Scrollable_Events_Box.Location.X, Scrollable_Events_Box.Location.Y);
-            lbl_room_info.Location = new Point(Scrollable_Events_Box.Location.X+((Scrollable_Events_Box.Width-lbl_room_info.Width)/2), 155);
+            lbl_room_info.Location = new Point(Scrollable_Events_Box.Location.X+((Scrollable_Events_Box.Width-lbl_room_info.Width)/2), 170);
             button_events_Click(this , new EventArgs());
 
 
