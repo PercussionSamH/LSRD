@@ -40,6 +40,10 @@ namespace LSRD_hmi
         public static bool enabled_drawing = true;
         public static bool enabled_scavenger = true;
 
+        //login
+        public static bool login_menu_open = false;
+        public bool login = false;
+
         public static bool wave_scheduled = false;
         public static int wave_t_start = 0;
         public static int wave_t_end = 0;
@@ -87,6 +91,11 @@ namespace LSRD_hmi
             PB_Quit_Program.Visible = DEBUG_MODE;
             test_textbox.Visible = DEBUG_MODE;
 
+
+
+            login_panel.Visible = false; //Show popup
+            login_panel.Location = new Point(282, 150);
+
             try
             {
                 System.Diagnostics.Debug.WriteLine("Connecting to " + PLC_IP + " on port " + port);
@@ -114,7 +123,21 @@ namespace LSRD_hmi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
+            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
+            SizeF scale = new SizeF(widthRatio, heightRatio);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)
+            {
+                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio/2);
+            }
+            foreach (Control ctrl in login_panel.Controls)
+            {
+                // Access existing size
+                float currentSize = ctrl.Font.Size;
+                // Set new size (e.g., 12pt)
+                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 2);
+            }
         }
 
 
@@ -343,20 +366,46 @@ namespace LSRD_hmi
 
         private void PB_staff_controls_Click(object sender, EventArgs e)
         {
-
-            Form_Pass_popup form_Settings_Popup = new Form_Pass_popup();
-            form_Settings_Popup.ShowDialog();
+            //old popup system
+            //Form_Pass_popup form_Settings_Popup = new Form_Pass_popup();
+            //form_Settings_Popup.ShowDialog();
             
-            //grab login bool from popup form
-            if (form_Settings_Popup.login == true)
+            login_panel.Visible = true; //Show popup
+            login_menu_open = true; //disable other buttons underneath
+            text_entry_pass.Focus();
+            //Initializations
+            login = false;
+            text_wrong_pass.Visible = false;
+            text_entry_pass.Text = string.Empty;
+
+        }
+
+
+        private void PB_Back_To_Home_Click(object sender, EventArgs e)
+        {
+            login_panel.Visible=false;
+            text_wrong_pass.Visible = false;
+            login_menu_open = false;
+        }
+
+        public void PB_confirm_pass_Click(object sender, EventArgs e)
+        {
+            login_check();
+        }
+
+        public void login_check()
+        {
+            if (text_entry_pass.Text == "lsrd")
             {
+                login_panel.Visible = false;
+                text_entry_pass.Text = string.Empty;
                 Form_Settings form_Settings = new Form_Settings();
                 form_Settings.ShowDialog();
 
                 //get vars from menu
                 enabled_doorman = form_Settings.enabled_doorman;
                 enabled_drawing = form_Settings.enabled_drawing;
-                enabled_scavenger  = form_Settings.enabled_scavenger;
+                enabled_scavenger = form_Settings.enabled_scavenger;
 
                 wave_t_start = form_Settings.wave_time_start;
                 wave_t_end = form_Settings.wave_time_end;
@@ -369,10 +418,22 @@ namespace LSRD_hmi
                 PB_drawing_mode.Image = (enabled_drawing) ? LSRD_hmi.Properties.Resources.PB_gray_Drawing_demo : LSRD_hmi.Properties.Resources.PB_disabled_drawing;
                 PB_scavenger_mode.Image = (enabled_scavenger) ? LSRD_hmi.Properties.Resources.PB_gray_Scavenger_hunt : LSRD_hmi.Properties.Resources.PB_disabled_scavenger;
                 form_Settings = null;
+
                 
             }
+            else
+            {
+                text_wrong_pass.Visible = true;
+            }
+        }
 
-            form_Settings_Popup = null;
+        private void Pass_popup_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                login_check();
+            }
         }
 
         private void PB_scavenger_mode_Click(object sender, EventArgs e)

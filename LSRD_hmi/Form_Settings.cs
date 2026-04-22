@@ -62,7 +62,6 @@ namespace LSRD_hmi
             Toggle_doorman.Image = (enabled_doorman) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
             Toggle_drawing.Image = (enabled_drawing) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
             Toggle_scavenger.Image = (enabled_scavenger) ? LSRD_hmi.Properties.Resources.toggle_on : LSRD_hmi.Properties.Resources.toggle_off;
-            
 
         }
 
@@ -216,6 +215,40 @@ namespace LSRD_hmi
                 text_scheduled_length.Text = duration.ToString();
                 wave_duration = duration;
             }
+
+
+        }
+
+        private void Form_Settings_Load(object sender, EventArgs e)
+        {
+            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
+            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
+            SizeF scale = new SizeF(widthRatio, heightRatio);
+            this.Scale(scale);
+            foreach (Control ctrl in panel1.Controls)
+            {
+                 // Access existing size
+                 float currentSize = ctrl.Font.Size;
+                 // Set new size (e.g., 12pt)
+                 ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 2);
+
+            }
+            foreach (Control ctrl in panel2.Controls)
+            {
+                // Access existing size
+                float currentSize = ctrl.Font.Size;
+                // Set new size (e.g., 12pt)
+                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 2);
+            }
+            foreach (Control ctrl in panel3.Controls)
+            {
+                // Access existing size
+                float currentSize = ctrl.Font.Size;
+                // Set new size (e.g., 12pt)
+                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 2);
+            }
+
+
 
 
         }

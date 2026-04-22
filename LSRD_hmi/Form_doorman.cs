@@ -67,7 +67,14 @@ namespace LSRD_hmi
     
         private void Form_doorman_Load(object sender, EventArgs e)
         {
-
+            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
+            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
+            SizeF scale = new SizeF(widthRatio, heightRatio);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)
+            {
+                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio / 2);
+            }
         }
 
         private void PB_Back_To_Home_Click(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace LSRD_hmi
         {
             //Initializations
             //this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
-            this.WindowState = FormWindowState.Maximized;            
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
 
             //Using a dictionary mostly to keep the code legible for long blocks of text
@@ -38,7 +38,7 @@ namespace LSRD_hmi
             D_fish_tag.Add("Sea Lamprey", "An ancient invader");
             D_fish_tag.Add("Zoo Plankton", "Tiny drifters with a big role");
             D_fish_tag.Add("Mayfly Nymph", "A sign of clean water");
-  
+
             D_fish_desc.Add("Lake Sturgeon", "Lake sturgeon can live for more than 100 years.");
             D_fish_desc.Add("Atlantic Salmon", "Originally from the Atlantic coast, the Atlantic salmon are now a popular Great Lakes sport fish.");
             D_fish_desc.Add("Sea Lamprey", "This jawless fish attaches to other fish with a suction-cup mouth and feeds on them.");
@@ -55,15 +55,24 @@ namespace LSRD_hmi
             //Load initial fish image, text and descs
             Fish_preview_picture.Image = fish_pictures[fish_selection];
             Label_Fish_Type_Text.Text = fish_names[fish_selection];
+            
             Fish_tagline.Text = D_fish_tag[fish_names[fish_selection]];
             Fish_desc.Text = D_fish_desc[fish_names[fish_selection]];
             Fish_desc2.Text = D_fish_desc2[fish_names[fish_selection]];
-
+            Fish_desc2.Location = new Point(Fish_desc2.Location.X, Fish_desc.Location.Y + Fish_desc.Size.Height + margin);
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
+            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
+            SizeF scale = new SizeF(widthRatio, heightRatio);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)
+            {
+                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio/2);
+            }
+            Fish_tagline.Font = new Font(Fish_tagline.Font, FontStyle.Italic);
         }
 
   
