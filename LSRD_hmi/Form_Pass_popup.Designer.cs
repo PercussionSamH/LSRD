@@ -67,7 +67,7 @@
             // 
             this.text_entry_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_entry_pass.Location = new System.Drawing.Point(210, 110);
-            this.text_entry_pass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.text_entry_pass.Margin = new System.Windows.Forms.Padding(2);
             this.text_entry_pass.MaxLength = 6;
             this.text_entry_pass.Name = "text_entry_pass";
             this.text_entry_pass.PasswordChar = '*';
@@ -94,7 +94,7 @@
             this.PB_confirm_pass.BackColor = System.Drawing.Color.Transparent;
             this.PB_confirm_pass.Image = ((System.Drawing.Image)(resources.GetObject("PB_confirm_pass.Image")));
             this.PB_confirm_pass.Location = new System.Drawing.Point(246, 200);
-            this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(2);
             this.PB_confirm_pass.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_confirm_pass.MinimumSize = new System.Drawing.Size(130, 60);
             this.PB_confirm_pass.Name = "PB_confirm_pass";
@@ -109,7 +109,7 @@
             this.PB_Back_To_Home.BackColor = System.Drawing.Color.Transparent;
             this.PB_Back_To_Home.Image = ((System.Drawing.Image)(resources.GetObject("PB_Back_To_Home.Image")));
             this.PB_Back_To_Home.Location = new System.Drawing.Point(71, 200);
-            this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Back_To_Home.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_Back_To_Home.MinimumSize = new System.Drawing.Size(130, 60);
             this.PB_Back_To_Home.Name = "PB_Back_To_Home";
@@ -134,12 +134,11 @@
             // 
             // Form_Pass_popup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(460, 300);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(500, 300);
             this.MinimizeBox = false;

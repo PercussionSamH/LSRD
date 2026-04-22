@@ -63,6 +63,7 @@ namespace LSRD_hmi
         public static bool demo_active_scavenger = false;
         public static bool demo_active_wave = false;
         //Process bits
+
         //Cancel
         public static bool cancel_active_demo = false; //[TODO:] hold this to true until robot at home, then set idle
         //user confirm
@@ -85,14 +86,19 @@ namespace LSRD_hmi
             this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
             this.WindowState = FormWindowState.Maximized;
 
-            //debug stuff
+            // -------- DEBUG VISIBILITY --------
             debug_wave_active.Visible = DEBUG_MODE;
             debug_wave_scheduled.Visible = DEBUG_MODE;
             PB_Quit_Program.Visible = DEBUG_MODE;
             test_textbox.Visible = DEBUG_MODE;
+            label_resolution.Visible = DEBUG_MODE;
+            label_scaling.Visible = DEBUG_MODE;
+            label_formsize.Visible = DEBUG_MODE;
+            label_formsize2.Visible = DEBUG_MODE;
+            label_formsize3.Visible = DEBUG_MODE;
+            //-------------------------------------
 
-
-
+            //Login "popup" screen
             login_panel.Visible = false; //Show popup
             login_panel.Location = new Point(282, 150);
 
@@ -129,7 +135,7 @@ namespace LSRD_hmi
             this.Scale(scale);
             foreach (Control control in this.Controls)
             {
-                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio/2);
+                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio / 2);
             }
             foreach (Control ctrl in login_panel.Controls)
             {
@@ -138,6 +144,31 @@ namespace LSRD_hmi
                 // Set new size (e.g., 12pt)
                 ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 2);
             }
+
+            //Debug screen resolutions
+            try{ label_resolution.Text = "Screen bounds detected: " + Screen.PrimaryScreen.Bounds.Width + "," + Screen.PrimaryScreen.Bounds.Height;}
+            catch { }
+
+            
+
+            try { label_formsize2.Text = "Form preferredSize:" + Form.ActiveForm.PreferredSize; }
+            catch { }
+
+            try { label_formsize3.Text = "Form size: " + Form.ActiveForm.Width + "," + Form.ActiveForm.Height; }
+            catch { }
+
+            try { label_formsize.Text = "Form ClientSize is currently:" + Form.ActiveForm.ClientSize.Width + "," + Form.ActiveForm.ClientSize.Height + "\n"; }
+            catch { }
+
+            try { label_scaling.Text = "Scaling = " + scale; }
+            catch { }
+
+            // I HAVE FINALLY TRACKED DOWN THE SCALING ISSUE
+            // the forms must be set to AutoScaleMode = None
+            // for some reason it by default will set this to Font as the scaling method
+            // it will literally scale the whole diplay, form width and height, picture size, and anything else by whatever the current font size is for Form.Font
+            
+            // 
         }
 
 
@@ -318,7 +349,7 @@ namespace LSRD_hmi
                                 }
                                 
                             }         
-                            if (DEBUG_MODE) System.Diagnostics.Debug.WriteLine("event found with name: " + title);
+                            //if (DEBUG_MODE) System.Diagnostics.Debug.WriteLine("event found with name: " + title);
 
                             Event_strings.Add(title + "\n\r" + description);
                             i++;
