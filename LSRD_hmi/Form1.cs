@@ -24,7 +24,7 @@ namespace LSRD_hmi
 
     public partial class Form1 : Form
     {
-        // ----Debug---- 
+        // -----Debug----- 
         public static bool DEBUG_MODE = false; //turn on to enable debug mode
 
         //IP address
@@ -35,12 +35,12 @@ namespace LSRD_hmi
         bool[] QX_Coils; //QX0.0 - QX...
         int QX_length = 100; //total # of vars
 
-        //settings
+        //Settings
         public static bool enabled_doorman = true;
         public static bool enabled_drawing = true;
         public static bool enabled_scavenger = true;
 
-        //login
+        //Login
         public static bool login_menu_open = false;
         public bool login = false;
 
@@ -62,11 +62,13 @@ namespace LSRD_hmi
         public static bool demo_active_doorman = false;
         public static bool demo_active_scavenger = false;
         public static bool demo_active_wave = false;
+        
         //Process bits
 
         //Cancel
         public static bool cancel_active_demo = false; //[TODO:] hold this to true until robot at home, then set idle
-        //user confirm
+       
+        //User confirm
         public static bool drawing_paper_in_place = false;
         public static bool door_next_step = false;
         //Selections
@@ -104,10 +106,10 @@ namespace LSRD_hmi
 
             try
             {
-                System.Diagnostics.Debug.WriteLine("Connecting to " + PLC_IP + " on port " + port);
+                System.Diagnostics.Debug.WriteLine("\nConnecting to " + PLC_IP + " on port " + port);
                 modbusClient.Connect();
 
-                System.Diagnostics.Debug.WriteLine("Connected!");
+                System.Diagnostics.Debug.WriteLine("Connected!!\n");
 
                 //start timer for push/pull sync
                 timer_Modbus_Com.Enabled = true;
@@ -120,7 +122,7 @@ namespace LSRD_hmi
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Connection to " + PLC_IP + " on port " + port + " failed...");
+                System.Diagnostics.Debug.WriteLine("\nConnection to " + PLC_IP + " on port " + port + " failed...");
                 System.Diagnostics.Debug.WriteLine("ERROR: ", ex.Message);
                 //throw;
             }
@@ -135,40 +137,39 @@ namespace LSRD_hmi
             this.Scale(scale);
             foreach (Control control in this.Controls)
             {
-                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio / 2);
+                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
             }
             foreach (Control ctrl in login_panel.Controls)
             {
                 // Access existing size
                 float currentSize = ctrl.Font.Size;
                 // Set new size (e.g., 12pt)
-                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 2);
+                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio);
             }
 
             //Debug screen resolutions
-            try{ label_resolution.Text = "Screen bounds detected: " + Screen.PrimaryScreen.Bounds.Width + "," + Screen.PrimaryScreen.Bounds.Height;}
-            catch { }
+            if (DEBUG_MODE)
+            {
+                try { label_resolution.Text = "Screen bounds detected: " + Screen.PrimaryScreen.Bounds.Width + "," + Screen.PrimaryScreen.Bounds.Height; }
+                catch { }
 
-            
+                try { label_formsize2.Text = "Form preferredSize:" + Form.ActiveForm.PreferredSize; }
+                catch { }
 
-            try { label_formsize2.Text = "Form preferredSize:" + Form.ActiveForm.PreferredSize; }
-            catch { }
+                try { label_formsize3.Text = "Form size: " + Form.ActiveForm.Width + "," + Form.ActiveForm.Height; }
+                catch { }
 
-            try { label_formsize3.Text = "Form size: " + Form.ActiveForm.Width + "," + Form.ActiveForm.Height; }
-            catch { }
+                try { label_formsize.Text = "Form ClientSize is currently:" + Form.ActiveForm.ClientSize.Width + "," + Form.ActiveForm.ClientSize.Height + "\n"; }
+                catch { }
 
-            try { label_formsize.Text = "Form ClientSize is currently:" + Form.ActiveForm.ClientSize.Width + "," + Form.ActiveForm.ClientSize.Height + "\n"; }
-            catch { }
-
-            try { label_scaling.Text = "Scaling = " + scale; }
-            catch { }
-
-            // I HAVE FINALLY TRACKED DOWN THE SCALING ISSUE
+                try { label_scaling.Text = "Scaling = " + scale; }
+                catch { }
+            }    
+            // I HAVE FINALLY TRACKED DOWN THE SCALING ISSUE FOR FORMS
             // the forms must be set to AutoScaleMode = None
             // for some reason it by default will set this to Font as the scaling method
             // it will literally scale the whole diplay, form width and height, picture size, and anything else by whatever the current font size is for Form.Font
             
-            // 
         }
 
 
@@ -177,7 +178,7 @@ namespace LSRD_hmi
         private void timer_Modbus_Com_Tick(object sender, EventArgs e)
         {
             timer_Modbus_Com.Enabled = false; //prevents multiple timer signals per read
-
+            modbusClient.ConnectionTimeout = 5000;
             //Fetch all inputs
             QX_Coils = modbusClient.ReadCoils(0, QX_length);
 
@@ -282,7 +283,6 @@ namespace LSRD_hmi
         }
 
 
-
         private async void Get_Calendar_Events()
         {
             try
@@ -304,7 +304,7 @@ namespace LSRD_hmi
                         CancellationToken.None,
                         new FileDataStore("token.json", true));
                 }
-                System.Diagnostics.Debug.WriteLine("Credentials found");
+                System.Diagnostics.Debug.WriteLine("Credentials found\n");
                 var service = new CalendarService(new BaseClientService.Initializer()
                 {
                     HttpClientInitializer = credential,

@@ -70,7 +70,7 @@ namespace LSRD_hmi
             this.Scale(scale);
             foreach (Control control in this.Controls)
             {
-                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio/2);
+                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
             }
             Fish_tagline.Font = new Font(Fish_tagline.Font, FontStyle.Italic);
         }
@@ -95,7 +95,6 @@ namespace LSRD_hmi
             Fish_desc.Text = D_fish_desc[fish_names[fish_selection]];
             Fish_desc2.Location = new Point(Fish_desc2.Location.X, Fish_desc.Location.Y + Fish_desc.Size.Height + margin);
             Fish_desc2.Text = D_fish_desc2[fish_names[fish_selection]];
-
         }
 
         private void PB_fish_select_left_Click(object sender, EventArgs e)

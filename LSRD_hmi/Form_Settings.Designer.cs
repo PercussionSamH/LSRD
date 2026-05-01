@@ -197,7 +197,7 @@
             this.start_t_hr.Margin = new System.Windows.Forms.Padding(2);
             this.start_t_hr.MaxLength = 2;
             this.start_t_hr.Name = "start_t_hr";
-            this.start_t_hr.Size = new System.Drawing.Size(43, 37);
+            this.start_t_hr.Size = new System.Drawing.Size(43, 45);
             this.start_t_hr.TabIndex = 20;
             this.start_t_hr.Text = "00";
             this.start_t_hr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -209,11 +209,11 @@
             // 
             this.PB_schedule_wave.BackColor = System.Drawing.Color.Transparent;
             this.PB_schedule_wave.Image = global::LSRD_hmi.Properties.Resources.PB_wave_demo1;
-            this.PB_schedule_wave.Location = new System.Drawing.Point(159, 335);
+            this.PB_schedule_wave.Location = new System.Drawing.Point(147, 334);
             this.PB_schedule_wave.Margin = new System.Windows.Forms.Padding(2);
             this.PB_schedule_wave.MaximumSize = new System.Drawing.Size(160, 90);
             this.PB_schedule_wave.Name = "PB_schedule_wave";
-            this.PB_schedule_wave.Size = new System.Drawing.Size(133, 68);
+            this.PB_schedule_wave.Size = new System.Drawing.Size(160, 75);
             this.PB_schedule_wave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_schedule_wave.TabIndex = 24;
             this.PB_schedule_wave.TabStop = false;
@@ -255,7 +255,7 @@
             this.text_clock.MaxLength = 2;
             this.text_clock.Name = "text_clock";
             this.text_clock.ReadOnly = true;
-            this.text_clock.Size = new System.Drawing.Size(251, 37);
+            this.text_clock.Size = new System.Drawing.Size(251, 45);
             this.text_clock.TabIndex = 27;
             this.text_clock.Text = "00:00:00 PM";
             this.text_clock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -274,7 +274,7 @@
             this.label8.Location = new System.Drawing.Point(281, 176);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 20);
+            this.label8.Size = new System.Drawing.Size(114, 25);
             this.label8.TabIndex = 30;
             this.label8.Text = "(in minutes)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,7 +301,7 @@
             this.text_scheduled_time.MaxLength = 5;
             this.text_scheduled_time.Name = "text_scheduled_time";
             this.text_scheduled_time.ReadOnly = true;
-            this.text_scheduled_time.Size = new System.Drawing.Size(136, 32);
+            this.text_scheduled_time.Size = new System.Drawing.Size(136, 38);
             this.text_scheduled_time.TabIndex = 32;
             this.text_scheduled_time.Text = "00:00 AM";
             this.text_scheduled_time.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -317,7 +317,7 @@
             0,
             0});
             this.t_duration.Name = "t_duration";
-            this.t_duration.Size = new System.Drawing.Size(107, 37);
+            this.t_duration.Size = new System.Drawing.Size(107, 45);
             this.t_duration.TabIndex = 34;
             this.t_duration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.t_duration.Value = new decimal(new int[] {
@@ -334,7 +334,7 @@
             this.start_t_min.Margin = new System.Windows.Forms.Padding(2);
             this.start_t_min.MaxLength = 2;
             this.start_t_min.Name = "start_t_min";
-            this.start_t_min.Size = new System.Drawing.Size(43, 37);
+            this.start_t_min.Size = new System.Drawing.Size(43, 45);
             this.start_t_min.TabIndex = 35;
             this.start_t_min.Text = "00";
             this.start_t_min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -352,7 +352,7 @@
             this.textBox1.MaxLength = 1;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(16, 30);
+            this.textBox1.Size = new System.Drawing.Size(16, 38);
             this.textBox1.TabIndex = 36;
             this.textBox1.Text = ":";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -369,7 +369,7 @@
             this.start_t_PM.Margin = new System.Windows.Forms.Padding(2);
             this.start_t_PM.MaxLength = 2;
             this.start_t_PM.Name = "start_t_PM";
-            this.start_t_PM.Size = new System.Drawing.Size(83, 37);
+            this.start_t_PM.Size = new System.Drawing.Size(83, 44);
             this.start_t_PM.TabIndex = 37;
             this.start_t_PM.Text = "AM";
             this.start_t_PM.Leave += new System.EventHandler(this.start_time_AM_PM_unfocused);
@@ -383,7 +383,7 @@
             this.text_scheduled_length.MaxLength = 5;
             this.text_scheduled_length.Name = "text_scheduled_length";
             this.text_scheduled_length.ReadOnly = true;
-            this.text_scheduled_length.Size = new System.Drawing.Size(128, 32);
+            this.text_scheduled_length.Size = new System.Drawing.Size(128, 38);
             this.text_scheduled_length.TabIndex = 39;
             this.text_scheduled_length.Text = "44 min";
             this.text_scheduled_length.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

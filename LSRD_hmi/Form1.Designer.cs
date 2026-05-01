@@ -99,7 +99,7 @@
             this.Picture_LSRD_Logo.BackColor = System.Drawing.Color.Transparent;
             this.Picture_LSRD_Logo.Image = global::LSRD_hmi.Properties.Resources.colored_LogoBright1;
             this.Picture_LSRD_Logo.Location = new System.Drawing.Point(108, 185);
-            this.Picture_LSRD_Logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Picture_LSRD_Logo.Margin = new System.Windows.Forms.Padding(2);
             this.Picture_LSRD_Logo.Name = "Picture_LSRD_Logo";
             this.Picture_LSRD_Logo.Size = new System.Drawing.Size(180, 167);
             this.Picture_LSRD_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +111,7 @@
             this.PB_doorman_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_doorman_mode.Image = global::LSRD_hmi.Properties.Resources.PB_gray_doorman_demo;
             this.PB_doorman_mode.Location = new System.Drawing.Point(129, 430);
-            this.PB_doorman_mode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_doorman_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_doorman_mode.Name = "PB_doorman_mode";
             this.PB_doorman_mode.Size = new System.Drawing.Size(208, 105);
             this.PB_doorman_mode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +124,7 @@
             this.PB_drawing_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_drawing_mode.Image = global::LSRD_hmi.Properties.Resources.PB_gray_Drawing_demo;
             this.PB_drawing_mode.Location = new System.Drawing.Point(408, 430);
-            this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_drawing_mode.Name = "PB_drawing_mode";
             this.PB_drawing_mode.Size = new System.Drawing.Size(208, 105);
             this.PB_drawing_mode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,7 +137,7 @@
             this.PB_scavenger_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_scavenger_mode.Image = ((System.Drawing.Image)(resources.GetObject("PB_scavenger_mode.Image")));
             this.PB_scavenger_mode.Location = new System.Drawing.Point(695, 430);
-            this.PB_scavenger_mode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_scavenger_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_scavenger_mode.Name = "PB_scavenger_mode";
             this.PB_scavenger_mode.Size = new System.Drawing.Size(208, 105);
             this.PB_scavenger_mode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +150,7 @@
             this.Picturebox_logo.BackColor = System.Drawing.Color.Transparent;
             this.Picturebox_logo.Image = global::LSRD_hmi.Properties.Resources.Title_text_CFREGOLD_fish_machine;
             this.Picturebox_logo.Location = new System.Drawing.Point(312, 52);
-            this.Picturebox_logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Picturebox_logo.Margin = new System.Windows.Forms.Padding(2);
             this.Picturebox_logo.MinimumSize = new System.Drawing.Size(208, 102);
             this.Picturebox_logo.Name = "Picturebox_logo";
             this.Picturebox_logo.Size = new System.Drawing.Size(401, 175);
@@ -163,7 +163,7 @@
             this.PB_staff_controls.BackColor = System.Drawing.Color.Transparent;
             this.PB_staff_controls.Image = ((System.Drawing.Image)(resources.GetObject("PB_staff_controls.Image")));
             this.PB_staff_controls.Location = new System.Drawing.Point(749, 38);
-            this.PB_staff_controls.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_staff_controls.Margin = new System.Windows.Forms.Padding(2);
             this.PB_staff_controls.Name = "PB_staff_controls";
             this.PB_staff_controls.Size = new System.Drawing.Size(208, 105);
             this.PB_staff_controls.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,7 +176,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.atlanticsalmon;
             this.pictureBox1.Location = new System.Drawing.Point(362, 229);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,7 +238,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LSRD_hmi.Properties.Resources.cfre_logo_circle_notext_fix1;
             this.pictureBox2.Location = new System.Drawing.Point(763, 202);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(180, 132);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -250,7 +250,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::LSRD_hmi.Properties.Resources.Eng_logo_blue;
             this.pictureBox3.Location = new System.Drawing.Point(36, 36);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(246, 97);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,7 +263,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(747, 340);
+            this.label4.Location = new System.Drawing.Point(774, 340);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(212, 64);
@@ -313,7 +313,7 @@
             this.PB_confirm_pass.BackColor = System.Drawing.Color.Transparent;
             this.PB_confirm_pass.Image = ((System.Drawing.Image)(resources.GetObject("PB_confirm_pass.Image")));
             this.PB_confirm_pass.Location = new System.Drawing.Point(246, 205);
-            this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(2);
             this.PB_confirm_pass.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_confirm_pass.MinimumSize = new System.Drawing.Size(130, 60);
             this.PB_confirm_pass.Name = "PB_confirm_pass";
@@ -328,7 +328,7 @@
             this.PB_Back_To_Home.BackColor = System.Drawing.Color.Transparent;
             this.PB_Back_To_Home.Image = ((System.Drawing.Image)(resources.GetObject("PB_Back_To_Home.Image")));
             this.PB_Back_To_Home.Location = new System.Drawing.Point(71, 205);
-            this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Back_To_Home.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_Back_To_Home.MinimumSize = new System.Drawing.Size(130, 60);
             this.PB_Back_To_Home.Name = "PB_Back_To_Home";
@@ -342,7 +342,7 @@
             // 
             this.text_entry_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_entry_pass.Location = new System.Drawing.Point(237, 107);
-            this.text_entry_pass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.text_entry_pass.Margin = new System.Windows.Forms.Padding(2);
             this.text_entry_pass.MaxLength = 6;
             this.text_entry_pass.Name = "text_entry_pass";
             this.text_entry_pass.PasswordChar = '*';
@@ -437,7 +437,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::LSRD_hmi.Properties.Resources.home_background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(970, 600);
+            this.ClientSize = new System.Drawing.Size(1024, 600);
             this.Controls.Add(this.label_formsize3);
             this.Controls.Add(this.label_formsize2);
             this.Controls.Add(this.label_formsize);
@@ -465,7 +465,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1024, 600);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(959, 600);
+            this.MinimumSize = new System.Drawing.Size(1024, 600);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

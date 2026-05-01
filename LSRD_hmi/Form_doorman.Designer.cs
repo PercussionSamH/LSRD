@@ -92,7 +92,7 @@
             this.PB_area_work_cafe.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_work_cafe.Image = ((System.Drawing.Image)(resources.GetObject("PB_area_work_cafe.Image")));
             this.PB_area_work_cafe.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_work_cafe.InitialImage")));
-            this.PB_area_work_cafe.Location = new System.Drawing.Point(117, 208);
+            this.PB_area_work_cafe.Location = new System.Drawing.Point(117, 222);
             this.PB_area_work_cafe.Margin = new System.Windows.Forms.Padding(2);
             this.PB_area_work_cafe.Name = "PB_area_work_cafe";
             this.PB_area_work_cafe.Size = new System.Drawing.Size(180, 92);
@@ -106,7 +106,7 @@
             this.PB_area_seminar_room.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_seminar_room.Image = ((System.Drawing.Image)(resources.GetObject("PB_area_seminar_room.Image")));
             this.PB_area_seminar_room.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_seminar_room.InitialImage")));
-            this.PB_area_seminar_room.Location = new System.Drawing.Point(330, 208);
+            this.PB_area_seminar_room.Location = new System.Drawing.Point(333, 222);
             this.PB_area_seminar_room.Margin = new System.Windows.Forms.Padding(2);
             this.PB_area_seminar_room.Name = "PB_area_seminar_room";
             this.PB_area_seminar_room.Size = new System.Drawing.Size(180, 92);
@@ -120,7 +120,7 @@
             this.PB_area_discovery_lab.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_discovery_lab.Image = ((System.Drawing.Image)(resources.GetObject("PB_area_discovery_lab.Image")));
             this.PB_area_discovery_lab.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_discovery_lab.InitialImage")));
-            this.PB_area_discovery_lab.Location = new System.Drawing.Point(117, 327);
+            this.PB_area_discovery_lab.Location = new System.Drawing.Point(117, 349);
             this.PB_area_discovery_lab.Margin = new System.Windows.Forms.Padding(2);
             this.PB_area_discovery_lab.Name = "PB_area_discovery_lab";
             this.PB_area_discovery_lab.Size = new System.Drawing.Size(180, 92);
@@ -134,7 +134,7 @@
             this.PB_area_partner_suites.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_partner_suites.Image = global::LSRD_hmi.Properties.Resources.PB_square_door_partner_suites_singleLine;
             this.PB_area_partner_suites.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_partner_suites.InitialImage")));
-            this.PB_area_partner_suites.Location = new System.Drawing.Point(330, 327);
+            this.PB_area_partner_suites.Location = new System.Drawing.Point(333, 349);
             this.PB_area_partner_suites.Margin = new System.Windows.Forms.Padding(2);
             this.PB_area_partner_suites.Name = "PB_area_partner_suites";
             this.PB_area_partner_suites.Size = new System.Drawing.Size(180, 92);
@@ -148,7 +148,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(43, 115);
+            this.label1.Location = new System.Drawing.Point(43, 122);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(547, 70);
@@ -182,6 +182,7 @@
             this.PB_get_directions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_get_directions.TabIndex = 39;
             this.PB_get_directions.TabStop = false;
+            this.PB_get_directions.Visible = false;
             this.PB_get_directions.Click += new System.EventHandler(this.PB_get_directions_Click);
             // 
             // lbl_room_info_back
@@ -211,7 +212,7 @@
             // button_events
             // 
             this.button_events.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_events.Location = new System.Drawing.Point(635, 107);
+            this.button_events.Location = new System.Drawing.Point(638, 107);
             this.button_events.Name = "button_events";
             this.button_events.Size = new System.Drawing.Size(179, 52);
             this.button_events.TabIndex = 42;

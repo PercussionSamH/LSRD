@@ -10,6 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+
+
+
+//------------- UNUSED BECUASE POPUP FORMS MAKE THE APPLICATION CRASH ON THE PI -------------------
+
+
+
+
+
 namespace LSRD_hmi
 {
     public partial class Form_Pass_popup : Form

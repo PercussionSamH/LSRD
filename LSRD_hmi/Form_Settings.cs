@@ -230,7 +230,7 @@ namespace LSRD_hmi
                  // Access existing size
                  float currentSize = ctrl.Font.Size;
                  // Set new size (e.g., 12pt)
-                 ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 2);
+                 ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 1);
 
             }
             foreach (Control ctrl in panel2.Controls)
@@ -238,14 +238,14 @@ namespace LSRD_hmi
                 // Access existing size
                 float currentSize = ctrl.Font.Size;
                 // Set new size (e.g., 12pt)
-                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 2);
+                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 1);
             }
             foreach (Control ctrl in panel3.Controls)
             {
                 // Access existing size
                 float currentSize = ctrl.Font.Size;
                 // Set new size (e.g., 12pt)
-                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 2);
+                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio / 1);
             }
 
 

@@ -74,10 +74,10 @@
             // Fish_preview_picture
             // 
             this.Fish_preview_picture.BackColor = System.Drawing.Color.White;
-            this.Fish_preview_picture.Location = new System.Drawing.Point(397, 145);
+            this.Fish_preview_picture.Location = new System.Drawing.Point(397, 153);
             this.Fish_preview_picture.Margin = new System.Windows.Forms.Padding(19, 20, 19, 20);
             this.Fish_preview_picture.Name = "Fish_preview_picture";
-            this.Fish_preview_picture.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Fish_preview_picture.Padding = new System.Windows.Forms.Padding(8);
             this.Fish_preview_picture.Size = new System.Drawing.Size(234, 184);
             this.Fish_preview_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Fish_preview_picture.TabIndex = 3;
@@ -87,8 +87,8 @@
             // 
             this.PB_fish_select_left.BackColor = System.Drawing.Color.Transparent;
             this.PB_fish_select_left.Image = global::LSRD_hmi.Properties.Resources.button_left;
-            this.PB_fish_select_left.Location = new System.Drawing.Point(299, 186);
-            this.PB_fish_select_left.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_fish_select_left.Location = new System.Drawing.Point(299, 194);
+            this.PB_fish_select_left.Margin = new System.Windows.Forms.Padding(2);
             this.PB_fish_select_left.MaximumSize = new System.Drawing.Size(90, 90);
             this.PB_fish_select_left.Name = "PB_fish_select_left";
             this.PB_fish_select_left.Size = new System.Drawing.Size(72, 81);
@@ -101,8 +101,8 @@
             // 
             this.PB_fish_select_right.BackColor = System.Drawing.Color.Transparent;
             this.PB_fish_select_right.Image = global::LSRD_hmi.Properties.Resources.button_right;
-            this.PB_fish_select_right.Location = new System.Drawing.Point(657, 186);
-            this.PB_fish_select_right.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_fish_select_right.Location = new System.Drawing.Point(657, 194);
+            this.PB_fish_select_right.Margin = new System.Windows.Forms.Padding(2);
             this.PB_fish_select_right.MaximumSize = new System.Drawing.Size(90, 90);
             this.PB_fish_select_right.Name = "PB_fish_select_right";
             this.PB_fish_select_right.Size = new System.Drawing.Size(72, 81);
@@ -115,8 +115,8 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.Frame_250_180;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 125);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(380, 133);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(273, 227);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -128,7 +128,7 @@
             this.PB_Back_To_Home.BackColor = System.Drawing.Color.Transparent;
             this.PB_Back_To_Home.Image = global::LSRD_hmi.Properties.Resources.PB_back_wide1;
             this.PB_Back_To_Home.Location = new System.Drawing.Point(61, 44);
-            this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Back_To_Home.Name = "PB_Back_To_Home";
             this.PB_Back_To_Home.Size = new System.Drawing.Size(155, 75);
             this.PB_Back_To_Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,12 +141,13 @@
             this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(453, 420);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.MaxLength = 2;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 44);
+            this.textBox1.Size = new System.Drawing.Size(123, 53);
             this.textBox1.TabIndex = 12;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.Visible = false;
             // 
             // Text_enter_initials_prompt
             // 
@@ -160,16 +161,17 @@
             this.Text_enter_initials_prompt.TabIndex = 13;
             this.Text_enter_initials_prompt.Text = "Enter your initials below:";
             this.Text_enter_initials_prompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Text_enter_initials_prompt.Visible = false;
             // 
             // PB_drawing_mode
             // 
             this.PB_drawing_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_drawing_mode.Image = global::LSRD_hmi.Properties.Resources.PB_square_enter;
-            this.PB_drawing_mode.Location = new System.Drawing.Point(448, 467);
-            this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_drawing_mode.Location = new System.Drawing.Point(448, 421);
+            this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_drawing_mode.MaximumSize = new System.Drawing.Size(160, 80);
             this.PB_drawing_mode.Name = "PB_drawing_mode";
-            this.PB_drawing_mode.Size = new System.Drawing.Size(133, 67);
+            this.PB_drawing_mode.Size = new System.Drawing.Size(160, 80);
             this.PB_drawing_mode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_drawing_mode.TabIndex = 14;
             this.PB_drawing_mode.TabStop = false;
@@ -188,7 +190,7 @@
             this.Fish_desc.MinimumSize = new System.Drawing.Size(210, 0);
             this.Fish_desc.Name = "Fish_desc";
             this.Fish_desc.Padding = new System.Windows.Forms.Padding(6, 6, 6, 15);
-            this.Fish_desc.Size = new System.Drawing.Size(210, 71);
+            this.Fish_desc.Size = new System.Drawing.Size(210, 81);
             this.Fish_desc.TabIndex = 15;
             this.Fish_desc.Text = "{{FISH DESCRIPTION}}";
             // 
@@ -202,7 +204,7 @@
             this.Fish_tagline.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Fish_tagline.MinimumSize = new System.Drawing.Size(150, 0);
             this.Fish_tagline.Name = "Fish_tagline";
-            this.Fish_tagline.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Fish_tagline.Padding = new System.Windows.Forms.Padding(6);
             this.Fish_tagline.Size = new System.Drawing.Size(210, 53);
             this.Fish_tagline.TabIndex = 16;
             this.Fish_tagline.Text = "{{FISH TAGLINE}}";
@@ -215,7 +217,7 @@
             this.label5.Location = new System.Drawing.Point(774, 46);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.label5.Padding = new System.Windows.Forms.Padding(6);
             this.label5.Size = new System.Drawing.Size(222, 50);
             this.label5.TabIndex = 19;
             this.label5.Text = "Fish Facts:";
@@ -243,7 +245,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.MinimumSize = new System.Drawing.Size(75, 8);
             this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.label7.Padding = new System.Windows.Forms.Padding(6);
             this.label7.Size = new System.Drawing.Size(228, 50);
             this.label7.TabIndex = 21;
             this.label7.Text = " Instructions: ";
@@ -261,7 +263,7 @@
             this.Fish_desc2.MinimumSize = new System.Drawing.Size(210, 0);
             this.Fish_desc2.Name = "Fish_desc2";
             this.Fish_desc2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 15);
-            this.Fish_desc2.Size = new System.Drawing.Size(210, 71);
+            this.Fish_desc2.Size = new System.Drawing.Size(210, 110);
             this.Fish_desc2.TabIndex = 22;
             this.Fish_desc2.Text = "{{FISH DESCRIPTION EXTENDED}}";
             // 
@@ -272,7 +274,7 @@
             this.label1.Location = new System.Drawing.Point(290, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.label1.Padding = new System.Windows.Forms.Padding(6);
             this.label1.Size = new System.Drawing.Size(448, 24);
             this.label1.TabIndex = 23;
             this.label1.Text = "Debug";
@@ -305,7 +307,7 @@
             this.Controls.Add(this.PB_fish_select_left);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1024, 600);
             this.MinimizeBox = false;
