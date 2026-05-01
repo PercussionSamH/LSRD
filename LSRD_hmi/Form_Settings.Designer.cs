@@ -359,7 +359,8 @@
             // 
             // start_t_PM
             // 
-            this.start_t_PM.DropDownWidth = 12;
+            this.start_t_PM.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.start_t_PM.DropDownWidth = 70;
             this.start_t_PM.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.start_t_PM.FormattingEnabled = true;
             this.start_t_PM.Items.AddRange(new object[] {
@@ -369,7 +370,7 @@
             this.start_t_PM.Margin = new System.Windows.Forms.Padding(2);
             this.start_t_PM.MaxLength = 2;
             this.start_t_PM.Name = "start_t_PM";
-            this.start_t_PM.Size = new System.Drawing.Size(83, 44);
+            this.start_t_PM.Size = new System.Drawing.Size(91, 44);
             this.start_t_PM.TabIndex = 37;
             this.start_t_PM.Text = "AM";
             this.start_t_PM.Leave += new System.EventHandler(this.start_time_AM_PM_unfocused);

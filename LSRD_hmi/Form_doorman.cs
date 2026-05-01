@@ -73,7 +73,7 @@ namespace LSRD_hmi
             this.Scale(scale);
             foreach (Control control in this.Controls)
             {
-                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio / 2);
+                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio / 1);
             }
         }
 

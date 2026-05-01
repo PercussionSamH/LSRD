@@ -167,7 +167,7 @@
             // 
             this.PB_drawing_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_drawing_mode.Image = global::LSRD_hmi.Properties.Resources.PB_square_enter;
-            this.PB_drawing_mode.Location = new System.Drawing.Point(448, 421);
+            this.PB_drawing_mode.Location = new System.Drawing.Point(434, 421);
             this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_drawing_mode.MaximumSize = new System.Drawing.Size(160, 80);
             this.PB_drawing_mode.Name = "PB_drawing_mode";
@@ -233,8 +233,8 @@
             this.label6.Padding = new System.Windows.Forms.Padding(3, 6, 6, 6);
             this.label6.Size = new System.Drawing.Size(205, 323);
             this.label6.TabIndex = 20;
-            this.label6.Text = "1) Select a fish using \r\n     the arrows\r\n\r\n2) Enter your initials\r\n\r\n3) Press en" +
-    "ter\r\n\r\n4) Follow next \r\n     instructions\r\n     for paper\r\n";
+            this.label6.Text = "-Select a fish\r\nusing the arrows\r\n\r\n-Press enter\r\n\r\n-Follow popup\r\ninstructions f" +
+    "or\r\nnext steps\r\n";
             // 
             // label7
             // 

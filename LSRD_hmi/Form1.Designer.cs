@@ -189,7 +189,7 @@
             this.test_textbox.Location = new System.Drawing.Point(11, 423);
             this.test_textbox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.test_textbox.Name = "test_textbox";
-            this.test_textbox.Size = new System.Drawing.Size(35, 13);
+            this.test_textbox.Size = new System.Drawing.Size(44, 16);
             this.test_textbox.TabIndex = 4;
             this.test_textbox.Text = "label1";
             // 
@@ -204,7 +204,7 @@
             this.debug_wave_active.Location = new System.Drawing.Point(11, 444);
             this.debug_wave_active.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.debug_wave_active.Name = "debug_wave_active";
-            this.debug_wave_active.Size = new System.Drawing.Size(35, 13);
+            this.debug_wave_active.Size = new System.Drawing.Size(44, 16);
             this.debug_wave_active.TabIndex = 16;
             this.debug_wave_active.Text = "label1";
             this.debug_wave_active.Visible = false;
@@ -215,7 +215,7 @@
             this.debug_wave_scheduled.Location = new System.Drawing.Point(11, 463);
             this.debug_wave_scheduled.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.debug_wave_scheduled.Name = "debug_wave_scheduled";
-            this.debug_wave_scheduled.Size = new System.Drawing.Size(35, 13);
+            this.debug_wave_scheduled.Size = new System.Drawing.Size(44, 16);
             this.debug_wave_scheduled.TabIndex = 17;
             this.debug_wave_scheduled.Text = "label2";
             this.debug_wave_scheduled.Visible = false;
@@ -223,15 +223,15 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label3.Location = new System.Drawing.Point(92, 340);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 64);
+            this.label3.Size = new System.Drawing.Size(212, 88);
             this.label3.TabIndex = 18;
             this.label3.Text = "Designed by\r\nTeam LSRD";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox2
             // 
@@ -263,13 +263,13 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(774, 340);
+            this.label4.Location = new System.Drawing.Point(706, 346);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 64);
+            this.label4.Size = new System.Drawing.Size(294, 88);
             this.label4.TabIndex = 21;
             this.label4.Text = "In Collaboration\r\nWith CFRE";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
@@ -302,7 +302,7 @@
             this.text_wrong_pass.Location = new System.Drawing.Point(70, 155);
             this.text_wrong_pass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.text_wrong_pass.Name = "text_wrong_pass";
-            this.text_wrong_pass.Size = new System.Drawing.Size(312, 25);
+            this.text_wrong_pass.Size = new System.Drawing.Size(392, 31);
             this.text_wrong_pass.TabIndex = 14;
             this.text_wrong_pass.Text = "Password is incorrect, try again";
             this.text_wrong_pass.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -346,7 +346,7 @@
             this.text_entry_pass.MaxLength = 6;
             this.text_entry_pass.Name = "text_entry_pass";
             this.text_entry_pass.PasswordChar = '*';
-            this.text_entry_pass.Size = new System.Drawing.Size(140, 31);
+            this.text_entry_pass.Size = new System.Drawing.Size(140, 37);
             this.text_entry_pass.TabIndex = 2;
             this.text_entry_pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pass_popup_KeyPress);
             // 
@@ -357,7 +357,7 @@
             this.label2.Location = new System.Drawing.Point(96, 111);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 25);
+            this.label2.Size = new System.Drawing.Size(142, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
@@ -379,7 +379,7 @@
             this.label_resolution.Location = new System.Drawing.Point(52, 152);
             this.label_resolution.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_resolution.Name = "label_resolution";
-            this.label_resolution.Size = new System.Drawing.Size(112, 18);
+            this.label_resolution.Size = new System.Drawing.Size(145, 24);
             this.label_resolution.TabIndex = 24;
             this.label_resolution.Text = "Screen bounds:";
             this.label_resolution.Visible = false;
@@ -391,7 +391,7 @@
             this.label_scaling.Location = new System.Drawing.Point(52, 316);
             this.label_scaling.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_scaling.Name = "label_scaling";
-            this.label_scaling.Size = new System.Drawing.Size(56, 18);
+            this.label_scaling.Size = new System.Drawing.Size(72, 24);
             this.label_scaling.TabIndex = 25;
             this.label_scaling.Text = "Scaling";
             this.label_scaling.Visible = false;
@@ -403,7 +403,7 @@
             this.label_formsize.Location = new System.Drawing.Point(52, 209);
             this.label_formsize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_formsize.Name = "label_formsize";
-            this.label_formsize.Size = new System.Drawing.Size(74, 18);
+            this.label_formsize.Size = new System.Drawing.Size(93, 24);
             this.label_formsize.TabIndex = 26;
             this.label_formsize.Text = "ClientSize";
             this.label_formsize.Visible = false;
@@ -415,7 +415,7 @@
             this.label_formsize2.Location = new System.Drawing.Point(52, 245);
             this.label_formsize2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_formsize2.Name = "label_formsize2";
-            this.label_formsize2.Size = new System.Drawing.Size(96, 18);
+            this.label_formsize2.Size = new System.Drawing.Size(123, 24);
             this.label_formsize2.TabIndex = 27;
             this.label_formsize2.Text = "preferredSize";
             this.label_formsize2.Visible = false;
@@ -427,7 +427,7 @@
             this.label_formsize3.Location = new System.Drawing.Point(52, 273);
             this.label_formsize3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_formsize3.Name = "label_formsize3";
-            this.label_formsize3.Size = new System.Drawing.Size(81, 18);
+            this.label_formsize3.Size = new System.Drawing.Size(101, 24);
             this.label_formsize3.TabIndex = 28;
             this.label_formsize3.Text = "Form Size:";
             this.label_formsize3.Visible = false;
