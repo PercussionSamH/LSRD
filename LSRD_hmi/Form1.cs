@@ -53,7 +53,6 @@ namespace LSRD_hmi
 
         //Google cal events
         public static List<string> Event_strings = new List<string>();
-        public static List<string> Event_times = new List<string>();
         public static DateTime t_event_start;
         public static DateTime t_event_end;
 
@@ -374,7 +373,7 @@ namespace LSRD_hmi
                         {
                             string title = ev.Summary ?? "No Title";
                             string description = ev.Description ?? "No Description";
-                            if (i==0)
+                            if (i == 0)
                             {
                                 DateTime t10 = t_event_end.AddMinutes(10);
                                 if (t10 < DateTime.Now)
@@ -382,11 +381,19 @@ namespace LSRD_hmi
                                     t_event_start = DateTime.Parse(ev.Start.DateTimeDateTimeOffset.ToString());
                                     t_event_end = DateTime.Parse(ev.End.DateTimeDateTimeOffset.ToString());
                                 }
-                                
-                            }         
-                            //if (DEBUG_MODE) System.Diagnostics.Debug.WriteLine("event found with name: " + title);
 
-                            Event_strings.Add(title + "\n\r" + description);
+                            }
+                            if (DEBUG_MODE) System.Diagnostics.Debug.WriteLine("event found with name: " + title);
+
+                            string event_start = t_event_start.ToString("ddd. MM/dd/yy hh:mm tt");
+                            string event_end = t_event_end.ToString("hh:mm tt"); //default case
+                            if (t_event_start.Day != t_event_end.Day) //if multi day event, display shorthand for end day along with time
+                            {
+                                event_end = t_event_end.ToString("ddd. hh:mm tt");
+                            }
+                            Event_strings.Add(title + "\r" +
+                                              "Time: " + event_start + " - " + event_end + "\r" +
+                                              "\n\nAbout: " + description);
                             i++;
                         }
                     }

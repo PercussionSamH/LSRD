@@ -175,7 +175,7 @@
             this.PB_get_directions.BackColor = System.Drawing.Color.Transparent;
             this.PB_get_directions.Image = global::LSRD_hmi.Properties.Resources.PB_square_door_get_directions;
             this.PB_get_directions.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_get_directions.InitialImage")));
-            this.PB_get_directions.Location = new System.Drawing.Point(223, 446);
+            this.PB_get_directions.Location = new System.Drawing.Point(223, 467);
             this.PB_get_directions.Margin = new System.Windows.Forms.Padding(2);
             this.PB_get_directions.Name = "PB_get_directions";
             this.PB_get_directions.Size = new System.Drawing.Size(180, 92);
