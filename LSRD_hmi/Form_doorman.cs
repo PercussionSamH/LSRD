@@ -33,7 +33,7 @@ namespace LSRD_hmi
 
 
             //Using a dictionary mostly to keep the code legible for long blocks of text
-            Room_Desc.Add(Room_names[0], "• Classroom (course number?)\r\n• Conference Room\r\n");
+            Room_Desc.Add(Room_names[0], "• Classroom \r\n• Conference Room\r\n");
             Room_Desc.Add(Room_names[1], "• Faculty Offices\r\n• USCG Great Lakes Oil Spill \r\n   Center of Expertise\r\n• Michigan Sea Grant\r\n• HeadWaters North \r\n");
             Room_Desc.Add(Room_names[2], "• Classroom\r\n• Conference Room\r\n");
             Room_Desc.Add(Room_names[3], "• Reception\r\n •Faculty and Administative\r\n  Offices\r\n• Conference Room 110\r\n• All deliveries \r\n");
@@ -45,13 +45,24 @@ namespace LSRD_hmi
             //Propagate events
             for (int i = 0; i < Form1.Event_strings.Count; i++)
             {
-                Label b = new Label();
+                RichTextBox b = new RichTextBox();
                 b.Text = Form1.Event_strings[i]; //sets text
                 b.Font = new Font(b.Font.FontFamily, 12, b.Font.Style); //font and text size
                 b.MinimumSize = new Size(230,0);
                 b.BorderStyle = BorderStyle.FixedSingle;
                 b.Margin = new Padding(5, 8, 5, 5);
                 b.AutoSize = true;
+
+                //Select the first line
+                b.SelectionStart = 0;
+                b.SelectionLength = b.Lines[0].Length;
+                //Make it bold
+                b.SelectionFont = new Font(b.Font.FontFamily, 12+2, FontStyle.Bold);
+                //Reset selection to end
+                b.SelectionStart = b.TextLength;
+                b.SelectionLength = 0;
+                
+
 
                 Scrollable_Events_Box.Controls.Add(b); //add each item to list
             }

@@ -129,7 +129,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 79);
+            this.label2.Location = new System.Drawing.Point(12, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(281, 48);
@@ -154,7 +154,7 @@
             this.Toggle_scavenger.BackColor = System.Drawing.Color.Transparent;
             this.Toggle_scavenger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Toggle_scavenger.Image = global::LSRD_hmi.Properties.Resources.toggle_off;
-            this.Toggle_scavenger.Location = new System.Drawing.Point(313, 211);
+            this.Toggle_scavenger.Location = new System.Drawing.Point(313, 210);
             this.Toggle_scavenger.Margin = new System.Windows.Forms.Padding(2);
             this.Toggle_scavenger.MaximumSize = new System.Drawing.Size(80, 48);
             this.Toggle_scavenger.Name = "Toggle_scavenger";
@@ -168,7 +168,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 211);
+            this.label4.Location = new System.Drawing.Point(12, 210);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(281, 48);
@@ -271,7 +271,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(281, 176);
+            this.label8.Location = new System.Drawing.Point(281, 187);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 25);
