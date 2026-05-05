@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Schema;
+using System.Threading;
+
 
 namespace LSRD_hmi
 {
@@ -15,6 +17,7 @@ namespace LSRD_hmi
     {
         //Global vars
         int fish_selection = 0;
+        public static bool DEBUG_MODE = false; //turn on to enable debug mode
         //int backgnd_selection = 0;
         int margin = 20;
 
@@ -64,6 +67,8 @@ namespace LSRD_hmi
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            drawingactive.Visible = DEBUG_MODE;
+            modoutput.Visible = DEBUG_MODE;
             float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
             float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
             SizeF scale = new SizeF(widthRatio, heightRatio);
@@ -73,6 +78,7 @@ namespace LSRD_hmi
                 control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
             }
             Fish_tagline.Font = new Font(Fish_tagline.Font, FontStyle.Italic);
+            drawingactive.Text = $"{GlobalData.demo_active_drawing}";
         }
 
   
@@ -121,6 +127,114 @@ namespace LSRD_hmi
         private void PB_Back_To_Home_Click(object sender, EventArgs e)
         {
             Close();
+            GlobalData.demo_active_drawing = false;
+        }
+
+        private void PB_drawing_mode_Click(object sender, EventArgs e)
+        {
+            if (fish_selection == 0)
+            {
+                GlobalData.sturgeon = true;
+                GlobalData.salmon = false;
+                GlobalData.lamprey = false;
+                GlobalData.plankton = false;
+                GlobalData.nymph = false;
+                modoutput.Text = " T f f f f";
+                wait(1000);
+                GlobalData.sturgeon = false;
+                GlobalData.salmon = false;
+                GlobalData.lamprey = false;
+                GlobalData.plankton = false;
+                GlobalData.nymph = false;
+                modoutput.Text = " f f f f f";
+            }
+            if (fish_selection == 1)
+            {
+                GlobalData.sturgeon = false;
+                GlobalData.salmon = true;
+                GlobalData.lamprey = false;
+                GlobalData.plankton = false;
+                GlobalData.nymph = false;
+                modoutput.Text = " f T f f f";
+                wait(1000);
+                GlobalData.sturgeon = false;
+                GlobalData.salmon = false;
+                GlobalData.lamprey = false;
+                GlobalData.plankton = false;
+                GlobalData.nymph = false;
+                modoutput.Text = " f f f f f";
+            }
+            if (fish_selection == 2)
+            {
+                GlobalData.sturgeon = false;
+                GlobalData.salmon = false;
+                GlobalData.lamprey = true;
+                GlobalData.plankton = false;
+                GlobalData.nymph = false;
+                modoutput.Text = " f f T f f";
+                wait(1000);
+                GlobalData.sturgeon = false;
+                GlobalData.salmon = false;
+                GlobalData.lamprey = false;
+                GlobalData.plankton = false;
+                GlobalData.nymph = false;
+                modoutput.Text = " f f f f f";
+            }
+            if (fish_selection == 3)
+            {
+                GlobalData.sturgeon = false;
+                GlobalData.salmon = false;
+                GlobalData.lamprey = false;
+                GlobalData.plankton = true;
+                GlobalData.nymph = false;
+                modoutput.Text = " f f f T f";
+                wait(1000);
+                GlobalData.sturgeon = false;
+                GlobalData.salmon = false;
+                GlobalData.lamprey = false;
+                GlobalData.plankton = false;
+                GlobalData.nymph = false;
+                modoutput.Text = " f f f f f";
+            }
+            if (fish_selection == 4)
+            {
+                GlobalData.sturgeon = false;
+                GlobalData.salmon = false;
+                GlobalData.lamprey = false;
+                GlobalData.plankton = false;
+                GlobalData.nymph = true;
+                modoutput.Text = " f f f f T";
+                wait(1000);
+                GlobalData.sturgeon = false;
+                GlobalData.salmon = false;
+                GlobalData.lamprey = false;
+                GlobalData.plankton = false;
+                GlobalData.nymph = false;
+                modoutput.Text = " f f f f f";
+            }
+        }
+
+        public void wait(int milliseconds)
+        {
+            var timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
+
+            // Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                // Console.WriteLine("stop wait timer");
+            };
+
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
+            }
         }
     }
 }
