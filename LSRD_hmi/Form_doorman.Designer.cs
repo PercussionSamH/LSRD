@@ -42,12 +42,20 @@
             this.lbl_room_info_back = new System.Windows.Forms.Label();
             this.button_room_info = new System.Windows.Forms.Button();
             this.button_events = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PB_confirm_pass = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Back_To_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_work_cafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_seminar_room)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_discovery_lab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_partner_suites)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_get_directions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_confirm_pass)).BeginInit();
             this.SuspendLayout();
             // 
             // Scrollable_Events_Box
@@ -92,7 +100,7 @@
             this.PB_area_work_cafe.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_work_cafe.Image = ((System.Drawing.Image)(resources.GetObject("PB_area_work_cafe.Image")));
             this.PB_area_work_cafe.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_work_cafe.InitialImage")));
-            this.PB_area_work_cafe.Location = new System.Drawing.Point(117, 222);
+            this.PB_area_work_cafe.Location = new System.Drawing.Point(117, 218);
             this.PB_area_work_cafe.Margin = new System.Windows.Forms.Padding(2);
             this.PB_area_work_cafe.Name = "PB_area_work_cafe";
             this.PB_area_work_cafe.Size = new System.Drawing.Size(180, 92);
@@ -106,7 +114,7 @@
             this.PB_area_seminar_room.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_seminar_room.Image = ((System.Drawing.Image)(resources.GetObject("PB_area_seminar_room.Image")));
             this.PB_area_seminar_room.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_seminar_room.InitialImage")));
-            this.PB_area_seminar_room.Location = new System.Drawing.Point(333, 222);
+            this.PB_area_seminar_room.Location = new System.Drawing.Point(333, 218);
             this.PB_area_seminar_room.Margin = new System.Windows.Forms.Padding(2);
             this.PB_area_seminar_room.Name = "PB_area_seminar_room";
             this.PB_area_seminar_room.Size = new System.Drawing.Size(180, 92);
@@ -120,7 +128,7 @@
             this.PB_area_discovery_lab.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_discovery_lab.Image = ((System.Drawing.Image)(resources.GetObject("PB_area_discovery_lab.Image")));
             this.PB_area_discovery_lab.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_discovery_lab.InitialImage")));
-            this.PB_area_discovery_lab.Location = new System.Drawing.Point(117, 349);
+            this.PB_area_discovery_lab.Location = new System.Drawing.Point(117, 345);
             this.PB_area_discovery_lab.Margin = new System.Windows.Forms.Padding(2);
             this.PB_area_discovery_lab.Name = "PB_area_discovery_lab";
             this.PB_area_discovery_lab.Size = new System.Drawing.Size(180, 92);
@@ -134,7 +142,7 @@
             this.PB_area_partner_suites.BackColor = System.Drawing.Color.Transparent;
             this.PB_area_partner_suites.Image = global::LSRD_hmi.Properties.Resources.PB_square_door_partner_suites_singleLine;
             this.PB_area_partner_suites.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_area_partner_suites.InitialImage")));
-            this.PB_area_partner_suites.Location = new System.Drawing.Point(333, 349);
+            this.PB_area_partner_suites.Location = new System.Drawing.Point(333, 345);
             this.PB_area_partner_suites.Margin = new System.Windows.Forms.Padding(2);
             this.PB_area_partner_suites.Name = "PB_area_partner_suites";
             this.PB_area_partner_suites.Size = new System.Drawing.Size(180, 92);
@@ -175,14 +183,13 @@
             this.PB_get_directions.BackColor = System.Drawing.Color.Transparent;
             this.PB_get_directions.Image = global::LSRD_hmi.Properties.Resources.PB_square_door_get_directions;
             this.PB_get_directions.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_get_directions.InitialImage")));
-            this.PB_get_directions.Location = new System.Drawing.Point(223, 467);
+            this.PB_get_directions.Location = new System.Drawing.Point(223, 463);
             this.PB_get_directions.Margin = new System.Windows.Forms.Padding(2);
             this.PB_get_directions.Name = "PB_get_directions";
             this.PB_get_directions.Size = new System.Drawing.Size(180, 92);
             this.PB_get_directions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_get_directions.TabIndex = 39;
             this.PB_get_directions.TabStop = false;
-            this.PB_get_directions.Visible = false;
             this.PB_get_directions.Click += new System.EventHandler(this.PB_get_directions_Click);
             // 
             // lbl_room_info_back
@@ -220,12 +227,85 @@
             this.button_events.UseVisualStyleBackColor = true;
             this.button_events.Click += new System.EventHandler(this.button_events_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(327, 426);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(169, 78);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(131, 60);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // PB_confirm_pass
+            // 
+            this.PB_confirm_pass.BackColor = System.Drawing.Color.Transparent;
+            this.PB_confirm_pass.Image = ((System.Drawing.Image)(resources.GetObject("PB_confirm_pass.Image")));
+            this.PB_confirm_pass.Location = new System.Drawing.Point(528, 426);
+            this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PB_confirm_pass.MaximumSize = new System.Drawing.Size(169, 78);
+            this.PB_confirm_pass.MinimumSize = new System.Drawing.Size(131, 60);
+            this.PB_confirm_pass.Name = "PB_confirm_pass";
+            this.PB_confirm_pass.Size = new System.Drawing.Size(169, 78);
+            this.PB_confirm_pass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_confirm_pass.TabIndex = 44;
+            this.PB_confirm_pass.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(283, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(460, 420);
+            this.label2.TabIndex = 45;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(275, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(476, 436);
+            this.label3.TabIndex = 46;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(305, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(417, 63);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Work Cafe";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(305, 216);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(417, 189);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "steps";
+            // 
             // Form_doorman
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::LSRD_hmi.Properties.Resources.doorman_bkg_blueish_22;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.PB_confirm_pass);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button_events);
             this.Controls.Add(this.button_room_info);
             this.Controls.Add(this.PB_get_directions);
@@ -253,6 +333,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_discovery_lab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_partner_suites)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_get_directions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_confirm_pass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +353,11 @@
         private System.Windows.Forms.Label lbl_room_info_back;
         private System.Windows.Forms.Button button_room_info;
         private System.Windows.Forms.Button button_events;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PB_confirm_pass;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -4,6 +4,7 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Xml.Schema;
+using static System.Windows.Forms.AxHost;
 
 
 namespace LSRD_hmi
@@ -61,8 +63,10 @@ namespace LSRD_hmi
         public static bool demo_active_doorman = false;
         public static bool demo_active_scavenger = false;
         public static bool demo_active_wave = false;
-        
-        //Process bits
+
+        //Alphabet dict
+        public Dictionary<char, bool> alphabet = new Dictionary<char, bool>();
+
 
         //Cancel
         public static bool cancel_active_demo = false; //[TODO:] hold this to true until robot at home, then set idle
@@ -100,9 +104,17 @@ namespace LSRD_hmi
             drawingactive.Visible = DEBUG_MODE;
             //-------------------------------------
 
+            
+
             //Login "popup" screen
             login_panel.Visible = false; //Show popup
             login_panel.Location = new Point(282, 150);
+
+            //Setup alphabet dictionary
+            for (char c = 'A'; c <= 'Z'; c++)
+            {
+                alphabet[c] = false;
+            }
 
             try
             {
@@ -178,61 +190,80 @@ namespace LSRD_hmi
         private void timer_Modbus_Com_Tick(object sender, EventArgs e)
         {
             timer_Modbus_Com.Enabled = false; //prevents multiple timer signals per read
-            modbusClient.ConnectionTimeout = 5000;
+            modbusClient.ConnectionTimeout = 4000;
             //Fetch all inputs
-            QX_Coils = modbusClient.ReadCoils(0, QX_length);
+            try
+            {
+                QX_Coils = modbusClient.ReadCoils(0, QX_length);
+            }
+            catch { }
+            
 
             if (DEBUG_MODE)
             {
                 test_textbox.Text = string.Join(" ", QX_Coils.Select(b => b.ToString()));
             }
+            try
+            {
+                //Set all individual outputs, see google sheet for full list
+                modbusClient.WriteSingleCoil(10, demo_idle);
+                modbusClient.WriteSingleCoil(11, GlobalData.demo_active_drawing);
+                modbusClient.WriteSingleCoil(12, demo_active_doorman);
+                modbusClient.WriteSingleCoil(13, demo_active_scavenger);
+                modbusClient.WriteSingleCoil(14, demo_active_wave); //Wave should be active
 
-            //Set all individual outputs, see google sheet for full list
-            modbusClient.WriteSingleCoil(10, demo_idle);
-            modbusClient.WriteSingleCoil(11, GlobalData.demo_active_drawing);
-            modbusClient.WriteSingleCoil(12, demo_active_doorman);
-            modbusClient.WriteSingleCoil(13, demo_active_scavenger);
-            modbusClient.WriteSingleCoil(14, demo_active_wave); //Wave should be active
+                modbusClient.WriteSingleCoil(20, cancel_active_demo);
 
-            modbusClient.WriteSingleCoil(20, cancel_active_demo);
+                modbusClient.WriteSingleCoil(22, drawing_paper_in_place);
+                modbusClient.WriteSingleCoil(23, door_next_step);
+                modbusClient.WriteSingleCoil(24, GlobalData.sturgeon);
+                modbusClient.WriteSingleCoil(25, GlobalData.salmon);
+                modbusClient.WriteSingleCoil(26, GlobalData.lamprey);
+                modbusClient.WriteSingleCoil(27, GlobalData.plankton);
+                modbusClient.WriteSingleCoil(28, GlobalData.nymph);
+                modbusClient.WriteSingleCoil(29, GlobalData.left);
 
-            modbusClient.WriteSingleCoil(22, drawing_paper_in_place);
-            modbusClient.WriteSingleCoil(23, door_next_step);
-            modbusClient.WriteSingleCoil(24, GlobalData.sturgeon);
-            modbusClient.WriteSingleCoil(25, GlobalData.salmon);
-            modbusClient.WriteSingleCoil(26, GlobalData.lamprey);
-            modbusClient.WriteSingleCoil(27, GlobalData.plankton);
-            modbusClient.WriteSingleCoil(28, GlobalData.nymph);
-            modbusClient.WriteSingleCoil(29, GlobalData.left);
+                int i = 0;
+                bool[] boolAlpha = new bool[26];
+                for (char c = 'A'; c <= 'Z'; c++)
+                {
+                    boolAlpha[i++] = alphabet[c];
+                }
+                //CHANGING A VALUE
+                //  alphabet['A'] = true; // set A to true
 
-            modbusClient.WriteSingleCoil(35, GlobalData.A);
-            modbusClient.WriteSingleCoil(36, GlobalData.B);
-            modbusClient.WriteSingleCoil(37, GlobalData.C);
-            modbusClient.WriteSingleCoil(38, GlobalData.D);
-            modbusClient.WriteSingleCoil(39, GlobalData.E);
-            modbusClient.WriteSingleCoil(40, GlobalData.F);
-            modbusClient.WriteSingleCoil(41, GlobalData.G);
-            modbusClient.WriteSingleCoil(42, GlobalData.H);
-            modbusClient.WriteSingleCoil(43, GlobalData.I);
-            modbusClient.WriteSingleCoil(44, GlobalData.J);
-            modbusClient.WriteSingleCoil(45, GlobalData.K);
-            modbusClient.WriteSingleCoil(46, GlobalData.L);
-            modbusClient.WriteSingleCoil(47, GlobalData.M);
-            modbusClient.WriteSingleCoil(48, GlobalData.N);
-            modbusClient.WriteSingleCoil(49, GlobalData.O);
-            modbusClient.WriteSingleCoil(50, GlobalData.P);
-            modbusClient.WriteSingleCoil(51, GlobalData.Q);
-            modbusClient.WriteSingleCoil(52, GlobalData.R);
-            modbusClient.WriteSingleCoil(53, GlobalData.S);
-            modbusClient.WriteSingleCoil(54, GlobalData.T);
-            modbusClient.WriteSingleCoil(55, GlobalData.U);
-            modbusClient.WriteSingleCoil(56, GlobalData.V);
-            modbusClient.WriteSingleCoil(57, GlobalData.W);
-            modbusClient.WriteSingleCoil(58, GlobalData.X);
-            modbusClient.WriteSingleCoil(59, GlobalData.Y);
-            modbusClient.WriteSingleCoil(60, GlobalData.Z);
+                modbusClient.WriteMultipleCoils(35, boolAlpha);
+                //modbusClient.WriteSingleCoil(35, GlobalData.A);
+                //modbusClient.WriteSingleCoil(36, GlobalData.B);
+                //modbusClient.WriteSingleCoil(37, GlobalData.C);
+                //modbusClient.WriteSingleCoil(38, GlobalData.D);
+                //modbusClient.WriteSingleCoil(39, GlobalData.E);
+                //modbusClient.WriteSingleCoil(40, GlobalData.F);
+                //modbusClient.WriteSingleCoil(41, GlobalData.G);
+                //modbusClient.WriteSingleCoil(42, GlobalData.H);
+                //modbusClient.WriteSingleCoil(43, GlobalData.I);
+                //modbusClient.WriteSingleCoil(44, GlobalData.J);
+                //modbusClient.WriteSingleCoil(45, GlobalData.K);
+                //modbusClient.WriteSingleCoil(46, GlobalData.L);
+                //modbusClient.WriteSingleCoil(47, GlobalData.M);
+                //modbusClient.WriteSingleCoil(48, GlobalData.N);
+                //modbusClient.WriteSingleCoil(49, GlobalData.O);
+                //modbusClient.WriteSingleCoil(50, GlobalData.P);
+                //modbusClient.WriteSingleCoil(51, GlobalData.Q);
+                //modbusClient.WriteSingleCoil(52, GlobalData.R);
+                //modbusClient.WriteSingleCoil(53, GlobalData.S);
+                //modbusClient.WriteSingleCoil(54, GlobalData.T);
+                //modbusClient.WriteSingleCoil(55, GlobalData.U);
+                //modbusClient.WriteSingleCoil(56, GlobalData.V);
+                //modbusClient.WriteSingleCoil(57, GlobalData.W);
+                //modbusClient.WriteSingleCoil(58, GlobalData.X);
+                //modbusClient.WriteSingleCoil(59, GlobalData.Y);
+                //modbusClient.WriteSingleCoil(60, GlobalData.Z);
+            }
+            catch
+            {
 
-
+            }
             //Reenable timer
             timer_Modbus_Com.Enabled = true;
         }
@@ -254,7 +285,7 @@ namespace LSRD_hmi
             DateTime t_10_min = t_now.AddMinutes(10);
             DateTime t_event_pre = t_event_start.AddMinutes(5);
             DateTime t_event_post = t_event_end.AddMinutes(10);
-            //check if a wave is manually scheuled
+            //check if a wave is manually scheduled
             if (((c_t_min >= wave_t_start && c_t_min < wave_t_end && wave_t_end >= wave_t_start) //normal case
                  ^ (c_t_min <= wave_t_start && c_t_min > wave_t_end && wave_t_end < wave_t_start) //past midnight (the ^ is an XOR)
                ) && wave_scheduled)
@@ -543,32 +574,33 @@ namespace LSRD_hmi
         public static bool lamprey = false;
         public static bool demo_active_drawing = false;
         public static bool left = false;
-        public static bool A = false;
-        public static bool B = false;
-        public static bool C = false;
-        public static bool D = false;
-        public static bool E = false;
-        public static bool F = false;
-        public static bool G = false;
-        public static bool H = false;
-        public static bool I = false;
-        public static bool J = false;
-        public static bool K = false;
-        public static bool L = false;
-        public static bool M = false;
-        public static bool N = false;
-        public static bool O = false;
-        public static bool P = false;
-        public static bool Q = false;
-        public static bool R = false;
-        public static bool S = false;
-        public static bool T = false;
-        public static bool U = false;
-        public static bool V = false;
-        public static bool W = false;
-        public static bool X = false;
-        public static bool Y = false;
-        public static bool Z = false;
+        
+        //public static bool A = false;
+        //public static bool B = false;
+        //public static bool C = false;
+        //public static bool D = false;
+        //public static bool E = false;
+        //public static bool F = false;
+        //public static bool G = false;
+        //public static bool H = false;
+        //public static bool I = false;
+        //public static bool J = false;
+        //public static bool K = false;
+        //public static bool L = false;
+        //public static bool M = false;
+        //public static bool N = false;
+        //public static bool O = false;
+        //public static bool P = false;
+        //public static bool Q = false;
+        //public static bool R = false;
+        //public static bool S = false;
+        //public static bool T = false;
+        //public static bool U = false;
+        //public static bool V = false;
+        //public static bool W = false;
+        //public static bool X = false;
+        //public static bool Y = false;
+        //public static bool Z = false;
     }
 
 }

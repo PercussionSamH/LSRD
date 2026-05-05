@@ -81,6 +81,7 @@
             // 
             // timer_Modbus_Com
             // 
+            this.timer_Modbus_Com.Interval = 200;
             this.timer_Modbus_Com.Tick += new System.EventHandler(this.timer_Modbus_Com_Tick);
             // 
             // PB_Quit_Program
