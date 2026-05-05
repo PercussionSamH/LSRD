@@ -50,10 +50,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.login_panel = new System.Windows.Forms.Panel();
+            this.pass4 = new System.Windows.Forms.DomainUpDown();
+            this.pass3 = new System.Windows.Forms.DomainUpDown();
+            this.pass2 = new System.Windows.Forms.DomainUpDown();
+            this.pass1 = new System.Windows.Forms.DomainUpDown();
             this.text_wrong_pass = new System.Windows.Forms.Label();
             this.PB_confirm_pass = new System.Windows.Forms.PictureBox();
             this.PB_Back_To_Home = new System.Windows.Forms.PictureBox();
-            this.text_entry_pass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label_resolution = new System.Windows.Forms.Label();
@@ -61,6 +64,7 @@
             this.label_formsize = new System.Windows.Forms.Label();
             this.label_formsize2 = new System.Windows.Forms.Label();
             this.label_formsize3 = new System.Windows.Forms.Label();
+            this.drawingactive = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_LSRD_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_doorman_mode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_drawing_mode)).BeginInit();
@@ -283,16 +287,91 @@
             // 
             // login_panel
             // 
+            this.login_panel.Controls.Add(this.pass4);
+            this.login_panel.Controls.Add(this.pass3);
+            this.login_panel.Controls.Add(this.pass2);
+            this.login_panel.Controls.Add(this.pass1);
             this.login_panel.Controls.Add(this.text_wrong_pass);
             this.login_panel.Controls.Add(this.PB_confirm_pass);
             this.login_panel.Controls.Add(this.PB_Back_To_Home);
-            this.login_panel.Controls.Add(this.text_entry_pass);
             this.login_panel.Controls.Add(this.label2);
             this.login_panel.Controls.Add(this.label5);
-            this.login_panel.Location = new System.Drawing.Point(601, 558);
+            this.login_panel.Location = new System.Drawing.Point(253, 97);
             this.login_panel.Name = "login_panel";
             this.login_panel.Size = new System.Drawing.Size(460, 300);
             this.login_panel.TabIndex = 23;
+            // 
+            // pass4
+            // 
+            this.pass4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
+            this.pass4.Items.Add("0");
+            this.pass4.Items.Add("1");
+            this.pass4.Items.Add("2");
+            this.pass4.Items.Add("3");
+            this.pass4.Items.Add("4");
+            this.pass4.Items.Add("5");
+            this.pass4.Items.Add("6");
+            this.pass4.Items.Add("7");
+            this.pass4.Items.Add("8");
+            this.pass4.Items.Add("9");
+            this.pass4.Location = new System.Drawing.Point(372, 99);
+            this.pass4.Name = "pass4";
+            this.pass4.Size = new System.Drawing.Size(62, 61);
+            this.pass4.TabIndex = 29;
+            // 
+            // pass3
+            // 
+            this.pass3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
+            this.pass3.Items.Add("0");
+            this.pass3.Items.Add("1");
+            this.pass3.Items.Add("2");
+            this.pass3.Items.Add("3");
+            this.pass3.Items.Add("4");
+            this.pass3.Items.Add("5");
+            this.pass3.Items.Add("6");
+            this.pass3.Items.Add("7");
+            this.pass3.Items.Add("8");
+            this.pass3.Items.Add("9");
+            this.pass3.Location = new System.Drawing.Point(304, 99);
+            this.pass3.Name = "pass3";
+            this.pass3.Size = new System.Drawing.Size(62, 61);
+            this.pass3.TabIndex = 28;
+            // 
+            // pass2
+            // 
+            this.pass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
+            this.pass2.Items.Add("0");
+            this.pass2.Items.Add("1");
+            this.pass2.Items.Add("2");
+            this.pass2.Items.Add("3");
+            this.pass2.Items.Add("4");
+            this.pass2.Items.Add("5");
+            this.pass2.Items.Add("6");
+            this.pass2.Items.Add("7");
+            this.pass2.Items.Add("8");
+            this.pass2.Items.Add("9");
+            this.pass2.Location = new System.Drawing.Point(236, 99);
+            this.pass2.Name = "pass2";
+            this.pass2.Size = new System.Drawing.Size(62, 61);
+            this.pass2.TabIndex = 27;
+            // 
+            // pass1
+            // 
+            this.pass1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
+            this.pass1.Items.Add("0");
+            this.pass1.Items.Add("1");
+            this.pass1.Items.Add("2");
+            this.pass1.Items.Add("3");
+            this.pass1.Items.Add("4");
+            this.pass1.Items.Add("5");
+            this.pass1.Items.Add("6");
+            this.pass1.Items.Add("7");
+            this.pass1.Items.Add("8");
+            this.pass1.Items.Add("9");
+            this.pass1.Location = new System.Drawing.Point(168, 99);
+            this.pass1.Name = "pass1";
+            this.pass1.Size = new System.Drawing.Size(62, 61);
+            this.pass1.TabIndex = 26;
             // 
             // text_wrong_pass
             // 
@@ -338,23 +417,11 @@
             this.PB_Back_To_Home.TabStop = false;
             this.PB_Back_To_Home.Click += new System.EventHandler(this.PB_Back_To_Home_Click);
             // 
-            // text_entry_pass
-            // 
-            this.text_entry_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_entry_pass.Location = new System.Drawing.Point(237, 107);
-            this.text_entry_pass.Margin = new System.Windows.Forms.Padding(2);
-            this.text_entry_pass.MaxLength = 6;
-            this.text_entry_pass.Name = "text_entry_pass";
-            this.text_entry_pass.PasswordChar = '*';
-            this.text_entry_pass.Size = new System.Drawing.Size(140, 37);
-            this.text_entry_pass.TabIndex = 2;
-            this.text_entry_pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pass_popup_KeyPress);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(96, 111);
+            this.label2.Location = new System.Drawing.Point(21, 106);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 31);
@@ -432,12 +499,25 @@
             this.label_formsize3.Text = "Form Size:";
             this.label_formsize3.Visible = false;
             // 
+            // drawingactive
+            // 
+            this.drawingactive.BackColor = System.Drawing.Color.Transparent;
+            this.drawingactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawingactive.ForeColor = System.Drawing.Color.Black;
+            this.drawingactive.Location = new System.Drawing.Point(44, 537);
+            this.drawingactive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.drawingactive.Name = "drawingactive";
+            this.drawingactive.Size = new System.Drawing.Size(131, 28);
+            this.drawingactive.TabIndex = 29;
+            this.drawingactive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::LSRD_hmi.Properties.Resources.home_background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.drawingactive);
             this.Controls.Add(this.label_formsize3);
             this.Controls.Add(this.label_formsize2);
             this.Controls.Add(this.label_formsize);
@@ -514,7 +594,6 @@
         private System.Windows.Forms.Label text_wrong_pass;
         private System.Windows.Forms.PictureBox PB_confirm_pass;
         private System.Windows.Forms.PictureBox PB_Back_To_Home;
-        private System.Windows.Forms.TextBox text_entry_pass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label_resolution;
@@ -522,6 +601,11 @@
         private System.Windows.Forms.Label label_formsize;
         private System.Windows.Forms.Label label_formsize2;
         private System.Windows.Forms.Label label_formsize3;
+        private System.Windows.Forms.DomainUpDown pass4;
+        private System.Windows.Forms.DomainUpDown pass3;
+        private System.Windows.Forms.DomainUpDown pass2;
+        private System.Windows.Forms.DomainUpDown pass1;
+        private System.Windows.Forms.Label drawingactive;
     }
 }
 

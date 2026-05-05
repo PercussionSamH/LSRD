@@ -35,7 +35,6 @@
             this.PB_fish_select_right = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PB_Back_To_Home = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Text_enter_initials_prompt = new System.Windows.Forms.Label();
             this.PB_drawing_mode = new System.Windows.Forms.PictureBox();
             this.Fish_desc = new System.Windows.Forms.Label();
@@ -45,6 +44,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Fish_desc2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.modoutput = new System.Windows.Forms.Label();
+            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
+            this.drawingactive = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Fish_preview_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_right)).BeginInit();
@@ -82,6 +85,9 @@
             this.Fish_preview_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Fish_preview_picture.TabIndex = 3;
             this.Fish_preview_picture.TabStop = false;
+            // 
+            // backgroundWorker1
+            // 
             // 
             // PB_fish_select_left
             // 
@@ -136,38 +142,24 @@
             this.PB_Back_To_Home.TabStop = false;
             this.PB_Back_To_Home.Click += new System.EventHandler(this.PB_Back_To_Home_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(453, 420);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.MaxLength = 2;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 53);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.Visible = false;
-            // 
             // Text_enter_initials_prompt
             // 
             this.Text_enter_initials_prompt.BackColor = System.Drawing.Color.Transparent;
             this.Text_enter_initials_prompt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Text_enter_initials_prompt.ForeColor = System.Drawing.Color.Black;
-            this.Text_enter_initials_prompt.Location = new System.Drawing.Point(375, 383);
+            this.Text_enter_initials_prompt.Location = new System.Drawing.Point(375, 362);
             this.Text_enter_initials_prompt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Text_enter_initials_prompt.Name = "Text_enter_initials_prompt";
             this.Text_enter_initials_prompt.Size = new System.Drawing.Size(278, 28);
             this.Text_enter_initials_prompt.TabIndex = 13;
             this.Text_enter_initials_prompt.Text = "Enter your initials below:";
             this.Text_enter_initials_prompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Text_enter_initials_prompt.Visible = false;
             // 
             // PB_drawing_mode
             // 
             this.PB_drawing_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_drawing_mode.Image = global::LSRD_hmi.Properties.Resources.PB_square_enter;
-            this.PB_drawing_mode.Location = new System.Drawing.Point(434, 421);
+            this.PB_drawing_mode.Location = new System.Drawing.Point(434, 477);
             this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_drawing_mode.MaximumSize = new System.Drawing.Size(160, 80);
             this.PB_drawing_mode.Name = "PB_drawing_mode";
@@ -175,6 +167,7 @@
             this.PB_drawing_mode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_drawing_mode.TabIndex = 14;
             this.PB_drawing_mode.TabStop = false;
+            this.PB_drawing_mode.Click += new System.EventHandler(this.PB_drawing_mode_Click);
             // 
             // Fish_desc
             // 
@@ -281,6 +274,100 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Visible = false;
             // 
+            // modoutput
+            // 
+            this.modoutput.BackColor = System.Drawing.Color.Transparent;
+            this.modoutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modoutput.ForeColor = System.Drawing.Color.Black;
+            this.modoutput.Location = new System.Drawing.Point(375, 103);
+            this.modoutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.modoutput.Name = "modoutput";
+            this.modoutput.Size = new System.Drawing.Size(278, 28);
+            this.modoutput.TabIndex = 24;
+            this.modoutput.Text = "f f f f f";
+            this.modoutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // domainUpDown1
+            // 
+            this.domainUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
+            this.domainUpDown1.Items.Add("A");
+            this.domainUpDown1.Items.Add("B");
+            this.domainUpDown1.Items.Add("C");
+            this.domainUpDown1.Items.Add("D");
+            this.domainUpDown1.Items.Add("E");
+            this.domainUpDown1.Items.Add("F");
+            this.domainUpDown1.Items.Add("G");
+            this.domainUpDown1.Items.Add("H");
+            this.domainUpDown1.Items.Add("I");
+            this.domainUpDown1.Items.Add("J");
+            this.domainUpDown1.Items.Add("K");
+            this.domainUpDown1.Items.Add("L");
+            this.domainUpDown1.Items.Add("M");
+            this.domainUpDown1.Items.Add("N");
+            this.domainUpDown1.Items.Add("O");
+            this.domainUpDown1.Items.Add("P");
+            this.domainUpDown1.Items.Add("Q");
+            this.domainUpDown1.Items.Add("R");
+            this.domainUpDown1.Items.Add("S");
+            this.domainUpDown1.Items.Add("T");
+            this.domainUpDown1.Items.Add("U");
+            this.domainUpDown1.Items.Add("V");
+            this.domainUpDown1.Items.Add("W");
+            this.domainUpDown1.Items.Add("X");
+            this.domainUpDown1.Items.Add("Y");
+            this.domainUpDown1.Items.Add("Z");
+            this.domainUpDown1.Location = new System.Drawing.Point(432, 411);
+            this.domainUpDown1.Name = "domainUpDown1";
+            this.domainUpDown1.Size = new System.Drawing.Size(80, 61);
+            this.domainUpDown1.TabIndex = 25;
+            // 
+            // domainUpDown2
+            // 
+            this.domainUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.25F);
+            this.domainUpDown2.Items.Add("A");
+            this.domainUpDown2.Items.Add("B");
+            this.domainUpDown2.Items.Add("C");
+            this.domainUpDown2.Items.Add("D");
+            this.domainUpDown2.Items.Add("E");
+            this.domainUpDown2.Items.Add("F");
+            this.domainUpDown2.Items.Add("G");
+            this.domainUpDown2.Items.Add("H");
+            this.domainUpDown2.Items.Add("I");
+            this.domainUpDown2.Items.Add("J");
+            this.domainUpDown2.Items.Add("K");
+            this.domainUpDown2.Items.Add("L");
+            this.domainUpDown2.Items.Add("M");
+            this.domainUpDown2.Items.Add("N");
+            this.domainUpDown2.Items.Add("O");
+            this.domainUpDown2.Items.Add("P");
+            this.domainUpDown2.Items.Add("Q");
+            this.domainUpDown2.Items.Add("R");
+            this.domainUpDown2.Items.Add("S");
+            this.domainUpDown2.Items.Add("T");
+            this.domainUpDown2.Items.Add("U");
+            this.domainUpDown2.Items.Add("V");
+            this.domainUpDown2.Items.Add("W");
+            this.domainUpDown2.Items.Add("X");
+            this.domainUpDown2.Items.Add("Y");
+            this.domainUpDown2.Items.Add("Z");
+            this.domainUpDown2.Location = new System.Drawing.Point(518, 411);
+            this.domainUpDown2.Name = "domainUpDown2";
+            this.domainUpDown2.Size = new System.Drawing.Size(80, 61);
+            this.domainUpDown2.TabIndex = 26;
+            // 
+            // drawingactive
+            // 
+            this.drawingactive.BackColor = System.Drawing.Color.Transparent;
+            this.drawingactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawingactive.ForeColor = System.Drawing.Color.Black;
+            this.drawingactive.Location = new System.Drawing.Point(598, 504);
+            this.drawingactive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.drawingactive.Name = "drawingactive";
+            this.drawingactive.Size = new System.Drawing.Size(131, 28);
+            this.drawingactive.TabIndex = 27;
+            this.drawingactive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            
+            // 
             // Form2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -289,6 +376,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.drawingactive);
+            this.Controls.Add(this.domainUpDown2);
+            this.Controls.Add(this.domainUpDown1);
+            this.Controls.Add(this.modoutput);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Fish_desc2);
             this.Controls.Add(this.label7);
@@ -298,7 +389,6 @@
             this.Controls.Add(this.Fish_desc);
             this.Controls.Add(this.PB_drawing_mode);
             this.Controls.Add(this.Text_enter_initials_prompt);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.PB_Back_To_Home);
             this.Controls.Add(this.Fish_preview_picture);
             this.Controls.Add(this.Label_Fish_Type_Text);
@@ -338,7 +428,6 @@
         private System.Windows.Forms.PictureBox PB_fish_select_right;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox PB_Back_To_Home;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Text_enter_initials_prompt;
         private System.Windows.Forms.PictureBox PB_drawing_mode;
         private System.Windows.Forms.Label Fish_desc;
@@ -348,5 +437,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label Fish_desc2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label modoutput;
+        private System.Windows.Forms.DomainUpDown domainUpDown1;
+        private System.Windows.Forms.DomainUpDown domainUpDown2;
+        private System.Windows.Forms.Label drawingactive;
     }
 }

@@ -16,6 +16,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using System.Xml.Schema;
 
 
@@ -58,7 +59,6 @@ namespace LSRD_hmi
 
         //io bits
         public static bool demo_idle = true;
-        public static bool demo_active_drawing = false;
         public static bool demo_active_doorman = false;
         public static bool demo_active_scavenger = false;
         public static bool demo_active_wave = false;
@@ -98,6 +98,7 @@ namespace LSRD_hmi
             label_formsize.Visible = DEBUG_MODE;
             label_formsize2.Visible = DEBUG_MODE;
             label_formsize3.Visible = DEBUG_MODE;
+            drawingactive.Visible = DEBUG_MODE;
             //-------------------------------------
 
             //Login "popup" screen
@@ -164,12 +165,12 @@ namespace LSRD_hmi
 
                 try { label_scaling.Text = "Scaling = " + scale; }
                 catch { }
-            }    
+            }
             // I HAVE FINALLY TRACKED DOWN THE SCALING ISSUE FOR FORMS
             // the forms must be set to AutoScaleMode = None
             // for some reason it by default will set this to Font as the scaling method
             // it will literally scale the whole diplay, form width and height, picture size, and anything else by whatever the current font size is for Form.Font
-            
+            drawingactive.Text = $"{GlobalData.demo_active_drawing}";
         }
 
 
@@ -189,14 +190,48 @@ namespace LSRD_hmi
 
             //Set all individual outputs, see google sheet for full list
             modbusClient.WriteSingleCoil(10, demo_idle);
-            modbusClient.WriteSingleCoil(11, demo_active_drawing);
+            modbusClient.WriteSingleCoil(11, GlobalData.demo_active_drawing);
             modbusClient.WriteSingleCoil(12, demo_active_doorman);
             modbusClient.WriteSingleCoil(13, demo_active_scavenger);
             modbusClient.WriteSingleCoil(14, demo_active_wave); //Wave should be active
 
             modbusClient.WriteSingleCoil(20, cancel_active_demo);
+
             modbusClient.WriteSingleCoil(22, drawing_paper_in_place);
             modbusClient.WriteSingleCoil(23, door_next_step);
+            modbusClient.WriteSingleCoil(24, GlobalData.sturgeon);
+            modbusClient.WriteSingleCoil(25, GlobalData.salmon);
+            modbusClient.WriteSingleCoil(26, GlobalData.lamprey);
+            modbusClient.WriteSingleCoil(27, GlobalData.plankton);
+            modbusClient.WriteSingleCoil(28, GlobalData.nymph);
+            modbusClient.WriteSingleCoil(29, GlobalData.left);
+
+            modbusClient.WriteSingleCoil(35, GlobalData.A);
+            modbusClient.WriteSingleCoil(36, GlobalData.B);
+            modbusClient.WriteSingleCoil(37, GlobalData.C);
+            modbusClient.WriteSingleCoil(38, GlobalData.D);
+            modbusClient.WriteSingleCoil(39, GlobalData.E);
+            modbusClient.WriteSingleCoil(40, GlobalData.F);
+            modbusClient.WriteSingleCoil(41, GlobalData.G);
+            modbusClient.WriteSingleCoil(42, GlobalData.H);
+            modbusClient.WriteSingleCoil(43, GlobalData.I);
+            modbusClient.WriteSingleCoil(44, GlobalData.J);
+            modbusClient.WriteSingleCoil(45, GlobalData.K);
+            modbusClient.WriteSingleCoil(46, GlobalData.L);
+            modbusClient.WriteSingleCoil(47, GlobalData.M);
+            modbusClient.WriteSingleCoil(48, GlobalData.N);
+            modbusClient.WriteSingleCoil(49, GlobalData.O);
+            modbusClient.WriteSingleCoil(50, GlobalData.P);
+            modbusClient.WriteSingleCoil(51, GlobalData.Q);
+            modbusClient.WriteSingleCoil(52, GlobalData.R);
+            modbusClient.WriteSingleCoil(53, GlobalData.S);
+            modbusClient.WriteSingleCoil(54, GlobalData.T);
+            modbusClient.WriteSingleCoil(55, GlobalData.U);
+            modbusClient.WriteSingleCoil(56, GlobalData.V);
+            modbusClient.WriteSingleCoil(57, GlobalData.W);
+            modbusClient.WriteSingleCoil(58, GlobalData.X);
+            modbusClient.WriteSingleCoil(59, GlobalData.Y);
+            modbusClient.WriteSingleCoil(60, GlobalData.Z);
 
 
             //Reenable timer
@@ -383,6 +418,7 @@ namespace LSRD_hmi
         {
             if (enabled_drawing == true)
             {
+                GlobalData.demo_active_drawing = true;
                 Form2 form2 = new Form2();
                 form2.ShowDialog();
                 form2 = null;
@@ -403,12 +439,9 @@ namespace LSRD_hmi
             
             login_panel.Visible = true; //Show popup
             login_menu_open = true; //disable other buttons underneath
-            text_entry_pass.Focus();
             //Initializations
             login = false;
             text_wrong_pass.Visible = false;
-            text_entry_pass.Text = string.Empty;
-
         }
 
 
@@ -426,10 +459,18 @@ namespace LSRD_hmi
 
         public void login_check()
         {
-            if (text_entry_pass.Text == "lsrd")
+            if (pass1.Text == "1" && pass2.Text == "2" && pass3.Text == "3" &&
+                pass4.Text == "4") 
             {
+                pass1.SelectedItem = "0";
+                pass2.SelectedItem = "0";
+                pass3.SelectedItem = "0";
+                pass4.SelectedItem = "0";
+                pass1.Text = "0";
+                pass2.Text = "0";
+                pass3.Text = "0";
+                pass4.Text = "0";
                 login_panel.Visible = false;
-                text_entry_pass.Text = string.Empty;
                 Form_Settings form_Settings = new Form_Settings();
                 form_Settings.ShowDialog();
 
@@ -455,6 +496,14 @@ namespace LSRD_hmi
             else
             {
                 text_wrong_pass.Visible = true;
+                pass1.SelectedItem = -1;
+                pass2.SelectedItem = -1;
+                pass3.SelectedItem = -1;
+                pass4.SelectedItem = -1;
+                pass1.Text = String.Empty;
+                pass2.Text = String.Empty;
+                pass3.Text = String.Empty;
+                pass4.Text = String.Empty;
             }
         }
 
@@ -477,9 +526,42 @@ namespace LSRD_hmi
             }
         }
 
-
-
-
-
     }
+    public static class GlobalData
+    {
+        public static bool sturgeon = false;
+        public static bool nymph = false;
+        public static bool salmon = false;
+        public static bool plankton = false;
+        public static bool lamprey = false;
+        public static bool demo_active_drawing = false;
+        public static bool left = false;
+        public static bool A = false;
+        public static bool B = false;
+        public static bool C = false;
+        public static bool D = false;
+        public static bool E = false;
+        public static bool F = false;
+        public static bool G = false;
+        public static bool H = false;
+        public static bool I = false;
+        public static bool J = false;
+        public static bool K = false;
+        public static bool L = false;
+        public static bool M = false;
+        public static bool N = false;
+        public static bool O = false;
+        public static bool P = false;
+        public static bool Q = false;
+        public static bool R = false;
+        public static bool S = false;
+        public static bool T = false;
+        public static bool U = false;
+        public static bool V = false;
+        public static bool W = false;
+        public static bool X = false;
+        public static bool Y = false;
+        public static bool Z = false;
+    }
+
 }
