@@ -86,9 +86,6 @@
             this.Fish_preview_picture.TabIndex = 3;
             this.Fish_preview_picture.TabStop = false;
             // 
-            // backgroundWorker1
-            // 
-            // 
             // PB_fish_select_left
             // 
             this.PB_fish_select_left.BackColor = System.Drawing.Color.Transparent;
@@ -279,10 +276,10 @@
             this.modoutput.BackColor = System.Drawing.Color.Transparent;
             this.modoutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modoutput.ForeColor = System.Drawing.Color.Black;
-            this.modoutput.Location = new System.Drawing.Point(375, 103);
+            this.modoutput.Location = new System.Drawing.Point(291, 103);
             this.modoutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.modoutput.Name = "modoutput";
-            this.modoutput.Size = new System.Drawing.Size(278, 28);
+            this.modoutput.Size = new System.Drawing.Size(447, 28);
             this.modoutput.TabIndex = 24;
             this.modoutput.Text = "f f f f f";
             this.modoutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -366,7 +363,6 @@
             this.drawingactive.Size = new System.Drawing.Size(131, 28);
             this.drawingactive.TabIndex = 27;
             this.drawingactive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
             // 
             // Form2
             // 

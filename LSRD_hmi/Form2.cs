@@ -79,6 +79,8 @@ namespace LSRD_hmi
             }
             Fish_tagline.Font = new Font(Fish_tagline.Font, FontStyle.Italic);
             drawingactive.Text = $"{GlobalData.demo_active_drawing}";
+            modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.sturgeon} " +
+                $"{GlobalData.sturgeon} {GlobalData.sturgeon} {GlobalData.sturgeon}";
         }
 
   
@@ -134,86 +136,71 @@ namespace LSRD_hmi
         {
             if (fish_selection == 0)
             {
-                GlobalData.sturgeon = true;
-                GlobalData.salmon = false;
-                GlobalData.lamprey = false;
-                GlobalData.plankton = false;
-                GlobalData.nymph = false;
-                modoutput.Text = " T f f f f";
+                fishon(0);
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
-                GlobalData.sturgeon = false;
-                GlobalData.salmon = false;
-                GlobalData.lamprey = false;
-                GlobalData.plankton = false;
-                GlobalData.nymph = false;
-                modoutput.Text = " f f f f f";
+                fishoff();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
             if (fish_selection == 1)
             {
-                GlobalData.sturgeon = false;
-                GlobalData.salmon = true;
-                GlobalData.lamprey = false;
-                GlobalData.plankton = false;
-                GlobalData.nymph = false;
-                modoutput.Text = " f T f f f";
+                fishon(1);
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
-                GlobalData.sturgeon = false;
-                GlobalData.salmon = false;
-                GlobalData.lamprey = false;
-                GlobalData.plankton = false;
-                GlobalData.nymph = false;
-                modoutput.Text = " f f f f f";
+                fishoff();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
             if (fish_selection == 2)
             {
-                GlobalData.sturgeon = false;
-                GlobalData.salmon = false;
-                GlobalData.lamprey = true;
-                GlobalData.plankton = false;
-                GlobalData.nymph = false;
-                modoutput.Text = " f f T f f";
+                fishon(2);
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
-                GlobalData.sturgeon = false;
-                GlobalData.salmon = false;
-                GlobalData.lamprey = false;
-                GlobalData.plankton = false;
-                GlobalData.nymph = false;
-                modoutput.Text = " f f f f f";
+                fishoff();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
             if (fish_selection == 3)
             {
-                GlobalData.sturgeon = false;
-                GlobalData.salmon = false;
-                GlobalData.lamprey = false;
-                GlobalData.plankton = true;
-                GlobalData.nymph = false;
-                modoutput.Text = " f f f T f";
+                fishon(3);
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
-                GlobalData.sturgeon = false;
-                GlobalData.salmon = false;
-                GlobalData.lamprey = false;
-                GlobalData.plankton = false;
-                GlobalData.nymph = false;
-                modoutput.Text = " f f f f f";
+                fishoff();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
             if (fish_selection == 4)
             {
-                GlobalData.sturgeon = false;
-                GlobalData.salmon = false;
-                GlobalData.lamprey = false;
-                GlobalData.plankton = false;
-                GlobalData.nymph = true;
-                modoutput.Text = " f f f f T";
+                fishon(4);
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
-                GlobalData.sturgeon = false;
-                GlobalData.salmon = false;
-                GlobalData.lamprey = false;
-                GlobalData.plankton = false;
-                GlobalData.nymph = false;
-                modoutput.Text = " f f f f f";
+                fishoff();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
         }
-
+        public void fishoff()
+        {
+            GlobalData.sturgeon = false;
+            GlobalData.salmon = false;
+            GlobalData.lamprey = false;
+            GlobalData.plankton = false;
+            GlobalData.nymph = false;
+        }
+        public void fishon(int i)
+        {
+            GlobalData.sturgeon = (i == 0);
+            GlobalData.salmon = (i == 1);
+            GlobalData.lamprey = (i == 2);
+            GlobalData.plankton = (i == 3);
+            GlobalData.nymph = (i == 4);
+        }
         public void wait(int milliseconds)
         {
             var timer1 = new System.Windows.Forms.Timer();
