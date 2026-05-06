@@ -65,6 +65,7 @@
             this.label_formsize2 = new System.Windows.Forms.Label();
             this.label_formsize3 = new System.Windows.Forms.Label();
             this.drawingactive = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_LSRD_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_doorman_mode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_drawing_mode)).BeginInit();
@@ -512,6 +513,12 @@
             this.drawingactive.TabIndex = 29;
             this.drawingactive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -607,6 +614,7 @@
         private System.Windows.Forms.DomainUpDown pass2;
         private System.Windows.Forms.DomainUpDown pass1;
         private System.Windows.Forms.Label drawingactive;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

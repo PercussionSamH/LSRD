@@ -64,8 +64,7 @@ namespace LSRD_hmi
         public static bool demo_active_scavenger = false;
         public static bool demo_active_wave = false;
 
-        //Alphabet dict
-        public Dictionary<char, bool> alphabet = new Dictionary<char, bool>();
+        
 
 
         //Cancel
@@ -113,7 +112,7 @@ namespace LSRD_hmi
             //Setup alphabet dictionary
             for (char c = 'A'; c <= 'Z'; c++)
             {
-                alphabet[c] = false;
+                GlobalData.alphabet[c] = false;
             }
 
             try
@@ -195,6 +194,8 @@ namespace LSRD_hmi
             try
             {
                 QX_Coils = modbusClient.ReadCoils(0, QX_length);
+                GlobalData.check1 = QX_Coils[30];
+                GlobalData.check2 = QX_Coils[31];
             }
             catch { }
             
@@ -227,7 +228,7 @@ namespace LSRD_hmi
                 bool[] boolAlpha = new bool[26];
                 for (char c = 'A'; c <= 'Z'; c++)
                 {
-                    boolAlpha[i++] = alphabet[c];
+                    boolAlpha[i++] = GlobalData.alphabet[c];
                 }
                 //CHANGING A VALUE
                 //  alphabet['A'] = true; // set A to true
@@ -574,7 +575,12 @@ namespace LSRD_hmi
         public static bool lamprey = false;
         public static bool demo_active_drawing = false;
         public static bool left = false;
-        
+        public static bool check1 = false;
+        public static bool check2 = false;
+
+        //Alphabet dict
+        public static Dictionary<char, bool> alphabet = new Dictionary<char, bool>();
+
         //public static bool A = false;
         //public static bool B = false;
         //public static bool C = false;
