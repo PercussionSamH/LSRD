@@ -108,7 +108,8 @@ namespace LSRD_hmi
 
             //Login "popup" screen
             login_panel.Visible = false; //Show popup
-            login_panel.Location = new Point(282, 150);
+            login_panel.Location = new Point(275, 150);
+           
 
             //Setup alphabet dictionary
             for (char c = 'A'; c <= 'Z'; c++)

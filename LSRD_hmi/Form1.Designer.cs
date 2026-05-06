@@ -299,9 +299,9 @@
             this.login_panel.Controls.Add(this.PB_Back_To_Home);
             this.login_panel.Controls.Add(this.label2);
             this.login_panel.Controls.Add(this.label5);
-            this.login_panel.Location = new System.Drawing.Point(266, 564);
+            this.login_panel.Location = new System.Drawing.Point(292, 563);
             this.login_panel.Name = "login_panel";
-            this.login_panel.Size = new System.Drawing.Size(460, 300);
+            this.login_panel.Size = new System.Drawing.Size(475, 300);
             this.login_panel.TabIndex = 23;
             // 
             // pass4
@@ -317,7 +317,7 @@
             this.pass4.Items.Add("7");
             this.pass4.Items.Add("8");
             this.pass4.Items.Add("9");
-            this.pass4.Location = new System.Drawing.Point(372, 99);
+            this.pass4.Location = new System.Drawing.Point(373, 99);
             this.pass4.Name = "pass4";
             this.pass4.Size = new System.Drawing.Size(62, 61);
             this.pass4.TabIndex = 29;
@@ -335,7 +335,7 @@
             this.pass3.Items.Add("7");
             this.pass3.Items.Add("8");
             this.pass3.Items.Add("9");
-            this.pass3.Location = new System.Drawing.Point(304, 99);
+            this.pass3.Location = new System.Drawing.Point(305, 99);
             this.pass3.Name = "pass3";
             this.pass3.Size = new System.Drawing.Size(62, 61);
             this.pass3.TabIndex = 28;
@@ -353,7 +353,7 @@
             this.pass2.Items.Add("7");
             this.pass2.Items.Add("8");
             this.pass2.Items.Add("9");
-            this.pass2.Location = new System.Drawing.Point(236, 99);
+            this.pass2.Location = new System.Drawing.Point(237, 99);
             this.pass2.Name = "pass2";
             this.pass2.Size = new System.Drawing.Size(62, 61);
             this.pass2.TabIndex = 27;
@@ -371,7 +371,7 @@
             this.pass1.Items.Add("7");
             this.pass1.Items.Add("8");
             this.pass1.Items.Add("9");
-            this.pass1.Location = new System.Drawing.Point(168, 99);
+            this.pass1.Location = new System.Drawing.Point(169, 99);
             this.pass1.Name = "pass1";
             this.pass1.Size = new System.Drawing.Size(62, 61);
             this.pass1.TabIndex = 26;
@@ -381,7 +381,7 @@
             this.text_wrong_pass.AutoSize = true;
             this.text_wrong_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_wrong_pass.ForeColor = System.Drawing.Color.Red;
-            this.text_wrong_pass.Location = new System.Drawing.Point(70, 155);
+            this.text_wrong_pass.Location = new System.Drawing.Point(61, 155);
             this.text_wrong_pass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.text_wrong_pass.Name = "text_wrong_pass";
             this.text_wrong_pass.Size = new System.Drawing.Size(392, 31);
@@ -394,7 +394,7 @@
             // 
             this.PB_confirm_pass.BackColor = System.Drawing.Color.Transparent;
             this.PB_confirm_pass.Image = ((System.Drawing.Image)(resources.GetObject("PB_confirm_pass.Image")));
-            this.PB_confirm_pass.Location = new System.Drawing.Point(246, 205);
+            this.PB_confirm_pass.Location = new System.Drawing.Point(263, 205);
             this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(2);
             this.PB_confirm_pass.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_confirm_pass.MinimumSize = new System.Drawing.Size(130, 60);
@@ -409,7 +409,7 @@
             // 
             this.PB_Back_To_Home.BackColor = System.Drawing.Color.Transparent;
             this.PB_Back_To_Home.Image = ((System.Drawing.Image)(resources.GetObject("PB_Back_To_Home.Image")));
-            this.PB_Back_To_Home.Location = new System.Drawing.Point(71, 205);
+            this.PB_Back_To_Home.Location = new System.Drawing.Point(88, 205);
             this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Back_To_Home.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_Back_To_Home.MinimumSize = new System.Drawing.Size(130, 60);
@@ -424,7 +424,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 106);
+            this.label2.Location = new System.Drawing.Point(28, 106);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 31);
@@ -434,7 +434,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 24);
+            this.label5.Location = new System.Drawing.Point(19, 24);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(437, 72);

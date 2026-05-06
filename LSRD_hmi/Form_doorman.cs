@@ -44,12 +44,13 @@ namespace LSRD_hmi
             for (int i = 0; i < Form1.Event_strings.Count; i++)
             {
                 RichTextBox b = new RichTextBox();
+                
                 b.Text = Form1.Event_strings[i]; //sets text
                 b.Font = new Font(b.Font.FontFamily, 13, b.Font.Style); //font and text size
-                b.MinimumSize = new Size(230,0);
+                
                 b.BorderStyle = BorderStyle.FixedSingle;
                 b.Margin = new Padding(5, 8, 5, 5);
-                b.AutoSize = true;
+                
 
                 //Select the first line
                 b.SelectionStart = 0;
@@ -59,7 +60,12 @@ namespace LSRD_hmi
                 //Reset selection to end
                 b.SelectionStart = b.TextLength;
                 b.SelectionLength = 0;
-                
+                b.AutoSize = true;
+                b.MinimumSize = new Size(315, 0);
+                //set size
+                Size preferredSize = b.GetPreferredSize(new Size(315, 0));
+                b.Height = (preferredSize.Height)+5;
+
 
 
                 Scrollable_Events_Box.Controls.Add(b); //add each item to list
