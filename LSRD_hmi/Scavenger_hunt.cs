@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace LSRD_hmi
+{
+    public partial class Scavenger_hunt : Form
+    {
+        public Scavenger_hunt()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            InitializeComponent();
+        }
+
+        private void Scavenger_hunt_Load(object sender, EventArgs e)
+        {
+            //drawingactive.Visible = DEBUG_MODE;
+            //modoutput.Visible = DEBUG_MODE;
+
+            Popup_Hide();
+
+            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
+            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
+            SizeF scale = new SizeF(widthRatio, heightRatio);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)
+            {
+                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+            }
+        }
+
+        private void popup_pb_close_Click(object sender, EventArgs e)
+        {
+            Popup_Hide();
+        }
+        private void PB_drawing_mode_Click(object sender, EventArgs e)
+        {
+            Popup_Show();
+        }
+
+
+        private void Popup_Hide()
+        {
+            //popup_open = false;
+
+            popup_scav_text.Visible = false;
+            popup_pb_close.Visible = false;
+            popup_pb_confirm.Visible = false;
+            popup_scav_border.Visible = false;
+            popup_scav_back.Visible = false;
+        }
+
+        private void Popup_Show()
+        {
+            //popup_open = false;
+
+
+            popup_scav_text.Visible = true;
+            popup_pb_close.Visible = true;
+            popup_pb_confirm.Visible = true;
+            popup_scav_border.Visible = true;
+            popup_scav_back.Visible = true;
+            popup_scav_text.BringToFront();
+            popup_pb_close.BringToFront();
+            popup_pb_confirm.BringToFront();
+        }
+
+        private void popup_pb_confirm_Click(object sender, EventArgs e)
+        {
+            //modbus stuff
+
+            Popup_Hide();
+        }
+    }
+}

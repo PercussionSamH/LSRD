@@ -153,29 +153,11 @@
     <Compile Include="Form_Pass_popup.Designer.cs">
       <DependentUpon>Form_Pass_popup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Room_popups\Form_door_discovery_lab.cs">
+    <Compile Include="Scavenger_hunt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room_popups\Form_door_discovery_lab.Designer.cs">
-      <DependentUpon>Form_door_discovery_lab.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Room_popups\Form_door_partner_suites.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Room_popups\Form_door_partner_suites.Designer.cs">
-      <DependentUpon>Form_door_partner_suites.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Room_popups\Form_door_seminar_room.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Room_popups\Form_door_seminar_room.Designer.cs">
-      <DependentUpon>Form_door_seminar_room.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Room_popups\Form_door_work_cafe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Room_popups\Form_door_work_cafe.Designer.cs">
-      <DependentUpon>Form_door_work_cafe.cs</DependentUpon>
+    <Compile Include="Scavenger_hunt.Designer.cs">
+      <DependentUpon>Scavenger_hunt.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -197,17 +179,8 @@
     <EmbeddedResource Include="Form_Pass_popup.resx">
       <DependentUpon>Form_Pass_popup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Room_popups\Form_door_discovery_lab.resx">
-      <DependentUpon>Form_door_discovery_lab.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Room_popups\Form_door_partner_suites.resx">
-      <DependentUpon>Form_door_partner_suites.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Room_popups\Form_door_seminar_room.resx">
-      <DependentUpon>Form_door_seminar_room.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Room_popups\Form_door_work_cafe.resx">
-      <DependentUpon>Form_door_work_cafe.cs</DependentUpon>
+    <EmbeddedResource Include="Scavenger_hunt.resx">
+      <DependentUpon>Scavenger_hunt.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LSRD_hmi_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -576,6 +549,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\slideshow_texture_white2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scavenger_hunt_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scavenger_hunt_background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scavenget hunt screengrab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placeholder_scavenger_instruct.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scav_arrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scav_arrow2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doosan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square confirm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square cancel4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square confirm3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square get directions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB square get directions1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

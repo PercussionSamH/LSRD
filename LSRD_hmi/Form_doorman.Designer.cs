@@ -42,20 +42,20 @@
             this.lbl_room_info_back = new System.Windows.Forms.Label();
             this.button_room_info = new System.Windows.Forms.Button();
             this.button_events = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PB_confirm_pass = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.popup_pb_close = new System.Windows.Forms.PictureBox();
+            this.popup_pb_enter = new System.Windows.Forms.PictureBox();
+            this.popup_back = new System.Windows.Forms.Label();
+            this.popup_border = new System.Windows.Forms.Label();
+            this.popup_title = new System.Windows.Forms.Label();
+            this.popup_text = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Back_To_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_work_cafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_seminar_room)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_discovery_lab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_partner_suites)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_get_directions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_confirm_pass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popup_pb_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popup_pb_enter)).BeginInit();
             this.SuspendLayout();
             // 
             // Scrollable_Events_Box
@@ -73,7 +73,7 @@
             // 
             this.label_doorman_title.BackColor = System.Drawing.Color.Transparent;
             this.label_doorman_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_doorman_title.Location = new System.Drawing.Point(2, 17);
+            this.label_doorman_title.Location = new System.Drawing.Point(2, 19);
             this.label_doorman_title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_doorman_title.Name = "label_doorman_title";
             this.label_doorman_title.Size = new System.Drawing.Size(1023, 74);
@@ -208,9 +208,9 @@
             // 
             this.button_room_info.BackColor = System.Drawing.Color.LightGray;
             this.button_room_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_room_info.Location = new System.Drawing.Point(809, 107);
+            this.button_room_info.Location = new System.Drawing.Point(809, 105);
             this.button_room_info.Name = "button_room_info";
-            this.button_room_info.Size = new System.Drawing.Size(179, 52);
+            this.button_room_info.Size = new System.Drawing.Size(179, 54);
             this.button_room_info.TabIndex = 41;
             this.button_room_info.Text = "Room info";
             this.button_room_info.UseVisualStyleBackColor = false;
@@ -219,80 +219,81 @@
             // button_events
             // 
             this.button_events.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_events.Location = new System.Drawing.Point(638, 107);
+            this.button_events.Location = new System.Drawing.Point(638, 105);
             this.button_events.Name = "button_events";
-            this.button_events.Size = new System.Drawing.Size(179, 52);
+            this.button_events.Size = new System.Drawing.Size(179, 54);
             this.button_events.TabIndex = 42;
             this.button_events.Text = "Upcoming Events";
             this.button_events.UseVisualStyleBackColor = true;
             this.button_events.Click += new System.EventHandler(this.button_events_Click);
             // 
-            // pictureBox1
+            // popup_pb_close
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(327, 426);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(169, 78);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(131, 60);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
+            this.popup_pb_close.BackColor = System.Drawing.Color.Transparent;
+            this.popup_pb_close.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.popup_pb_close.Image = global::LSRD_hmi.Properties.Resources.PB_square_cancel1;
+            this.popup_pb_close.Location = new System.Drawing.Point(327, 426);
+            this.popup_pb_close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.popup_pb_close.MaximumSize = new System.Drawing.Size(169, 78);
+            this.popup_pb_close.MinimumSize = new System.Drawing.Size(131, 60);
+            this.popup_pb_close.Name = "popup_pb_close";
+            this.popup_pb_close.Size = new System.Drawing.Size(169, 78);
+            this.popup_pb_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.popup_pb_close.TabIndex = 43;
+            this.popup_pb_close.TabStop = false;
+            this.popup_pb_close.Click += new System.EventHandler(this.popup_pb_close_Click);
             // 
-            // PB_confirm_pass
+            // popup_pb_enter
             // 
-            this.PB_confirm_pass.BackColor = System.Drawing.Color.Transparent;
-            this.PB_confirm_pass.Image = ((System.Drawing.Image)(resources.GetObject("PB_confirm_pass.Image")));
-            this.PB_confirm_pass.Location = new System.Drawing.Point(528, 426);
-            this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PB_confirm_pass.MaximumSize = new System.Drawing.Size(169, 78);
-            this.PB_confirm_pass.MinimumSize = new System.Drawing.Size(131, 60);
-            this.PB_confirm_pass.Name = "PB_confirm_pass";
-            this.PB_confirm_pass.Size = new System.Drawing.Size(169, 78);
-            this.PB_confirm_pass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_confirm_pass.TabIndex = 44;
-            this.PB_confirm_pass.TabStop = false;
+            this.popup_pb_enter.BackColor = System.Drawing.Color.Transparent;
+            this.popup_pb_enter.Image = global::LSRD_hmi.Properties.Resources.PB_square_get_directions1;
+            this.popup_pb_enter.Location = new System.Drawing.Point(528, 426);
+            this.popup_pb_enter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.popup_pb_enter.MaximumSize = new System.Drawing.Size(169, 78);
+            this.popup_pb_enter.MinimumSize = new System.Drawing.Size(131, 60);
+            this.popup_pb_enter.Name = "popup_pb_enter";
+            this.popup_pb_enter.Size = new System.Drawing.Size(169, 78);
+            this.popup_pb_enter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.popup_pb_enter.TabIndex = 44;
+            this.popup_pb_enter.TabStop = false;
             // 
-            // label2
+            // popup_back
             // 
-            this.label2.Location = new System.Drawing.Point(283, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(460, 420);
-            this.label2.TabIndex = 45;
+            this.popup_back.Location = new System.Drawing.Point(283, 105);
+            this.popup_back.Name = "popup_back";
+            this.popup_back.Size = new System.Drawing.Size(460, 420);
+            this.popup_back.TabIndex = 45;
             // 
-            // label3
+            // popup_border
             // 
-            this.label3.BackColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(275, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(476, 436);
-            this.label3.TabIndex = 46;
+            this.popup_border.BackColor = System.Drawing.Color.DimGray;
+            this.popup_border.Location = new System.Drawing.Point(275, 98);
+            this.popup_border.Name = "popup_border";
+            this.popup_border.Size = new System.Drawing.Size(476, 436);
+            this.popup_border.TabIndex = 46;
             // 
-            // label4
+            // popup_title
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(305, 127);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(417, 63);
-            this.label4.TabIndex = 48;
-            this.label4.Text = "Work Cafe";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.popup_title.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.popup_title.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.popup_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.popup_title.Location = new System.Drawing.Point(305, 127);
+            this.popup_title.Name = "popup_title";
+            this.popup_title.Size = new System.Drawing.Size(417, 63);
+            this.popup_title.TabIndex = 48;
+            this.popup_title.Text = "Work Cafe";
+            this.popup_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // popup_text
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(305, 216);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(417, 189);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "steps";
+            this.popup_text.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.popup_text.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.popup_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.popup_text.Location = new System.Drawing.Point(305, 216);
+            this.popup_text.Name = "popup_text";
+            this.popup_text.Size = new System.Drawing.Size(417, 189);
+            this.popup_text.TabIndex = 49;
+            this.popup_text.Text = "steps";
             // 
             // Form_doorman
             // 
@@ -300,12 +301,12 @@
             this.BackgroundImage = global::LSRD_hmi.Properties.Resources.doorman_bkg_blueish_22;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.PB_confirm_pass);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.popup_text);
+            this.Controls.Add(this.popup_title);
+            this.Controls.Add(this.popup_pb_enter);
+            this.Controls.Add(this.popup_pb_close);
+            this.Controls.Add(this.popup_back);
+            this.Controls.Add(this.popup_border);
             this.Controls.Add(this.button_events);
             this.Controls.Add(this.button_room_info);
             this.Controls.Add(this.PB_get_directions);
@@ -333,8 +334,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_discovery_lab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_area_partner_suites)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_get_directions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_confirm_pass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popup_pb_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popup_pb_enter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,11 +354,11 @@
         private System.Windows.Forms.Label lbl_room_info_back;
         private System.Windows.Forms.Button button_room_info;
         private System.Windows.Forms.Button button_events;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox PB_confirm_pass;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox popup_pb_close;
+        private System.Windows.Forms.PictureBox popup_pb_enter;
+        private System.Windows.Forms.Label popup_back;
+        private System.Windows.Forms.Label popup_border;
+        private System.Windows.Forms.Label popup_title;
+        private System.Windows.Forms.Label popup_text;
     }
 }

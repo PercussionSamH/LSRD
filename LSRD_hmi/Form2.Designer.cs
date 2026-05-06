@@ -188,14 +188,14 @@
             // 
             this.Fish_tagline.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Fish_tagline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Fish_tagline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fish_tagline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fish_tagline.ForeColor = System.Drawing.Color.Black;
             this.Fish_tagline.Location = new System.Drawing.Point(781, 100);
             this.Fish_tagline.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Fish_tagline.MinimumSize = new System.Drawing.Size(150, 0);
             this.Fish_tagline.Name = "Fish_tagline";
             this.Fish_tagline.Padding = new System.Windows.Forms.Padding(6);
-            this.Fish_tagline.Size = new System.Drawing.Size(210, 53);
+            this.Fish_tagline.Size = new System.Drawing.Size(210, 66);
             this.Fish_tagline.TabIndex = 16;
             this.Fish_tagline.Text = "{{FISH TAGLINE}}";
             this.Fish_tagline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

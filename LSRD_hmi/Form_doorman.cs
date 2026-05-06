@@ -1,5 +1,4 @@
-﻿using LSRD_hmi.Room_popups;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +12,6 @@ using System.Windows.Forms;
 using System.Xml.Schema;
 
 
-
-
 namespace LSRD_hmi
 {
     public partial class Form_doorman : Form
@@ -24,13 +21,14 @@ namespace LSRD_hmi
         public string[] Room_names = {"Discovery Lab", "Partner Suites", "Seminar Room", "Work Cafe"};
         public Dictionary<string, string> Room_Desc = new Dictionary<string, string>();
         public string room_selection = null;
+        public bool popup_open = false;
         public Form_doorman()
         {
             //Initializations
             this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
             this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
-
+            Hide_Popup(); //make sure popup with directions is hidden
 
             //Using a dictionary mostly to keep the code legible for long blocks of text
             Room_Desc.Add(Room_names[0], "• Classroom \r\n• Conference Room\r\n");
@@ -90,34 +88,52 @@ namespace LSRD_hmi
 
         private void PB_Back_To_Home_Click(object sender, EventArgs e)
         {
-            Close();
+            if (popup_open == false)
+            {
+                Close();
+            }
         }
 
         // Buttons
     
         private void PB_door_work_cafe_Click(object sender, EventArgs e)
         {
-            room_selection = "Work Cafe";
-            lbl_room_info.Text = "\t" + room_selection + "\n\r" + Room_Desc[room_selection];
-            button_room_info_Click(this, new EventArgs());
+            if (popup_open == false)
+            {
+                room_selection = "Work Cafe";
+                lbl_room_info.Text = "\t" + room_selection + "\n\r" + Room_Desc[room_selection];
+                button_room_info_Click(this, new EventArgs());
+            }
+            
         }
         private void PB_door_seminar_room_Click(object sender, EventArgs e)
         {
-            room_selection = "Seminar Room";
-            lbl_room_info.Text = "\t" + room_selection + "\n\r" + Room_Desc[room_selection];
-            button_room_info_Click(this, new EventArgs());
+            if (popup_open == false)
+            {
+                room_selection = "Seminar Room";
+                lbl_room_info.Text = "\t" + room_selection + "\n\r" + Room_Desc[room_selection];
+                button_room_info_Click(this, new EventArgs());
+            }
         }
         private void PB_door_discovery_lab_Click(object sender, EventArgs e)
         {
-            room_selection = "Discovery Lab";
-            lbl_room_info.Text = "\t" + room_selection + "\n\r" + Room_Desc[room_selection];
-            button_room_info_Click(this, new EventArgs());
+            if (popup_open == false)
+            {
+                room_selection = "Discovery Lab";
+                lbl_room_info.Text = "\t" + room_selection + "\n\r" + Room_Desc[room_selection];
+                button_room_info_Click(this, new EventArgs());
+            }
         }
         private void PB_door_partner_suites_Click(object sender, EventArgs e)
         {
-            room_selection = "Partner Suites";
-            lbl_room_info.Text = "\t" + room_selection + "\n\r" + Room_Desc[room_selection];
-            button_room_info_Click(this, new EventArgs());
+            if (popup_open == false)
+            {
+                room_selection = "Partner Suites";
+                lbl_room_info.Text = "\t" + room_selection + "\n\r" + Room_Desc[room_selection];
+                button_room_info_Click(this, new EventArgs());
+            }
+
+            
         }
 
 
@@ -125,18 +141,21 @@ namespace LSRD_hmi
 
         private void button_events_Click(object sender, EventArgs e)
         {
-            button_events.BringToFront();
-            button_events.BackColor = Color.White;
-            button_room_info.BackColor = Color.LightGray;
-            Scrollable_Events_Box.Visible = true;
-            lbl_room_info.Visible = false;
-            lbl_room_info_back.Visible = false;
-
+            if (popup_open == false)
+            {
+                button_room_info.SendToBack();
+                button_events.BackColor = Color.White;
+                button_room_info.BackColor = Color.LightGray;
+                Scrollable_Events_Box.Visible = true;
+                lbl_room_info.Visible = false;
+                lbl_room_info_back.Visible = false;
+            }
         }
 
         private void button_room_info_Click(object sender, EventArgs e)
         {
-            button_room_info.BringToFront();
+
+            button_events.SendToBack();
             button_room_info.BackColor = Color.White;
             button_events.BackColor = Color.LightGray;
             Scrollable_Events_Box.Visible = false;
@@ -146,28 +165,70 @@ namespace LSRD_hmi
 
         private void PB_get_directions_Click(object sender, EventArgs e)
         {
+            Show_Popup();         
+        }
+
+        private void Show_Popup()
+        {
+            popup_open = true;
+            popup_back.Visible = true;
+            popup_border.Visible = true;
+            popup_pb_close.Visible = true;
+            popup_pb_enter.Visible = true;
+            popup_text.Visible = true;
+            popup_title.Visible = true;
+            popup_title.BringToFront();
+            popup_text.BringToFront();
+            popup_pb_close.BringToFront();
+            popup_pb_enter.BringToFront();
             //public string[] Room_names = { "Discovery Lab", "Partner Suites", "Seminar Room", "Work Cafe" };
             //launch popups
-            if (room_selection== Room_names[0])
+
+            popup_title.Text = room_selection;
+            if (room_selection == Room_names[0])//Discovery_Lab
             {
-                Form_door_discovery_lab form_Door_Discovery_Lab = new Form_door_discovery_lab();
-                form_Door_Discovery_Lab.ShowDialog();
+                popup_text.Text = "--sample--\n" +
+                    "Facing towards the discovery center, take the door forward and to your left\n" +
+                    "go up the stairs and to the left\n";
+
             }
-            else if (room_selection == Room_names[1])
+            else if (room_selection == Room_names[1])//Partner_Suites
             {
-                Form_door_partner_suites form_Door_Partner_Suites = new Form_door_partner_suites();
-                form_Door_Partner_Suites.ShowDialog();
+                popup_text.Text = "--sample--\n" +
+                    "Partner_Suites Facing towards the discovery center, take the door forward and to your left\n" +
+                    "go up the stairs and to the left\n";
             }
-            else if (room_selection == Room_names[2])
+            else if (room_selection == Room_names[2])//Seminar_Room
             {
-                Form_door_seminar_room form_Door_Seminar_Room = new Form_door_seminar_room();
-                form_Door_Seminar_Room.ShowDialog();
+                popup_text.Text = "--sample--\n" +
+                   "Seminar_Room Facing towards the discovery center, take the door forward and to your left\n" +
+                   "go up the stairs and to the left\n";
+
             }
-            else if (room_selection == Room_names[3])
+            else if (room_selection == Room_names[3]) //Work_Cafe
             {
-                Form_door_work_cafe form_Door_Work_Cafe = new Form_door_work_cafe();
-                form_Door_Work_Cafe.ShowDialog();
-            }          
+                popup_text.Text = "--sample--\n" +
+                     "Work_Cafe Facing towards the discovery center, take the door forward and to your left\n" +
+                     "go up the stairs and to the left\n";
+            }
+        }
+        private void Hide_Popup()
+        {
+            popup_open = false;
+
+            popup_title.Visible = false;
+            popup_text.Visible = false;
+            popup_pb_close.Visible = false;
+            popup_pb_enter.Visible = false;
+            popup_border.Visible = false;
+            popup_back.Visible = false;
+
+
+        }
+
+        private void popup_pb_close_Click(object sender, EventArgs e)
+        {
+            Hide_Popup();
         }
     }
 }

@@ -558,9 +558,9 @@ namespace LSRD_hmi
         {
             if (enabled_scavenger == true)
             {
-                //Form2 form2 = new Form2();
-                //form2.ShowDialog();
-                //form2 = null;
+                Scavenger_hunt scavenger_Hunt = new Scavenger_hunt();
+                scavenger_Hunt.ShowDialog();
+                scavenger_Hunt = null;
             }
         }
 
