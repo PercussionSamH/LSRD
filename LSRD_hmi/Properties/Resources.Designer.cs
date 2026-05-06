@@ -543,6 +543,36 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap salm1 {
+            get {
+                object obj = ResourceManager.GetObject("salm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salm11 {
+            get {
+                object obj = ResourceManager.GetObject("salm11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salm2 {
+            get {
+                object obj = ResourceManager.GetObject("salm2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap scav_arrow2 {
             get {
                 object obj = ResourceManager.GetObject("scav_arrow2", resourceCulture);
@@ -586,6 +616,26 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap slideshow_texture_white2 {
             get {
                 object obj = ResourceManager.GetObject("slideshow_texture_white2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap the_fish_machine_gold {
+            get {
+                object obj = ResourceManager.GetObject("the_fish_machine_gold", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap the_fish_machine_gold2 {
+            get {
+                object obj = ResourceManager.GetObject("the_fish_machine_gold2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

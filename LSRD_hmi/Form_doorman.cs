@@ -45,7 +45,7 @@ namespace LSRD_hmi
             {
                 RichTextBox b = new RichTextBox();
                 b.Text = Form1.Event_strings[i]; //sets text
-                b.Font = new Font(b.Font.FontFamily, 12, b.Font.Style); //font and text size
+                b.Font = new Font(b.Font.FontFamily, 13, b.Font.Style); //font and text size
                 b.MinimumSize = new Size(230,0);
                 b.BorderStyle = BorderStyle.FixedSingle;
                 b.Margin = new Padding(5, 8, 5, 5);
@@ -55,7 +55,7 @@ namespace LSRD_hmi
                 b.SelectionStart = 0;
                 b.SelectionLength = b.Lines[0].Length;
                 //Make it bold
-                b.SelectionFont = new Font(b.Font.FontFamily, 12+2, FontStyle.Bold);
+                b.SelectionFont = new Font(b.Font.FontFamily, 13+2, FontStyle.Bold);
                 //Reset selection to end
                 b.SelectionStart = b.TextLength;
                 b.SelectionLength = 0;
