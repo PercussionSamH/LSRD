@@ -69,6 +69,7 @@
             // 
             // label6
             // 
+            this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(102)))));
@@ -76,7 +77,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(3, 6, 6, 6);
-            this.label6.Size = new System.Drawing.Size(300, 397);
+            this.label6.Size = new System.Drawing.Size(300, 356);
             this.label6.TabIndex = 23;
             this.label6.Text = "- Place your scavenger hunt on the tray on the robot\r\n \r\n- Slide it all the way u" +
     "p\r\n(shown in right photo)\r\n\r\n- Press Enter\r\n";
@@ -123,7 +124,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(220)))));
             this.label1.Location = new System.Drawing.Point(334, 116);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -148,9 +149,9 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.label2.Location = new System.Drawing.Point(709, 119);
+            this.label2.Location = new System.Drawing.Point(714, 133);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(273, 45);
@@ -182,7 +183,7 @@
             // 
             this.popup_scav_text.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.popup_scav_text.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.popup_scav_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.popup_scav_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popup_scav_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
             this.popup_scav_text.Location = new System.Drawing.Point(303, 202);
             this.popup_scav_text.Name = "popup_scav_text";
