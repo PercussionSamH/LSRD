@@ -55,17 +55,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.put_yo_paper = new System.Windows.Forms.Panel();
-            this.popup_pb_close = new System.Windows.Forms.PictureBox();
-            this.popup_pb_confirm = new System.Windows.Forms.PictureBox();
-            this.popup_scav_text = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.please_take_your_fish = new System.Windows.Forms.Panel();
+            this.triple_dipper_explode = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pb_confirm_take = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.triple_dipper_explode = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.popup_scav_text = new System.Windows.Forms.Label();
+            this.popup_pb_close = new System.Windows.Forms.PictureBox();
+            this.popup_pb_confirm = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Fish_preview_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_right)).BeginInit();
@@ -76,11 +76,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.put_yo_paper.SuspendLayout();
+            this.please_take_your_fish.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.triple_dipper_explode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_confirm_take)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popup_pb_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popup_pb_confirm)).BeginInit();
-            this.please_take_your_fish.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_confirm_take)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.triple_dipper_explode)).BeginInit();
             this.SuspendLayout();
             // 
             // Label_Fish_Type_Text
@@ -464,73 +464,6 @@
             this.put_yo_paper.TabIndex = 64;
             this.put_yo_paper.Visible = false;
             // 
-            // popup_pb_close
-            // 
-            this.popup_pb_close.BackColor = System.Drawing.Color.Transparent;
-            this.popup_pb_close.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.popup_pb_close.Image = global::LSRD_hmi.Properties.Resources.PB_square_cancel1;
-            this.popup_pb_close.Location = new System.Drawing.Point(83, 415);
-            this.popup_pb_close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.popup_pb_close.MaximumSize = new System.Drawing.Size(169, 78);
-            this.popup_pb_close.MinimumSize = new System.Drawing.Size(131, 60);
-            this.popup_pb_close.Name = "popup_pb_close";
-            this.popup_pb_close.Size = new System.Drawing.Size(169, 77);
-            this.popup_pb_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.popup_pb_close.TabIndex = 64;
-            this.popup_pb_close.TabStop = false;
-            this.popup_pb_close.Click += new System.EventHandler(this.popup_pb_close_Click);
-            // 
-            // popup_pb_confirm
-            // 
-            this.popup_pb_confirm.BackColor = System.Drawing.Color.Transparent;
-            this.popup_pb_confirm.Image = global::LSRD_hmi.Properties.Resources.PB_square_confirm3;
-            this.popup_pb_confirm.Location = new System.Drawing.Point(306, 413);
-            this.popup_pb_confirm.Margin = new System.Windows.Forms.Padding(2);
-            this.popup_pb_confirm.MaximumSize = new System.Drawing.Size(160, 80);
-            this.popup_pb_confirm.Name = "popup_pb_confirm";
-            this.popup_pb_confirm.Size = new System.Drawing.Size(160, 79);
-            this.popup_pb_confirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.popup_pb_confirm.TabIndex = 63;
-            this.popup_pb_confirm.TabStop = false;
-            this.popup_pb_confirm.Click += new System.EventHandler(this.popup_pb_confirm_Click);
-            // 
-            // popup_scav_text
-            // 
-            this.popup_scav_text.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.popup_scav_text.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.popup_scav_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.popup_scav_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
-            this.popup_scav_text.Location = new System.Drawing.Point(61, 26);
-            this.popup_scav_text.Name = "popup_scav_text";
-            this.popup_scav_text.Size = new System.Drawing.Size(417, 91);
-            this.popup_scav_text.TabIndex = 65;
-            this.popup_scav_text.Text = "Please grab a bordered paper\r\nPlace it on the vacuum bed as shown below";
-            this.popup_scav_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
-            this.label4.Location = new System.Drawing.Point(12, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(515, 501);
-            this.label4.TabIndex = 66;
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
-            this.label8.Location = new System.Drawing.Point(161, 131);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(216, 268);
-            this.label8.TabIndex = 67;
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // please_take_your_fish
             // 
             this.please_take_your_fish.BackColor = System.Drawing.Color.DimGray;
@@ -543,7 +476,18 @@
             this.please_take_your_fish.Name = "please_take_your_fish";
             this.please_take_your_fish.Size = new System.Drawing.Size(541, 453);
             this.please_take_your_fish.TabIndex = 68;
-            this.please_take_your_fish.Visible = false;
+            // 
+            // triple_dipper_explode
+            // 
+            this.triple_dipper_explode.BackColor = System.Drawing.Color.Transparent;
+            this.triple_dipper_explode.Image = global::LSRD_hmi.Properties.Resources.Triple_dipper;
+            this.triple_dipper_explode.Location = new System.Drawing.Point(133, 102);
+            this.triple_dipper_explode.Margin = new System.Windows.Forms.Padding(2);
+            this.triple_dipper_explode.Name = "triple_dipper_explode";
+            this.triple_dipper_explode.Size = new System.Drawing.Size(271, 220);
+            this.triple_dipper_explode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.triple_dipper_explode.TabIndex = 68;
+            this.triple_dipper_explode.TabStop = false;
             // 
             // label10
             // 
@@ -596,17 +540,72 @@
             this.label12.TabIndex = 66;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // triple_dipper_explode
+            // label8
             // 
-            this.triple_dipper_explode.BackColor = System.Drawing.Color.Transparent;
-            this.triple_dipper_explode.Image = global::LSRD_hmi.Properties.Resources.Triple_dipper;
-            this.triple_dipper_explode.Location = new System.Drawing.Point(133, 102);
-            this.triple_dipper_explode.Margin = new System.Windows.Forms.Padding(2);
-            this.triple_dipper_explode.Name = "triple_dipper_explode";
-            this.triple_dipper_explode.Size = new System.Drawing.Size(271, 220);
-            this.triple_dipper_explode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.triple_dipper_explode.TabIndex = 68;
-            this.triple_dipper_explode.TabStop = false;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
+            this.label8.Location = new System.Drawing.Point(161, 131);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(216, 268);
+            this.label8.TabIndex = 67;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // popup_scav_text
+            // 
+            this.popup_scav_text.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.popup_scav_text.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.popup_scav_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.popup_scav_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
+            this.popup_scav_text.Location = new System.Drawing.Point(61, 26);
+            this.popup_scav_text.Name = "popup_scav_text";
+            this.popup_scav_text.Size = new System.Drawing.Size(417, 91);
+            this.popup_scav_text.TabIndex = 65;
+            this.popup_scav_text.Text = "Please grab a bordered paper\r\nPlace it on the vacuum bed as shown below";
+            this.popup_scav_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // popup_pb_close
+            // 
+            this.popup_pb_close.BackColor = System.Drawing.Color.Transparent;
+            this.popup_pb_close.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.popup_pb_close.Image = global::LSRD_hmi.Properties.Resources.PB_square_cancel1;
+            this.popup_pb_close.Location = new System.Drawing.Point(83, 415);
+            this.popup_pb_close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.popup_pb_close.MaximumSize = new System.Drawing.Size(169, 78);
+            this.popup_pb_close.MinimumSize = new System.Drawing.Size(131, 60);
+            this.popup_pb_close.Name = "popup_pb_close";
+            this.popup_pb_close.Size = new System.Drawing.Size(169, 77);
+            this.popup_pb_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.popup_pb_close.TabIndex = 64;
+            this.popup_pb_close.TabStop = false;
+            this.popup_pb_close.Click += new System.EventHandler(this.popup_pb_close_Click);
+            // 
+            // popup_pb_confirm
+            // 
+            this.popup_pb_confirm.BackColor = System.Drawing.Color.Transparent;
+            this.popup_pb_confirm.Image = global::LSRD_hmi.Properties.Resources.PB_square_confirm3;
+            this.popup_pb_confirm.Location = new System.Drawing.Point(306, 413);
+            this.popup_pb_confirm.Margin = new System.Windows.Forms.Padding(2);
+            this.popup_pb_confirm.MaximumSize = new System.Drawing.Size(160, 80);
+            this.popup_pb_confirm.Name = "popup_pb_confirm";
+            this.popup_pb_confirm.Size = new System.Drawing.Size(160, 79);
+            this.popup_pb_confirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.popup_pb_confirm.TabIndex = 63;
+            this.popup_pb_confirm.TabStop = false;
+            this.popup_pb_confirm.Click += new System.EventHandler(this.popup_pb_confirm_Click);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
+            this.label4.Location = new System.Drawing.Point(12, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(515, 501);
+            this.label4.TabIndex = 66;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form2
             // 
@@ -662,11 +661,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.put_yo_paper.ResumeLayout(false);
+            this.please_take_your_fish.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.triple_dipper_explode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_confirm_take)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popup_pb_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popup_pb_confirm)).EndInit();
-            this.please_take_your_fish.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_confirm_take)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.triple_dipper_explode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
