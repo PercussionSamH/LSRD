@@ -276,7 +276,7 @@
             // 
             this.popup_title.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.popup_title.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.popup_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.popup_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popup_title.Location = new System.Drawing.Point(305, 127);
             this.popup_title.Name = "popup_title";
             this.popup_title.Size = new System.Drawing.Size(417, 63);
@@ -288,7 +288,7 @@
             // 
             this.popup_text.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.popup_text.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.popup_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.popup_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popup_text.Location = new System.Drawing.Point(305, 216);
             this.popup_text.Name = "popup_text";
             this.popup_text.Size = new System.Drawing.Size(417, 189);
