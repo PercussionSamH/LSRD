@@ -14,6 +14,7 @@ using System.Xml.Schema;
 
 namespace LSRD_hmi
 {
+
     public partial class Form2 : Form
     {
         //Global vars
