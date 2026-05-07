@@ -50,6 +50,7 @@
             this.drawingactive = new System.Windows.Forms.Label();
             this.drawing = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Fish_preview_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_right)).BeginInit();
@@ -370,22 +371,34 @@
             // 
             // drawing
             // 
+            this.drawing.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.drawing.Controls.Add(this.label2);
             this.drawing.Controls.Add(this.pictureBox2);
-            this.drawing.Location = new System.Drawing.Point(670, 428);
+            this.drawing.Location = new System.Drawing.Point(502, 100);
             this.drawing.Name = "drawing";
-            this.drawing.Size = new System.Drawing.Size(468, 439);
+            this.drawing.Size = new System.Drawing.Size(636, 474);
             this.drawing.TabIndex = 28;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = global::LSRD_hmi.Properties.Resources.Triple_dipper;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 15);
+            this.pictureBox2.Image = global::LSRD_hmi.Properties.Resources.Zooplankton_250_180;
+            this.pictureBox2.Location = new System.Drawing.Point(78, 40);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(447, 364);
+            this.pictureBox2.Size = new System.Drawing.Size(500, 360);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.8F);
+            this.label2.Location = new System.Drawing.Point(153, 406);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(344, 36);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Your fish is being drawn!";
             // 
             // Form2
             // 
@@ -466,5 +479,6 @@
         private System.Windows.Forms.Label drawingactive;
         private System.Windows.Forms.Panel drawing;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
     }
 }

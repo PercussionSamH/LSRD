@@ -142,6 +142,8 @@ namespace LSRD_hmi
             drawing.Width = this.Width; drawing.Height = this.Height;
             drawing.Location = new Point(0, 0);
             pictureBox2.Location = new Point((drawing.Width - pictureBox2.Width) / 2, (drawing.Height - pictureBox2.Height) / 2);
+            label2.Location = new Point((drawing.Width - label2.Width) / 2, pictureBox2.Location.Y + pictureBox2.Height + margin);
+            pictureBox2.Image = fish_pictures[fish_selection]; 
 
             //turn on the selected fish for the drawing
             if (fish_selection == 0)
