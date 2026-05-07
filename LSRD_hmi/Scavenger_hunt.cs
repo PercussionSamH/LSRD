@@ -14,25 +14,26 @@ namespace LSRD_hmi
     {
         public Scavenger_hunt()
         {
+            this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
             this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
         }
 
         private void Scavenger_hunt_Load(object sender, EventArgs e)
         {
-            //drawingactive.Visible = DEBUG_MODE;
-            //modoutput.Visible = DEBUG_MODE;
-
             Popup_Hide();
-
-            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
-            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
-            SizeF scale = new SizeF(widthRatio, heightRatio);
-            this.Scale(scale);
-            foreach (Control control in this.Controls)
+            if(Form1.ENABLE_SCALING)
             {
-                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+                float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
+                float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
+                SizeF scale = new SizeF(widthRatio, heightRatio);
+                this.Scale(scale);
+                foreach (Control control in this.Controls)
+                {
+                    control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+                }
             }
+            
         }
 
         private void popup_pb_close_Click(object sender, EventArgs e)

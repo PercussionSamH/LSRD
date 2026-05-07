@@ -75,15 +75,18 @@ namespace LSRD_hmi
 
             drawingactive.Visible = DEBUG_MODE;
             modoutput.Visible = DEBUG_MODE;
-
-            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
-            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
-            SizeF scale = new SizeF(widthRatio, heightRatio);
-            this.Scale(scale);
-            foreach (Control control in this.Controls)
+            if (Form1.ENABLE_SCALING)
             {
-                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+                float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
+                float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
+                SizeF scale = new SizeF(widthRatio, heightRatio);
+                this.Scale(scale);
+                foreach (Control control in this.Controls)
+                {
+                    control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+                }
             }
+                
             Fish_tagline.Font = new Font(Fish_tagline.Font, FontStyle.Italic);
             drawingactive.Text = $"{GlobalData.demo_active_drawing}";
             modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.sturgeon} " +

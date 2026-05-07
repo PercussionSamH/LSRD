@@ -17,7 +17,6 @@ namespace LSRD_hmi
     public partial class Form_doorman : Form
     {
         //Global vars
-        
         public string[] Room_names = {"Discovery Lab", "Partner Suites", "Seminar Room", "Work Cafe"};
         public Dictionary<string, string> Room_Desc = new Dictionary<string, string>();
         public string room_selection = null;
@@ -46,7 +45,7 @@ namespace LSRD_hmi
                 RichTextBox b = new RichTextBox();
                 b.Text = Form1.Event_strings[i]; //sets text
                 b.Font = new Font(b.Font.FontFamily, 12, b.Font.Style); //font and text size
-                b.MinimumSize = new Size(230,0);
+                b.MinimumSize = new Size(230,200);
                 b.BorderStyle = BorderStyle.FixedSingle;
                 b.Margin = new Padding(5, 8, 5, 5);
                 b.AutoSize = true;
@@ -60,6 +59,7 @@ namespace LSRD_hmi
                 b.SelectionStart = b.TextLength;
                 b.SelectionLength = 0;
                 
+                b.BringToFront();
 
 
                 Scrollable_Events_Box.Controls.Add(b); //add each item to list
@@ -76,14 +76,18 @@ namespace LSRD_hmi
     
         private void Form_doorman_Load(object sender, EventArgs e)
         {
-            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
-            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
-            SizeF scale = new SizeF(widthRatio, heightRatio);
-            this.Scale(scale);
-            foreach (Control control in this.Controls)
+            if (Form1.ENABLE_SCALING)
             {
-                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio / 1);
+                float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
+                float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
+                SizeF scale = new SizeF(widthRatio, heightRatio);
+                this.Scale(scale);
+                foreach (Control control in this.Controls)
+                {
+                    control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio / 1);
+                }
             }
+
         }
 
         private void PB_Back_To_Home_Click(object sender, EventArgs e)

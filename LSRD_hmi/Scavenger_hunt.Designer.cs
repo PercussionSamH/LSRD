@@ -78,8 +78,9 @@
             this.label6.Padding = new System.Windows.Forms.Padding(3, 6, 6, 6);
             this.label6.Size = new System.Drawing.Size(300, 397);
             this.label6.TabIndex = 23;
-            this.label6.Text = "- Place your scavenger hunt on the tray on the robot\r\n \r\n- Slide it all the way u" +
-    "p\r\n(shown in right photo)\r\n\r\n- Press Enter\r\n";
+            this.label6.Text = "GET THE ROBOT TO SIGN YOUR PAGE!\r\n\r\n- Place your scavenger hunt on the tray on th" +
+    "e robot\r\n \r\n- Slide it all the way up\r\n(shown in right photo)\r\n\r\n- Press Enter\r\n" +
+    "";
             // 
             // PB_drawing_mode
             // 
@@ -269,7 +270,9 @@
             this.Controls.Add(this.label4);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1024, 600);
             this.Name = "Scavenger_hunt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Scavenger_hunt";
             this.Load += new System.EventHandler(this.Scavenger_hunt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PB_drawing_mode)).EndInit();

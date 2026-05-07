@@ -73,16 +73,6 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap atlanticsalmon {
-            get {
-                object obj = ResourceManager.GetObject("atlanticsalmon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap button_left {
             get {
                 object obj = ResourceManager.GetObject("button left", resourceCulture);
@@ -106,16 +96,6 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap cfre_logo_circle_notext_fix1 {
             get {
                 object obj = ResourceManager.GetObject("cfre_logo_circle_notext_fix1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap colored_LogoBright {
-            get {
-                object obj = ResourceManager.GetObject("colored_LogoBright", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,36 +213,6 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PB_cancel_small_wave_demo {
-            get {
-                object obj = ResourceManager.GetObject("PB cancel small wave demo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PB_cancel_small_wave_demo1 {
-            get {
-                object obj = ResourceManager.GetObject("PB cancel small wave demo1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PB_cancel_wave_demo {
-            get {
-                object obj = ResourceManager.GetObject("PB cancel wave demo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap PB_disabled_doorman {
             get {
                 object obj = ResourceManager.GetObject("PB disabled doorman", resourceCulture);
@@ -286,26 +236,6 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap PB_disabled_scavenger {
             get {
                 object obj = ResourceManager.GetObject("PB disabled scavenger", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PB_door_highlight {
-            get {
-                object obj = ResourceManager.GetObject("PB door highlight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PB_door_highlight1 {
-            get {
-                object obj = ResourceManager.GetObject("PB door highlight1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,26 +423,6 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PB_wave_demo {
-            get {
-                object obj = ResourceManager.GetObject("PB wave demo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PB_wave_demo1 {
-            get {
-                object obj = ResourceManager.GetObject("PB wave demo1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap PB_wave_demo2 {
             get {
                 object obj = ResourceManager.GetObject("PB wave demo2", resourceCulture);
@@ -526,26 +436,6 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap placeholder_scavenger_instruct {
             get {
                 object obj = ResourceManager.GetObject("placeholder_scavenger_instruct", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap push_button_dark_gray {
-            get {
-                object obj = ResourceManager.GetObject("push button dark gray", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap push_button_light_gray_drawing_demo {
-            get {
-                object obj = ResourceManager.GetObject("push button light gray drawing demo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
