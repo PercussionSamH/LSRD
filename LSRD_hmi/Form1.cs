@@ -234,32 +234,6 @@ namespace LSRD_hmi
                 //  alphabet['A'] = true; // set A to true
 
                 modbusClient.WriteMultipleCoils(35, boolAlpha);
-                //modbusClient.WriteSingleCoil(35, GlobalData.A);
-                //modbusClient.WriteSingleCoil(36, GlobalData.B);
-                //modbusClient.WriteSingleCoil(37, GlobalData.C);
-                //modbusClient.WriteSingleCoil(38, GlobalData.D);
-                //modbusClient.WriteSingleCoil(39, GlobalData.E);
-                //modbusClient.WriteSingleCoil(40, GlobalData.F);
-                //modbusClient.WriteSingleCoil(41, GlobalData.G);
-                //modbusClient.WriteSingleCoil(42, GlobalData.H);
-                //modbusClient.WriteSingleCoil(43, GlobalData.I);
-                //modbusClient.WriteSingleCoil(44, GlobalData.J);
-                //modbusClient.WriteSingleCoil(45, GlobalData.K);
-                //modbusClient.WriteSingleCoil(46, GlobalData.L);
-                //modbusClient.WriteSingleCoil(47, GlobalData.M);
-                //modbusClient.WriteSingleCoil(48, GlobalData.N);
-                //modbusClient.WriteSingleCoil(49, GlobalData.O);
-                //modbusClient.WriteSingleCoil(50, GlobalData.P);
-                //modbusClient.WriteSingleCoil(51, GlobalData.Q);
-                //modbusClient.WriteSingleCoil(52, GlobalData.R);
-                //modbusClient.WriteSingleCoil(53, GlobalData.S);
-                //modbusClient.WriteSingleCoil(54, GlobalData.T);
-                //modbusClient.WriteSingleCoil(55, GlobalData.U);
-                //modbusClient.WriteSingleCoil(56, GlobalData.V);
-                //modbusClient.WriteSingleCoil(57, GlobalData.W);
-                //modbusClient.WriteSingleCoil(58, GlobalData.X);
-                //modbusClient.WriteSingleCoil(59, GlobalData.Y);
-                //modbusClient.WriteSingleCoil(60, GlobalData.Z);
             }
             catch
             {
@@ -386,8 +360,8 @@ namespace LSRD_hmi
                 request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
                 var events = request.Execute().Items;
-
-                ////For writing to a .txt file
+                
+                ////----For writing to a .txt file----
                 //System.Diagnostics.Debug.WriteLine("Getting File path");
                 //string downloadsPath = Path.Combine(
                 //Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
@@ -423,8 +397,8 @@ namespace LSRD_hmi
                             {
                                 event_end = t_event_end.ToString("ddd. hh:mm tt");
                             }
-                            Event_strings.Add(title + "\r" +
-                                              "Time: " + event_start + " - " + event_end + "\r" +
+                            Event_strings.Add(title + "\n\r" +
+                                              "Time: " + event_start + " - " + event_end + "\n\r" +
                                               "\n\nAbout: " + description);
                             i++;
                         }

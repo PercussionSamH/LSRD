@@ -56,7 +56,7 @@ namespace LSRD_hmi
                 b.SelectionStart = 0;
                 b.SelectionLength = b.Lines[0].Length;
                 //Make it bold
-                b.SelectionFont = new Font(b.Font.FontFamily, 13+2, FontStyle.Bold);
+                b.SelectionFont = new Font(b.Font.FontFamily, 13+4, FontStyle.Bold);
                 //Reset selection to end
                 b.SelectionStart = b.TextLength;
                 b.SelectionLength = 0;
@@ -121,6 +121,7 @@ namespace LSRD_hmi
                 button_room_info_Click(this, new EventArgs());
             }
         }
+
         private void PB_door_discovery_lab_Click(object sender, EventArgs e)
         {
             if (popup_open == false)
