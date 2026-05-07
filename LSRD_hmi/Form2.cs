@@ -20,9 +20,9 @@ namespace LSRD_hmi
         //Global vars
         int fish_selection = 0;
         public static bool DEBUG_MODE = false; //turn on to enable debug mode
-        //int backgnd_selection = 0;
         int margin = 20;
-
+        bool isPopup_open = false;
+        bool fish_taken_confirm = false;
         string[] fish_names = {"Lake Sturgeon","Atlantic Salmon","Sea Lamprey","Zoo Plankton","Mayfly Nymph"};
         Image[] fish_pictures = {LSRD_hmi.Properties.Resources.Lake_Sturgeon_250_180, LSRD_hmi.Properties.Resources.Atlantic_Salmon_250_180, LSRD_hmi.Properties.Resources.Sea_Lamprey_250_180, LSRD_hmi.Properties.Resources.Zooplankton_250_180, LSRD_hmi.Properties.Resources.Mayfly_nymph_250_180};
 
@@ -36,7 +36,7 @@ namespace LSRD_hmi
             //this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
             this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
-            drawing.Visible = false;
+            drawing_in_progress.Visible = false;
 
             //Using a dictionary mostly to keep the code legible for long blocks of text
             D_fish_tag.Add("Lake Sturgeon", "A living fossil of the Great Lakes");
@@ -70,8 +70,14 @@ namespace LSRD_hmi
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            isPopup_open = false;
+            fish_taken_confirm = false;
+            put_yo_paper.Visible = false;
+
+
             drawingactive.Visible = DEBUG_MODE;
             modoutput.Visible = DEBUG_MODE;
+
             float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
             float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
             SizeF scale = new SizeF(widthRatio, heightRatio);
@@ -135,15 +141,24 @@ namespace LSRD_hmi
             GlobalData.demo_active_drawing = false;
         }
 
-        private async void PB_drawing_mode_Click(object sender, EventArgs e)
+        private  void PB_drawing_mode_Click(object sender, EventArgs e)
         {
+            isPopup_open = true;
+            put_yo_paper.Visible = true;
+
+        }
+
+        private async void popup_pb_confirm_Click(object sender, EventArgs e)
+        {
+            put_yo_paper.Visible = false;
+
             //sets the popup while drawing
-            drawing.Visible = true;
-            drawing.Width = this.Width; drawing.Height = this.Height;
-            drawing.Location = new Point(0, 0);
-            pictureBox2.Location = new Point((drawing.Width - pictureBox2.Width) / 2, (drawing.Height - pictureBox2.Height) / 2);
-            label2.Location = new Point((drawing.Width - label2.Width) / 2, pictureBox2.Location.Y + pictureBox2.Height + margin);
-            pictureBox2.Image = fish_pictures[fish_selection]; 
+            drawing_in_progress.Visible = true;
+            drawing_in_progress.Width = this.Width; drawing_in_progress.Height = this.Height;
+            drawing_in_progress.Location = new Point(0, 0);
+            pictureBox2.Location = new Point((drawing_in_progress.Width - pictureBox2.Width) / 2, (drawing_in_progress.Height - pictureBox2.Height) / 2);
+            label2.Location = new Point((drawing_in_progress.Width - label2.Width) / 2, pictureBox2.Location.Y + pictureBox2.Height + margin);
+            pictureBox2.Image = fish_pictures[fish_selection];
 
             //turn on the selected fish for the drawing
             if (fish_selection == 0)
@@ -195,14 +210,23 @@ namespace LSRD_hmi
                 await Task.Delay(100);
             }
             GlobalData.left = false;
-            GlobalData.alphabet[Convert.ToChar(domainUpDown1.SelectedItem)  ] = false;
+            GlobalData.alphabet[Convert.ToChar(domainUpDown1.SelectedItem)] = false;
             GlobalData.alphabet[Convert.ToChar(domainUpDown2.SelectedItem)] = true;
 
             while (!GlobalData.check2)
             {
                 await Task.Delay(100);
             }
-            drawing.Visible = false;
+            drawing_in_progress.Visible = false;
+            please_take_your_fish.Visible = true;
+            isPopup_open = true;
+            while (!fish_taken_confirm)
+            {
+                await Task.Delay(100);
+            }
+            isPopup_open = false;
+            fish_taken_confirm = false;
+            put_yo_paper.Visible = false;
             GlobalData.alphabet[Convert.ToChar(domainUpDown2.SelectedItem)] = false;
 
         }
@@ -248,6 +272,19 @@ namespace LSRD_hmi
             {
                 Application.DoEvents();
             }
+        }
+
+        private void popup_pb_close_Click(object sender, EventArgs e)
+        {
+            put_yo_paper.Visible = false;
+            isPopup_open = false;
+        }
+
+        private void pb_confirm_take_Click(object sender, EventArgs e)
+        {
+            please_take_your_fish.Visible = false;
+            fish_taken_confirm = true;
+            isPopup_open = false;
         }
     }
 }
