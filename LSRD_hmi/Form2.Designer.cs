@@ -371,7 +371,7 @@
             // drawing
             // 
             this.drawing.Controls.Add(this.pictureBox2);
-            this.drawing.Location = new System.Drawing.Point(221, 81);
+            this.drawing.Location = new System.Drawing.Point(670, 428);
             this.drawing.Name = "drawing";
             this.drawing.Size = new System.Drawing.Size(468, 439);
             this.drawing.TabIndex = 28;

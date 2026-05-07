@@ -246,6 +246,5 @@ namespace LSRD_hmi
                 Application.DoEvents();
             }
         }
-
     }
 }
