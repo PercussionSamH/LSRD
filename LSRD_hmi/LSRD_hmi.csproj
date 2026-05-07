@@ -593,6 +593,12 @@
     <None Include="Resources\PB square get directions1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Triple_dipper.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Triple_dipper1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\salm1.png" />
   </ItemGroup>
   <ItemGroup>

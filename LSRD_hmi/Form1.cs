@@ -65,8 +65,7 @@ namespace LSRD_hmi
         public static bool demo_active_scavenger = false;
         public static bool demo_active_wave = false;
 
-        //Alphabet dict
-        public Dictionary<char, bool> alphabet = new Dictionary<char, bool>();
+        
 
 
         //Cancel
@@ -112,7 +111,7 @@ namespace LSRD_hmi
             //Setup alphabet dictionary (used for initials)
             for (char c = 'A'; c <= 'Z'; c++)
             {
-                alphabet[c] = false;
+                GlobalData.alphabet[c] = false;
             }
 
             try //attempt to connect to openplc using modbus
@@ -195,6 +194,8 @@ namespace LSRD_hmi
             try
             {
                 QX_Coils = modbusClient.ReadCoils(0, QX_length);
+                GlobalData.check1 = QX_Coils[30];
+                GlobalData.check2 = QX_Coils[31];
             }
             catch { }
             
@@ -227,7 +228,7 @@ namespace LSRD_hmi
                 bool[] boolAlpha = new bool[26];
                 for (char c = 'A'; c <= 'Z'; c++)
                 {
-                    boolAlpha[i++] = alphabet[c];
+                    boolAlpha[i++] = GlobalData.alphabet[c];
                 }
                 //CHANGING A VALUE
                 //  alphabet['A'] = true; // set A to true
@@ -467,6 +468,14 @@ namespace LSRD_hmi
             login_panel.Visible=false;
             text_wrong_pass.Visible = false;
             login_menu_open = false;
+            pass1.SelectedIndex = 0;
+            pass2.SelectedIndex = 0;
+            pass3.SelectedIndex = 0;
+            pass4.SelectedIndex = 0;
+            pass1.Text = String.Empty;
+            pass2.Text = String.Empty;
+            pass3.Text = String.Empty;
+            pass4.Text = String.Empty;
         }
 
         public void PB_confirm_pass_Click(object sender, EventArgs e)
@@ -515,10 +524,10 @@ namespace LSRD_hmi
             else
             {
                 text_wrong_pass.Visible = true;
-                pass1.SelectedItem = -1;
-                pass2.SelectedItem = -1;
-                pass3.SelectedItem = -1;
-                pass4.SelectedItem = -1;
+                pass1.SelectedIndex = 0;
+                pass2.SelectedIndex = 0;
+                pass3.SelectedIndex = 0;
+                pass4.SelectedIndex = 0;
                 pass1.Text = String.Empty;
                 pass2.Text = String.Empty;
                 pass3.Text = String.Empty;
@@ -566,6 +575,38 @@ namespace LSRD_hmi
         public static bool lamprey = false;
         public static bool demo_active_drawing = false;
         public static bool left = false;
+        public static bool check1 = false;
+        public static bool check2 = false;
+
+        //Alphabet dict
+        public static Dictionary<char, bool> alphabet = new Dictionary<char, bool>();
+
+        //public static bool A = false;
+        //public static bool B = false;
+        //public static bool C = false;
+        //public static bool D = false;
+        //public static bool E = false;
+        //public static bool F = false;
+        //public static bool G = false;
+        //public static bool H = false;
+        //public static bool I = false;
+        //public static bool J = false;
+        //public static bool K = false;
+        //public static bool L = false;
+        //public static bool M = false;
+        //public static bool N = false;
+        //public static bool O = false;
+        //public static bool P = false;
+        //public static bool Q = false;
+        //public static bool R = false;
+        //public static bool S = false;
+        //public static bool T = false;
+        //public static bool U = false;
+        //public static bool V = false;
+        //public static bool W = false;
+        //public static bool X = false;
+        //public static bool Y = false;
+        //public static bool Z = false;
     }
 
 }
