@@ -107,7 +107,6 @@
             this.PB_Back_To_Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Back_To_Home.TabIndex = 25;
             this.PB_Back_To_Home.TabStop = false;
-            this.PB_Back_To_Home.Click += new System.EventHandler(this.PB_Back_To_Home_Click);
             // 
             // label_doorman_title
             // 
