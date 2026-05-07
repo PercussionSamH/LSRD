@@ -489,6 +489,14 @@ namespace LSRD_hmi
             login_panel.Visible=false;
             text_wrong_pass.Visible = false;
             login_menu_open = false;
+            pass1.SelectedIndex = 0;
+            pass2.SelectedIndex = 0;
+            pass3.SelectedIndex = 0;
+            pass4.SelectedIndex = 0;
+            pass1.Text = String.Empty;
+            pass2.Text = String.Empty;
+            pass3.Text = String.Empty;
+            pass4.Text = String.Empty;
         }
 
         public void PB_confirm_pass_Click(object sender, EventArgs e)
@@ -535,10 +543,10 @@ namespace LSRD_hmi
             else
             {
                 text_wrong_pass.Visible = true;
-                pass1.SelectedItem = -1;
-                pass2.SelectedItem = -1;
-                pass3.SelectedItem = -1;
-                pass4.SelectedItem = -1;
+                pass1.SelectedIndex = 0;
+                pass2.SelectedIndex = 0;
+                pass3.SelectedIndex = 0;
+                pass4.SelectedIndex = 0;
                 pass1.Text = String.Empty;
                 pass2.Text = String.Empty;
                 pass3.Text = String.Empty;
