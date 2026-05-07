@@ -42,6 +42,7 @@ namespace LSRD_hmi
         public static bool enabled_doorman = true;
         public static bool enabled_drawing = true;
         public static bool enabled_scavenger = true;
+        public static bool enabled_wave = true;
 
         //Login
         public static bool login_menu_open = false;
@@ -52,6 +53,7 @@ namespace LSRD_hmi
         public static int wave_t_end = 0;
         public static string wave_t_string = null;
         public static int wave_duration = 0;
+        public static int timeleft; //time left for wave
 
         //Google cal events
         public static List<string> Event_strings = new List<string>();
@@ -268,7 +270,7 @@ namespace LSRD_hmi
             //Reenable timer
             timer_Modbus_Com.Enabled = true;
         }
-        
+
         //Check for Wave triggered
         //This function runs every tick (10/sec)
         private void tmr_update_vars_Tick(object sender, EventArgs e)
@@ -278,7 +280,7 @@ namespace LSRD_hmi
             int c_t_min = DateTime.Now.Minute + (60 * DateTime.Now.Hour); //curent time in minutes
 
             if (DEBUG_MODE)
-            {   
+            {
                 debug_wave_active.Text = "wave active: " + demo_active_wave.ToString();
                 debug_wave_scheduled.Text = "wave scheduled: " + wave_scheduled.ToString();
             }
@@ -286,24 +288,29 @@ namespace LSRD_hmi
             DateTime t_10_min = t_now.AddMinutes(10);
             DateTime t_event_pre = t_event_start.AddMinutes(5);
             DateTime t_event_post = t_event_end.AddMinutes(10);
-            //check if a wave is manually scheduled
+            //check if a wave is manually scheduled 
+            //this if statement could be seriously cleaned up with the new wave duration instead of time but it wont be because it works
             if (((c_t_min >= wave_t_start && c_t_min < wave_t_end && wave_t_end >= wave_t_start) //normal case
-                 ^ (c_t_min <= wave_t_start && c_t_min > wave_t_end && wave_t_end < wave_t_start) //past midnight (the ^ is an XOR)
-               ) && wave_scheduled)
+                 ^ (c_t_min <= wave_t_start && c_t_min > wave_t_end && wave_t_end < wave_t_start)) //past midnight (the ^ is an XOR)
+                && enabled_wave && wave_scheduled)
             {
                 start_wave_demo();
             }
             else //if an event is scheduled
             {
                 //This could be a single if statement but the mess of having a 4 line if condidition makes it hardly readable
-                if (((t_event_start <= t_10_min) && (t_event_pre > t_now)) //10 minutes before an event til 5 minutes after start
-                   || ((t_event_end < t_10_min) && (t_event_post > t_now))) //10 minutes after event ends til 10 minutes after)
+                if ((((t_event_start <= t_10_min) && (t_event_pre > t_now)) //10 minutes before an event til 5 minutes after start
+                   || ((t_event_end < t_10_min) && (t_event_post > t_now))) && enabled_wave) //10 minutes after event ends til 10 minutes after)
                 {
                     start_wave_demo();
+                    if (DEBUG_MODE)
+                    {
+                        debug_wave_active.Text = "wave active: " + demo_active_wave.ToString();
+                        debug_wave_scheduled.Text = "wave scheduled: " + wave_scheduled.ToString();
+                    }
                 }
                 else //no event active
                 {
-                    if (demo_active_wave) wave_scheduled = false;
                     demo_active_wave = false;
                     demo_idle = true;
                 }
@@ -316,7 +323,6 @@ namespace LSRD_hmi
         {
             if (demo_idle)
             {
-                wave_scheduled = false;
                 demo_idle = false;
                 demo_active_wave = true;
             }
@@ -423,8 +429,8 @@ namespace LSRD_hmi
                             {
                                 event_end = t_event_end.ToString("ddd. hh:mm tt");
                             }
-                            Event_strings.Add(title + "\r" +
-                                              "Time: " + event_start + " - " + event_end + "\r" +
+                            Event_strings.Add(title + "\n\r" +
+                                              "Time: " + event_start + " - " + event_end + "\n\r" +
                                               "\n\nAbout: " + description);
                             i++;
                         }
@@ -525,6 +531,7 @@ namespace LSRD_hmi
                 enabled_doorman = form_Settings.enabled_doorman;
                 enabled_drawing = form_Settings.enabled_drawing;
                 enabled_scavenger = form_Settings.enabled_scavenger;
+                enabled_wave = form_Settings.enabled_wave;
 
                 wave_t_start = form_Settings.wave_time_start;
                 wave_t_end = form_Settings.wave_time_end;
@@ -536,9 +543,10 @@ namespace LSRD_hmi
                 PB_doorman_mode.Image = (enabled_doorman) ? LSRD_hmi.Properties.Resources.PB_gray_doorman_demo : LSRD_hmi.Properties.Resources.PB_disabled_doorman;
                 PB_drawing_mode.Image = (enabled_drawing) ? LSRD_hmi.Properties.Resources.PB_gray_Drawing_demo : LSRD_hmi.Properties.Resources.PB_disabled_drawing;
                 PB_scavenger_mode.Image = (enabled_scavenger) ? LSRD_hmi.Properties.Resources.PB_gray_Scavenger_hunt : LSRD_hmi.Properties.Resources.PB_disabled_scavenger;
+
                 form_Settings = null;
 
-                
+
             }
             else
             {
@@ -572,8 +580,19 @@ namespace LSRD_hmi
                 scavenger_Hunt = null;
             }
         }
-
+        private void tmr_wave_countdown_Tick(object sender, EventArgs e)
+        {
+            if (wave_scheduled)
+            {
+                timeleft = timeleft - 1;
+            }
+            if (timeleft <= 0)
+            {
+                wave_scheduled = false;
+            }
+        }
     }
+
     public static class GlobalData
     {
         public static bool sturgeon = false;

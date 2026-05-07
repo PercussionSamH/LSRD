@@ -19,7 +19,7 @@ namespace LSRD_hmi.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -513,6 +513,16 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PB_wave_demo2 {
+            get {
+                object obj = ResourceManager.GetObject("PB wave demo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap placeholder_scavenger_instruct {
             get {
                 object obj = ResourceManager.GetObject("placeholder_scavenger_instruct", resourceCulture);
@@ -586,6 +596,16 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap slideshow_texture_white2 {
             get {
                 object obj = ResourceManager.GetObject("slideshow_texture_white2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap the_fish_machine_gold2 {
+            get {
+                object obj = ResourceManager.GetObject("the_fish_machine_gold2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

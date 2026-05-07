@@ -66,6 +66,7 @@
             this.label_formsize3 = new System.Windows.Forms.Label();
             this.drawingactive = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tmr_wave_countdown = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_LSRD_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_doorman_mode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_drawing_mode)).BeginInit();
@@ -155,7 +156,7 @@
             // 
             this.Picturebox_logo.BackColor = System.Drawing.Color.Transparent;
             this.Picturebox_logo.Image = global::LSRD_hmi.Properties.Resources.Title_text_CFREGOLD_fish_machine;
-            this.Picturebox_logo.Location = new System.Drawing.Point(312, 52);
+            this.Picturebox_logo.Location = new System.Drawing.Point(-22, 567);
             this.Picturebox_logo.Margin = new System.Windows.Forms.Padding(2);
             this.Picturebox_logo.MinimumSize = new System.Drawing.Size(208, 102);
             this.Picturebox_logo.Name = "Picturebox_logo";
@@ -163,6 +164,7 @@
             this.Picturebox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picturebox_logo.TabIndex = 13;
             this.Picturebox_logo.TabStop = false;
+            this.Picturebox_logo.Visible = false;
             // 
             // PB_staff_controls
             // 
@@ -180,11 +182,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.atlanticsalmon;
-            this.pictureBox1.Location = new System.Drawing.Point(362, 229);
+            this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.the_fish_machine_gold2;
+            this.pictureBox1.Location = new System.Drawing.Point(297, 26);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 135);
+            this.pictureBox1.Size = new System.Drawing.Size(430, 408);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -298,7 +300,7 @@
             this.login_panel.Controls.Add(this.PB_Back_To_Home);
             this.login_panel.Controls.Add(this.label2);
             this.login_panel.Controls.Add(this.label5);
-            this.login_panel.Location = new System.Drawing.Point(253, 97);
+            this.login_panel.Location = new System.Drawing.Point(453, 403);
             this.login_panel.Name = "login_panel";
             this.login_panel.Size = new System.Drawing.Size(460, 300);
             this.login_panel.TabIndex = 23;
@@ -519,6 +521,12 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // tmr_wave_countdown
+            // 
+            this.tmr_wave_countdown.Enabled = true;
+            this.tmr_wave_countdown.Interval = 1000;
+            this.tmr_wave_countdown.Tick += new System.EventHandler(this.tmr_wave_countdown_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -615,6 +623,7 @@
         private System.Windows.Forms.DomainUpDown pass1;
         private System.Windows.Forms.Label drawingactive;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Timer tmr_wave_countdown;
     }
 }
 

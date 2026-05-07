@@ -595,6 +595,8 @@
     <None Include="Resources\PB square get directions1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\PB wave demo2.png" />
+    <None Include="Resources\the_fish_machine_gold2.png" />
     <Content Include="Resources\Triple_dipper.JPG" />
     <None Include="Resources\Triple_dipper1.JPG" />
   </ItemGroup>
