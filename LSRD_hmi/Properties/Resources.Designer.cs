@@ -513,6 +513,16 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PB_wave_demo2 {
+            get {
+                object obj = ResourceManager.GetObject("PB wave demo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap placeholder_scavenger_instruct {
             get {
                 object obj = ResourceManager.GetObject("placeholder_scavenger_instruct", resourceCulture);

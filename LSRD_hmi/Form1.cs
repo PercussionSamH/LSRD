@@ -24,7 +24,6 @@ using static System.Windows.Forms.AxHost;
 
 namespace LSRD_hmi
 {
-
     public partial class Form1 : Form
     {
         // -----Debug----- 
@@ -42,6 +41,7 @@ namespace LSRD_hmi
         public static bool enabled_doorman = true;
         public static bool enabled_drawing = true;
         public static bool enabled_scavenger = true;
+        public static bool enabled_wave = true;
 
         //Login
         public static bool login_menu_open = false;
@@ -52,6 +52,7 @@ namespace LSRD_hmi
         public static int wave_t_end = 0;
         public static string wave_t_string = null;
         public static int wave_duration = 0;
+        public static int timeleft; //time left for wave
 
         //Google cal events
         public static List<string> Event_strings = new List<string>();
@@ -104,20 +105,17 @@ namespace LSRD_hmi
             drawingactive.Visible = DEBUG_MODE;
             //-------------------------------------
 
-            
-
             //Login "popup" screen
             login_panel.Visible = false; //Show popup
             login_panel.Location = new Point(275, 150);
-           
 
-            //Setup alphabet dictionary
+            //Setup alphabet dictionary (used for initials)
             for (char c = 'A'; c <= 'Z'; c++)
             {
                 alphabet[c] = false;
             }
 
-            try
+            try //attempt to connect to openplc using modbus
             {
                 System.Diagnostics.Debug.WriteLine("\nConnecting to " + PLC_IP + " on port " + port);
                 modbusClient.Connect();
@@ -144,14 +142,23 @@ namespace LSRD_hmi
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //resize to pi screen (this will likely look wrong on a desktop application)
             float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
             float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
             SizeF scale = new SizeF(widthRatio, heightRatio);
             this.Scale(scale);
+            //Rescale font size based on screen size
+            
+            // I HAVE FINALLY TRACKED DOWN THE SCALING ISSUE FOR FORMS
+            // the forms must be set to AutoScaleMode = None
+            // for some reason it by default will set this to Font as the scaling method
+            // it will literally scale the whole diplay, form width and height, picture size, and anything else by whatever the current font size is for Form.Font
+
             foreach (Control control in this.Controls)
             {
                 control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
             }
+            //Rescale font size based on screen size
             foreach (Control ctrl in login_panel.Controls)
             {
                 // Access existing size
@@ -165,23 +172,15 @@ namespace LSRD_hmi
             {
                 try { label_resolution.Text = "Screen bounds detected: " + Screen.PrimaryScreen.Bounds.Width + "," + Screen.PrimaryScreen.Bounds.Height; }
                 catch { }
-
                 try { label_formsize2.Text = "Form preferredSize:" + Form.ActiveForm.PreferredSize; }
                 catch { }
-
                 try { label_formsize3.Text = "Form size: " + Form.ActiveForm.Width + "," + Form.ActiveForm.Height; }
                 catch { }
-
                 try { label_formsize.Text = "Form ClientSize is currently:" + Form.ActiveForm.ClientSize.Width + "," + Form.ActiveForm.ClientSize.Height + "\n"; }
                 catch { }
-
                 try { label_scaling.Text = "Scaling = " + scale; }
                 catch { }
             }
-            // I HAVE FINALLY TRACKED DOWN THE SCALING ISSUE FOR FORMS
-            // the forms must be set to AutoScaleMode = None
-            // for some reason it by default will set this to Font as the scaling method
-            // it will literally scale the whole diplay, form width and height, picture size, and anything else by whatever the current font size is for Form.Font
             drawingactive.Text = $"{GlobalData.demo_active_drawing}";
         }
 
@@ -260,24 +259,29 @@ namespace LSRD_hmi
             DateTime t_10_min = t_now.AddMinutes(10);
             DateTime t_event_pre = t_event_start.AddMinutes(5);
             DateTime t_event_post = t_event_end.AddMinutes(10);
-            //check if a wave is manually scheduled
+            //check if a wave is manually scheduled 
+            //this if statement could be seriously cleaned up with the new wave duration instead of time but it wont be because it works
             if (((c_t_min >= wave_t_start && c_t_min < wave_t_end && wave_t_end >= wave_t_start) //normal case
-                 ^ (c_t_min <= wave_t_start && c_t_min > wave_t_end && wave_t_end < wave_t_start) //past midnight (the ^ is an XOR)
-               ) && wave_scheduled)
+                 ^ (c_t_min <= wave_t_start && c_t_min > wave_t_end && wave_t_end < wave_t_start)) //past midnight (the ^ is an XOR)
+                && enabled_wave && wave_scheduled)
             {
                 start_wave_demo();
             }
             else //if an event is scheduled
             {
                 //This could be a single if statement but the mess of having a 4 line if condidition makes it hardly readable
-                if (((t_event_start <= t_10_min) && (t_event_pre > t_now)) //10 minutes before an event til 5 minutes after start
-                   || ((t_event_end < t_10_min) && (t_event_post > t_now))) //10 minutes after event ends til 10 minutes after)
+                if ((((t_event_start <= t_10_min) && (t_event_pre > t_now)) //10 minutes before an event til 5 minutes after start
+                   || ((t_event_end < t_10_min) && (t_event_post > t_now))) && enabled_wave) //10 minutes after event ends til 10 minutes after)
                 {
                     start_wave_demo();
+                    if (DEBUG_MODE)
+                    {
+                        debug_wave_active.Text = "wave active: " + demo_active_wave.ToString();
+                        debug_wave_scheduled.Text = "wave scheduled: " + wave_scheduled.ToString();
+                    }
                 }
                 else //no event active
                 {
-                    if (demo_active_wave) wave_scheduled = false;
                     demo_active_wave = false;
                     demo_idle = true;
                 }
@@ -290,7 +294,6 @@ namespace LSRD_hmi
         {
             if (demo_idle)
             {
-                wave_scheduled = false;
                 demo_idle = false;
                 demo_active_wave = true;
             }
@@ -370,6 +373,7 @@ namespace LSRD_hmi
                 //string outputPath = Path.Combine(downloadsPath, "calendar_events.txt");
                 //System.Diagnostics.Debug.WriteLine("outputPath at: " + outputPath);
                 //using (StreamWriter writer = new StreamWriter(outputPath))
+
                 Event_strings.Clear();
                 {
                     if (events != null && events.Count > 0)
@@ -491,6 +495,7 @@ namespace LSRD_hmi
                 enabled_doorman = form_Settings.enabled_doorman;
                 enabled_drawing = form_Settings.enabled_drawing;
                 enabled_scavenger = form_Settings.enabled_scavenger;
+                enabled_wave = form_Settings.enabled_wave;
 
                 wave_t_start = form_Settings.wave_time_start;
                 wave_t_end = form_Settings.wave_time_end;
@@ -502,6 +507,7 @@ namespace LSRD_hmi
                 PB_doorman_mode.Image = (enabled_doorman) ? LSRD_hmi.Properties.Resources.PB_gray_doorman_demo : LSRD_hmi.Properties.Resources.PB_disabled_doorman;
                 PB_drawing_mode.Image = (enabled_drawing) ? LSRD_hmi.Properties.Resources.PB_gray_Drawing_demo : LSRD_hmi.Properties.Resources.PB_disabled_drawing;
                 PB_scavenger_mode.Image = (enabled_scavenger) ? LSRD_hmi.Properties.Resources.PB_gray_Scavenger_hunt : LSRD_hmi.Properties.Resources.PB_disabled_scavenger;
+                
                 form_Settings = null;
 
                 
@@ -539,6 +545,17 @@ namespace LSRD_hmi
             }
         }
 
+        private void wave_clock_Tick(object sender, EventArgs e)
+        {
+            if (wave_scheduled)
+            {
+                timeleft = timeleft - 1;
+            }
+            if (timeleft <= 0)
+            {
+                wave_scheduled = false;
+            }
+        }
     }
     public static class GlobalData
     {
@@ -549,33 +566,6 @@ namespace LSRD_hmi
         public static bool lamprey = false;
         public static bool demo_active_drawing = false;
         public static bool left = false;
-        
-        //public static bool A = false;
-        //public static bool B = false;
-        //public static bool C = false;
-        //public static bool D = false;
-        //public static bool E = false;
-        //public static bool F = false;
-        //public static bool G = false;
-        //public static bool H = false;
-        //public static bool I = false;
-        //public static bool J = false;
-        //public static bool K = false;
-        //public static bool L = false;
-        //public static bool M = false;
-        //public static bool N = false;
-        //public static bool O = false;
-        //public static bool P = false;
-        //public static bool Q = false;
-        //public static bool R = false;
-        //public static bool S = false;
-        //public static bool T = false;
-        //public static bool U = false;
-        //public static bool V = false;
-        //public static bool W = false;
-        //public static bool X = false;
-        //public static bool Y = false;
-        //public static bool Z = false;
     }
 
 }
