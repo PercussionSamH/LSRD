@@ -66,6 +66,7 @@
             this.label_formsize3 = new System.Windows.Forms.Label();
             this.drawingactive = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tmr_update_wave_duration = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_LSRD_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_doorman_mode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_drawing_mode)).BeginInit();
@@ -104,7 +105,7 @@
             // 
             this.Picture_LSRD_Logo.BackColor = System.Drawing.Color.Transparent;
             this.Picture_LSRD_Logo.Image = global::LSRD_hmi.Properties.Resources.colored_LogoBright1;
-            this.Picture_LSRD_Logo.Location = new System.Drawing.Point(108, 185);
+            this.Picture_LSRD_Logo.Location = new System.Drawing.Point(108, 196);
             this.Picture_LSRD_Logo.Margin = new System.Windows.Forms.Padding(2);
             this.Picture_LSRD_Logo.Name = "Picture_LSRD_Logo";
             this.Picture_LSRD_Logo.Size = new System.Drawing.Size(180, 167);
@@ -116,7 +117,7 @@
             // 
             this.PB_doorman_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_doorman_mode.Image = global::LSRD_hmi.Properties.Resources.PB_gray_doorman_demo;
-            this.PB_doorman_mode.Location = new System.Drawing.Point(129, 430);
+            this.PB_doorman_mode.Location = new System.Drawing.Point(129, 454);
             this.PB_doorman_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_doorman_mode.Name = "PB_doorman_mode";
             this.PB_doorman_mode.Size = new System.Drawing.Size(208, 105);
@@ -129,7 +130,7 @@
             // 
             this.PB_drawing_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_drawing_mode.Image = global::LSRD_hmi.Properties.Resources.PB_gray_Drawing_demo;
-            this.PB_drawing_mode.Location = new System.Drawing.Point(408, 430);
+            this.PB_drawing_mode.Location = new System.Drawing.Point(408, 454);
             this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_drawing_mode.Name = "PB_drawing_mode";
             this.PB_drawing_mode.Size = new System.Drawing.Size(208, 105);
@@ -142,7 +143,7 @@
             // 
             this.PB_scavenger_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_scavenger_mode.Image = ((System.Drawing.Image)(resources.GetObject("PB_scavenger_mode.Image")));
-            this.PB_scavenger_mode.Location = new System.Drawing.Point(695, 430);
+            this.PB_scavenger_mode.Location = new System.Drawing.Point(695, 454);
             this.PB_scavenger_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_scavenger_mode.Name = "PB_scavenger_mode";
             this.PB_scavenger_mode.Size = new System.Drawing.Size(208, 105);
@@ -155,14 +156,15 @@
             // 
             this.Picturebox_logo.BackColor = System.Drawing.Color.Transparent;
             this.Picturebox_logo.Image = global::LSRD_hmi.Properties.Resources.Title_text_CFREGOLD_fish_machine;
-            this.Picturebox_logo.Location = new System.Drawing.Point(312, 52);
+            this.Picturebox_logo.Location = new System.Drawing.Point(-52, 564);
             this.Picturebox_logo.Margin = new System.Windows.Forms.Padding(2);
             this.Picturebox_logo.MinimumSize = new System.Drawing.Size(208, 102);
             this.Picturebox_logo.Name = "Picturebox_logo";
-            this.Picturebox_logo.Size = new System.Drawing.Size(401, 175);
+            this.Picturebox_logo.Size = new System.Drawing.Size(227, 102);
             this.Picturebox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picturebox_logo.TabIndex = 13;
             this.Picturebox_logo.TabStop = false;
+            this.Picturebox_logo.Visible = false;
             // 
             // PB_staff_controls
             // 
@@ -180,11 +182,12 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.atlanticsalmon;
-            this.pictureBox1.Location = new System.Drawing.Point(362, 229);
+            this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.the_fish_machine_gold2;
+            this.pictureBox1.InitialImage = global::LSRD_hmi.Properties.Resources.salm1;
+            this.pictureBox1.Location = new System.Drawing.Point(304, 32);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 135);
+            this.pictureBox1.Size = new System.Drawing.Size(441, 405);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -231,7 +234,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(92, 340);
+            this.label3.Location = new System.Drawing.Point(92, 351);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 88);
@@ -243,7 +246,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LSRD_hmi.Properties.Resources.cfre_logo_circle_notext_fix1;
-            this.pictureBox2.Location = new System.Drawing.Point(763, 202);
+            this.pictureBox2.Location = new System.Drawing.Point(763, 213);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(180, 132);
@@ -269,7 +272,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(706, 346);
+            this.label4.Location = new System.Drawing.Point(706, 357);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(294, 88);
@@ -298,9 +301,9 @@
             this.login_panel.Controls.Add(this.PB_Back_To_Home);
             this.login_panel.Controls.Add(this.label2);
             this.login_panel.Controls.Add(this.label5);
-            this.login_panel.Location = new System.Drawing.Point(253, 97);
+            this.login_panel.Location = new System.Drawing.Point(292, 563);
             this.login_panel.Name = "login_panel";
-            this.login_panel.Size = new System.Drawing.Size(460, 300);
+            this.login_panel.Size = new System.Drawing.Size(475, 300);
             this.login_panel.TabIndex = 23;
             // 
             // pass4
@@ -316,7 +319,7 @@
             this.pass4.Items.Add("7");
             this.pass4.Items.Add("8");
             this.pass4.Items.Add("9");
-            this.pass4.Location = new System.Drawing.Point(372, 99);
+            this.pass4.Location = new System.Drawing.Point(373, 99);
             this.pass4.Name = "pass4";
             this.pass4.Size = new System.Drawing.Size(62, 61);
             this.pass4.TabIndex = 29;
@@ -334,7 +337,7 @@
             this.pass3.Items.Add("7");
             this.pass3.Items.Add("8");
             this.pass3.Items.Add("9");
-            this.pass3.Location = new System.Drawing.Point(304, 99);
+            this.pass3.Location = new System.Drawing.Point(305, 99);
             this.pass3.Name = "pass3";
             this.pass3.Size = new System.Drawing.Size(62, 61);
             this.pass3.TabIndex = 28;
@@ -352,7 +355,7 @@
             this.pass2.Items.Add("7");
             this.pass2.Items.Add("8");
             this.pass2.Items.Add("9");
-            this.pass2.Location = new System.Drawing.Point(236, 99);
+            this.pass2.Location = new System.Drawing.Point(237, 99);
             this.pass2.Name = "pass2";
             this.pass2.Size = new System.Drawing.Size(62, 61);
             this.pass2.TabIndex = 27;
@@ -370,7 +373,7 @@
             this.pass1.Items.Add("7");
             this.pass1.Items.Add("8");
             this.pass1.Items.Add("9");
-            this.pass1.Location = new System.Drawing.Point(168, 99);
+            this.pass1.Location = new System.Drawing.Point(169, 99);
             this.pass1.Name = "pass1";
             this.pass1.Size = new System.Drawing.Size(62, 61);
             this.pass1.TabIndex = 26;
@@ -380,7 +383,7 @@
             this.text_wrong_pass.AutoSize = true;
             this.text_wrong_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_wrong_pass.ForeColor = System.Drawing.Color.Red;
-            this.text_wrong_pass.Location = new System.Drawing.Point(70, 155);
+            this.text_wrong_pass.Location = new System.Drawing.Point(61, 155);
             this.text_wrong_pass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.text_wrong_pass.Name = "text_wrong_pass";
             this.text_wrong_pass.Size = new System.Drawing.Size(392, 31);
@@ -393,7 +396,7 @@
             // 
             this.PB_confirm_pass.BackColor = System.Drawing.Color.Transparent;
             this.PB_confirm_pass.Image = ((System.Drawing.Image)(resources.GetObject("PB_confirm_pass.Image")));
-            this.PB_confirm_pass.Location = new System.Drawing.Point(246, 205);
+            this.PB_confirm_pass.Location = new System.Drawing.Point(263, 205);
             this.PB_confirm_pass.Margin = new System.Windows.Forms.Padding(2);
             this.PB_confirm_pass.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_confirm_pass.MinimumSize = new System.Drawing.Size(130, 60);
@@ -408,7 +411,7 @@
             // 
             this.PB_Back_To_Home.BackColor = System.Drawing.Color.Transparent;
             this.PB_Back_To_Home.Image = ((System.Drawing.Image)(resources.GetObject("PB_Back_To_Home.Image")));
-            this.PB_Back_To_Home.Location = new System.Drawing.Point(71, 205);
+            this.PB_Back_To_Home.Location = new System.Drawing.Point(88, 205);
             this.PB_Back_To_Home.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Back_To_Home.MaximumSize = new System.Drawing.Size(130, 60);
             this.PB_Back_To_Home.MinimumSize = new System.Drawing.Size(130, 60);
@@ -423,7 +426,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 106);
+            this.label2.Location = new System.Drawing.Point(28, 106);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 31);
@@ -433,7 +436,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 24);
+            this.label5.Location = new System.Drawing.Point(19, 24);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(437, 72);
@@ -506,7 +509,7 @@
             this.drawingactive.BackColor = System.Drawing.Color.Transparent;
             this.drawingactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drawingactive.ForeColor = System.Drawing.Color.Black;
-            this.drawingactive.Location = new System.Drawing.Point(44, 537);
+            this.drawingactive.Location = new System.Drawing.Point(44, 563);
             this.drawingactive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.drawingactive.Name = "drawingactive";
             this.drawingactive.Size = new System.Drawing.Size(131, 28);
@@ -518,6 +521,11 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // tmr_update_wave_duration
+            // 
+            this.tmr_update_wave_duration.Enabled = true;
+            this.tmr_update_wave_duration.Interval = 1000;
+            this.tmr_update_wave_duration.Tick += new System.EventHandler(this.wave_clock_Tick);
             // 
             // Form1
             // 
@@ -615,6 +623,7 @@
         private System.Windows.Forms.DomainUpDown pass1;
         private System.Windows.Forms.Label drawingactive;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Timer tmr_update_wave_duration;
     }
 }
 

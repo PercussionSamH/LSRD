@@ -513,6 +513,16 @@ namespace LSRD_hmi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PB_wave_demo2 {
+            get {
+                object obj = ResourceManager.GetObject("PB wave demo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap placeholder_scavenger_instruct {
             get {
                 object obj = ResourceManager.GetObject("placeholder_scavenger_instruct", resourceCulture);
@@ -536,6 +546,36 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap push_button_light_gray_drawing_demo {
             get {
                 object obj = ResourceManager.GetObject("push button light gray drawing demo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salm1 {
+            get {
+                object obj = ResourceManager.GetObject("salm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salm11 {
+            get {
+                object obj = ResourceManager.GetObject("salm11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salm2 {
+            get {
+                object obj = ResourceManager.GetObject("salm2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -586,6 +626,26 @@ namespace LSRD_hmi.Properties {
         internal static System.Drawing.Bitmap slideshow_texture_white2 {
             get {
                 object obj = ResourceManager.GetObject("slideshow_texture_white2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap the_fish_machine_gold {
+            get {
+                object obj = ResourceManager.GetObject("the_fish_machine_gold", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap the_fish_machine_gold2 {
+            get {
+                object obj = ResourceManager.GetObject("the_fish_machine_gold2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

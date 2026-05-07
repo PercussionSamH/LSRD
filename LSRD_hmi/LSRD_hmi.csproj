@@ -594,7 +594,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Triple_dipper.JPG" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Triple_dipper1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salm11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the_fish_machine_gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the_fish_machine_gold2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PB wave demo2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
