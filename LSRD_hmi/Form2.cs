@@ -1,15 +1,14 @@
-﻿using EasyModbus;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Schema;
+using System.Threading;
 
 
 namespace LSRD_hmi
@@ -35,7 +34,6 @@ namespace LSRD_hmi
             //this.FormBorderStyle = FormBorderStyle.None; // Removes borders and title bar
             this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
-            drawing.Visible = false;
 
             //Using a dictionary mostly to keep the code legible for long blocks of text
             D_fish_tag.Add("Lake Sturgeon", "A living fossil of the Great Lakes");
@@ -134,74 +132,58 @@ namespace LSRD_hmi
             GlobalData.demo_active_drawing = false;
         }
 
-        private async void PB_drawing_mode_Click(object sender, EventArgs e)
+        private void PB_drawing_mode_Click(object sender, EventArgs e)
         {
-            //sets the popup while drawing
-            drawing.Visible = true;
-            drawing.Width = this.Width; drawing.Height = this.Height;
-            drawing.Location = new Point(0, 0);
-            pictureBox2.Location = new Point((drawing.Width - pictureBox2.Width) / 2, (drawing.Height - pictureBox2.Height) / 2);
-
-            //turn on the selected fish for the drawing
             if (fish_selection == 0)
             {
                 fishon(0);
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
                 fishoff();
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
             if (fish_selection == 1)
             {
                 fishon(1);
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
                 fishoff();
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
             if (fish_selection == 2)
             {
                 fishon(2);
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
                 fishoff();
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
             if (fish_selection == 3)
             {
                 fishon(3);
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
                 fishoff();
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
             if (fish_selection == 4)
             {
                 fishon(4);
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
                 wait(1000);
                 fishoff();
-                update_debug();
+                modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
+                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
             }
-
-            //set the left initial and waits for robot to finish it
-            GlobalData.left = true;
-            GlobalData.alphabet[Convert.ToChar(domainUpDown1.SelectedItem)] = true;
-            while (!GlobalData.check1)
-            {
-                await Task.Delay(100);
-            }
-            GlobalData.left = false;
-            GlobalData.alphabet[Convert.ToChar(domainUpDown1.SelectedItem)  ] = false;
-            GlobalData.alphabet[Convert.ToChar(domainUpDown2.SelectedItem)] = true;
-
-            while (!GlobalData.check2)
-            {
-                await Task.Delay(100);
-            }
-            drawing.Visible = false;
-            GlobalData.alphabet[Convert.ToChar(domainUpDown2.SelectedItem)] = false;
-
         }
         public void fishoff()
         {
@@ -210,11 +192,6 @@ namespace LSRD_hmi
             GlobalData.lamprey = false;
             GlobalData.plankton = false;
             GlobalData.nymph = false;
-        }
-        public void update_debug()
-        {
-            modoutput.Text = $"{GlobalData.sturgeon} {GlobalData.salmon} " +
-                $"{GlobalData.lamprey} {GlobalData.plankton} {GlobalData.nymph}";
         }
         public void fishon(int i)
         {

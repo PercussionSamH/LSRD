@@ -48,16 +48,12 @@
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
             this.drawingactive = new System.Windows.Forms.Label();
-            this.drawing = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Fish_preview_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_right)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Back_To_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_drawing_mode)).BeginInit();
-            this.drawing.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Label_Fish_Type_Text
@@ -368,25 +364,6 @@
             this.drawingactive.TabIndex = 27;
             this.drawingactive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // drawing
-            // 
-            this.drawing.Controls.Add(this.pictureBox2);
-            this.drawing.Location = new System.Drawing.Point(670, 428);
-            this.drawing.Name = "drawing";
-            this.drawing.Size = new System.Drawing.Size(468, 439);
-            this.drawing.TabIndex = 28;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = global::LSRD_hmi.Properties.Resources.Triple_dipper;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 15);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(447, 364);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // Form2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -395,7 +372,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
             this.ControlBox = false;
-            this.Controls.Add(this.drawing);
             this.Controls.Add(this.drawingactive);
             this.Controls.Add(this.domainUpDown2);
             this.Controls.Add(this.domainUpDown1);
@@ -435,9 +411,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Back_To_Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_drawing_mode)).EndInit();
-            this.drawing.ResumeLayout(false);
-            this.drawing.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,7 +437,5 @@
         private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.DomainUpDown domainUpDown2;
         private System.Windows.Forms.Label drawingactive;
-        private System.Windows.Forms.Panel drawing;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
