@@ -55,17 +55,16 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.put_yo_paper = new System.Windows.Forms.Panel();
-            this.please_take_your_fish = new System.Windows.Forms.Panel();
-            this.triple_dipper_explode = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pb_confirm_take = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.popup_scav_text = new System.Windows.Forms.Label();
             this.popup_pb_close = new System.Windows.Forms.PictureBox();
             this.popup_pb_confirm = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.take_fish = new System.Windows.Forms.Panel();
+            this.triple_dipper_explode = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pb_confirm_take = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Fish_preview_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_right)).BeginInit();
@@ -76,11 +75,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.put_yo_paper.SuspendLayout();
-            this.please_take_your_fish.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.triple_dipper_explode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_confirm_take)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popup_pb_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popup_pb_confirm)).BeginInit();
+            this.take_fish.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.triple_dipper_explode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_confirm_take)).BeginInit();
             this.SuspendLayout();
             // 
             // Label_Fish_Type_Text
@@ -450,7 +449,6 @@
             // put_yo_paper
             // 
             this.put_yo_paper.BackColor = System.Drawing.Color.DimGray;
-            this.put_yo_paper.Controls.Add(this.please_take_your_fish);
             this.put_yo_paper.Controls.Add(this.label3);
             this.put_yo_paper.Controls.Add(this.pictureBox3);
             this.put_yo_paper.Controls.Add(this.label8);
@@ -463,82 +461,6 @@
             this.put_yo_paper.Size = new System.Drawing.Size(541, 526);
             this.put_yo_paper.TabIndex = 64;
             this.put_yo_paper.Visible = false;
-            // 
-            // please_take_your_fish
-            // 
-            this.please_take_your_fish.BackColor = System.Drawing.Color.DimGray;
-            this.please_take_your_fish.Controls.Add(this.triple_dipper_explode);
-            this.please_take_your_fish.Controls.Add(this.label10);
-            this.please_take_your_fish.Controls.Add(this.label11);
-            this.please_take_your_fish.Controls.Add(this.pb_confirm_take);
-            this.please_take_your_fish.Controls.Add(this.label12);
-            this.please_take_your_fish.Location = new System.Drawing.Point(0, 55);
-            this.please_take_your_fish.Name = "please_take_your_fish";
-            this.please_take_your_fish.Size = new System.Drawing.Size(541, 453);
-            this.please_take_your_fish.TabIndex = 68;
-            // 
-            // triple_dipper_explode
-            // 
-            this.triple_dipper_explode.BackColor = System.Drawing.Color.Transparent;
-            this.triple_dipper_explode.Image = global::LSRD_hmi.Properties.Resources.Triple_dipper;
-            this.triple_dipper_explode.Location = new System.Drawing.Point(133, 102);
-            this.triple_dipper_explode.Margin = new System.Windows.Forms.Padding(2);
-            this.triple_dipper_explode.Name = "triple_dipper_explode";
-            this.triple_dipper_explode.Size = new System.Drawing.Size(271, 220);
-            this.triple_dipper_explode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.triple_dipper_explode.TabIndex = 68;
-            this.triple_dipper_explode.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
-            this.label10.Location = new System.Drawing.Point(125, 95);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(287, 236);
-            this.label10.TabIndex = 67;
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
-            this.label11.Location = new System.Drawing.Point(60, 32);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(417, 51);
-            this.label11.TabIndex = 65;
-            this.label11.Text = "Please take your fish!";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pb_confirm_take
-            // 
-            this.pb_confirm_take.BackColor = System.Drawing.Color.Transparent;
-            this.pb_confirm_take.Image = global::LSRD_hmi.Properties.Resources.PB_square_confirm3;
-            this.pb_confirm_take.Location = new System.Drawing.Point(188, 348);
-            this.pb_confirm_take.Margin = new System.Windows.Forms.Padding(2);
-            this.pb_confirm_take.MaximumSize = new System.Drawing.Size(160, 80);
-            this.pb_confirm_take.Name = "pb_confirm_take";
-            this.pb_confirm_take.Size = new System.Drawing.Size(160, 79);
-            this.pb_confirm_take.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_confirm_take.TabIndex = 63;
-            this.pb_confirm_take.TabStop = false;
-            this.pb_confirm_take.Click += new System.EventHandler(this.pb_confirm_take_Click);
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
-            this.label12.Location = new System.Drawing.Point(12, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(515, 430);
-            this.label12.TabIndex = 66;
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -607,6 +529,69 @@
             this.label4.TabIndex = 66;
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // take_fish
+            // 
+            this.take_fish.BackColor = System.Drawing.SystemColors.GrayText;
+            this.take_fish.Controls.Add(this.triple_dipper_explode);
+            this.take_fish.Controls.Add(this.label11);
+            this.take_fish.Controls.Add(this.pb_confirm_take);
+            this.take_fish.Controls.Add(this.label12);
+            this.take_fish.Location = new System.Drawing.Point(235, 58);
+            this.take_fish.Name = "take_fish";
+            this.take_fish.Size = new System.Drawing.Size(556, 462);
+            this.take_fish.TabIndex = 29;
+            // 
+            // triple_dipper_explode
+            // 
+            this.triple_dipper_explode.BackColor = System.Drawing.Color.Transparent;
+            this.triple_dipper_explode.Image = global::LSRD_hmi.Properties.Resources.Triple_dipper;
+            this.triple_dipper_explode.Location = new System.Drawing.Point(140, 107);
+            this.triple_dipper_explode.Margin = new System.Windows.Forms.Padding(2);
+            this.triple_dipper_explode.Name = "triple_dipper_explode";
+            this.triple_dipper_explode.Size = new System.Drawing.Size(286, 220);
+            this.triple_dipper_explode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.triple_dipper_explode.TabIndex = 72;
+            this.triple_dipper_explode.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
+            this.label11.Location = new System.Drawing.Point(67, 37);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(432, 51);
+            this.label11.TabIndex = 70;
+            this.label11.Text = "Please take your fish!";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pb_confirm_take
+            // 
+            this.pb_confirm_take.BackColor = System.Drawing.Color.Transparent;
+            this.pb_confirm_take.Image = global::LSRD_hmi.Properties.Resources.PB_square_confirm3;
+            this.pb_confirm_take.Location = new System.Drawing.Point(202, 353);
+            this.pb_confirm_take.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_confirm_take.MaximumSize = new System.Drawing.Size(160, 80);
+            this.pb_confirm_take.Name = "pb_confirm_take";
+            this.pb_confirm_take.Size = new System.Drawing.Size(160, 79);
+            this.pb_confirm_take.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_confirm_take.TabIndex = 69;
+            this.pb_confirm_take.TabStop = false;
+            this.pb_confirm_take.Click += new System.EventHandler(this.pb_confirm_take_Click_1);
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
+            this.label12.Location = new System.Drawing.Point(14, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(530, 430);
+            this.label12.TabIndex = 71;
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -615,6 +600,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.take_fish);
             this.Controls.Add(this.put_yo_paper);
             this.Controls.Add(this.drawing_in_progress);
             this.Controls.Add(this.drawingactive);
@@ -661,11 +647,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.put_yo_paper.ResumeLayout(false);
-            this.please_take_your_fish.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.triple_dipper_explode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_confirm_take)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popup_pb_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popup_pb_confirm)).EndInit();
+            this.take_fish.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.triple_dipper_explode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_confirm_take)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -704,11 +690,10 @@
         private System.Windows.Forms.PictureBox popup_pb_close;
         private System.Windows.Forms.PictureBox popup_pb_confirm;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel please_take_your_fish;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel take_fish;
+        private System.Windows.Forms.PictureBox triple_dipper_explode;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pb_confirm_take;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox triple_dipper_explode;
     }
 }
