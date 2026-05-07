@@ -148,9 +148,6 @@
   <data name="Sea_Lamprey_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sea_Lamprey_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="atlanticsalmon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atlanticsalmon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="toggle on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle on2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,9 +193,6 @@
   <data name="Atlantic_Salmon_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Atlantic_Salmon_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PB cancel small wave demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB cancel small wave demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="button left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,20 +205,11 @@
   <data name="PB square door discovery lab" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door discovery lab2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="push button dark gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\push button dark gray3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="PB back wide1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB back wide1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB square door work cafe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door work cafe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="colored_LogoBright" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colored_LogoBright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="push button light gray drawing demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\push button light gray drawing demo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB square door partner suites singleLine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door partner suites singleLine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,14 +226,8 @@
   <data name="placeholder_scavenger_instruct" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\placeholder_scavenger_instruct.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PB door highlight1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB door highlight1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="PB square enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square enter5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PB cancel small wave demo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB cancel small wave demo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB back wide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB back wide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,17 +238,11 @@
   <data name="scav_arrow2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scav_arrow2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PB wave demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB wave demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="slideshow_texture_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\slideshow_texture_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB square door partner suites" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door partner suites1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PB cancel wave demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB cancel wave demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB square cancel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square cancel4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -279,12 +252,6 @@
   </data>
   <data name="button right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PB door highlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB door highlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PB wave demo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB wave demo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mayfly_nymph_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mayfly_nymph_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

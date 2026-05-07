@@ -29,6 +29,7 @@ namespace LSRD_hmi
     {
         // -----Debug----- 
         public static bool DEBUG_MODE = false; //turn on to enable debug mode
+        public static bool ENABLE_SCALING = true; //
 
         //IP address
         static string PLC_IP = "10.104.5.184"; static int port = 502;
@@ -144,40 +145,44 @@ namespace LSRD_hmi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
-            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
-            SizeF scale = new SizeF(widthRatio, heightRatio);
-            this.Scale(scale);
-            foreach (Control control in this.Controls)
+            if (ENABLE_SCALING)
             {
-                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+                float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1024f;
+                float heightRatio = Screen.PrimaryScreen.Bounds.Height / 600f;
+                SizeF scale = new SizeF(widthRatio, heightRatio);
+                this.Scale(scale);
+                foreach (Control control in this.Controls)
+                {
+                    control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+                }
+                foreach (Control ctrl in login_panel.Controls)
+                {
+                    // Access existing size
+                    float currentSize = ctrl.Font.Size;
+                    // Set new size (e.g., 12pt)
+                    ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio);
+                }
+                //Debug screen resolutions
+                if (DEBUG_MODE)
+                {
+                    try { label_resolution.Text = "Screen bounds detected: " + Screen.PrimaryScreen.Bounds.Width + "," + Screen.PrimaryScreen.Bounds.Height; }
+                    catch { }
+
+                    try { label_formsize2.Text = "Form preferredSize:" + Form.ActiveForm.PreferredSize; }
+                    catch { }
+
+                    try { label_formsize3.Text = "Form size: " + Form.ActiveForm.Width + "," + Form.ActiveForm.Height; }
+                    catch { }
+
+                    try { label_formsize.Text = "Form ClientSize is currently:" + Form.ActiveForm.ClientSize.Width + "," + Form.ActiveForm.ClientSize.Height + "\n"; }
+                    catch { }
+
+                    try { label_scaling.Text = "Scaling = " + scale; }
+                    catch { }
+                }
             }
-            foreach (Control ctrl in login_panel.Controls)
-            {
-                // Access existing size
-                float currentSize = ctrl.Font.Size;
-                // Set new size (e.g., 12pt)
-                ctrl.Font = new Font("Verdana", ctrl.Font.SizeInPoints * heightRatio * widthRatio);
-            }
 
-            //Debug screen resolutions
-            if (DEBUG_MODE)
-            {
-                try { label_resolution.Text = "Screen bounds detected: " + Screen.PrimaryScreen.Bounds.Width + "," + Screen.PrimaryScreen.Bounds.Height; }
-                catch { }
 
-                try { label_formsize2.Text = "Form preferredSize:" + Form.ActiveForm.PreferredSize; }
-                catch { }
-
-                try { label_formsize3.Text = "Form size: " + Form.ActiveForm.Width + "," + Form.ActiveForm.Height; }
-                catch { }
-
-                try { label_formsize.Text = "Form ClientSize is currently:" + Form.ActiveForm.ClientSize.Width + "," + Form.ActiveForm.ClientSize.Height + "\n"; }
-                catch { }
-
-                try { label_scaling.Text = "Scaling = " + scale; }
-                catch { }
-            }
             // I HAVE FINALLY TRACKED DOWN THE SCALING ISSUE FOR FORMS
             // the forms must be set to AutoScaleMode = None
             // for some reason it by default will set this to Font as the scaling method
@@ -237,31 +242,7 @@ namespace LSRD_hmi
 
                 modbusClient.WriteMultipleCoils(35, boolAlpha);
                 //modbusClient.WriteSingleCoil(35, GlobalData.A);
-                //modbusClient.WriteSingleCoil(36, GlobalData.B);
-                //modbusClient.WriteSingleCoil(37, GlobalData.C);
-                //modbusClient.WriteSingleCoil(38, GlobalData.D);
-                //modbusClient.WriteSingleCoil(39, GlobalData.E);
-                //modbusClient.WriteSingleCoil(40, GlobalData.F);
-                //modbusClient.WriteSingleCoil(41, GlobalData.G);
-                //modbusClient.WriteSingleCoil(42, GlobalData.H);
-                //modbusClient.WriteSingleCoil(43, GlobalData.I);
-                //modbusClient.WriteSingleCoil(44, GlobalData.J);
-                //modbusClient.WriteSingleCoil(45, GlobalData.K);
-                //modbusClient.WriteSingleCoil(46, GlobalData.L);
-                //modbusClient.WriteSingleCoil(47, GlobalData.M);
-                //modbusClient.WriteSingleCoil(48, GlobalData.N);
-                //modbusClient.WriteSingleCoil(49, GlobalData.O);
-                //modbusClient.WriteSingleCoil(50, GlobalData.P);
-                //modbusClient.WriteSingleCoil(51, GlobalData.Q);
-                //modbusClient.WriteSingleCoil(52, GlobalData.R);
-                //modbusClient.WriteSingleCoil(53, GlobalData.S);
-                //modbusClient.WriteSingleCoil(54, GlobalData.T);
-                //modbusClient.WriteSingleCoil(55, GlobalData.U);
-                //modbusClient.WriteSingleCoil(56, GlobalData.V);
-                //modbusClient.WriteSingleCoil(57, GlobalData.W);
-                //modbusClient.WriteSingleCoil(58, GlobalData.X);
-                //modbusClient.WriteSingleCoil(59, GlobalData.Y);
-                //modbusClient.WriteSingleCoil(60, GlobalData.Z);
+
             }
             catch
             {
