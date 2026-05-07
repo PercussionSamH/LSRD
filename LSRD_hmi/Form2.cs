@@ -294,6 +294,7 @@ namespace LSRD_hmi
         {
             take_fish.Visible = false;
             isPopup_open = false;
+            isPopup_open = false;
         }
     }
 }
