@@ -29,10 +29,10 @@ namespace LSRD_hmi
     {
         // -----Debug----- 
         public static bool DEBUG_MODE = false; //turn on to enable debug mode
-        public static bool ENABLE_SCALING = false; //
+        public static bool ENABLE_SCALING = true; //
 
         //IP address
-        static string PLC_IP = "10.104.5.184"; static int port = 502;
+        static string PLC_IP = "10.205.1.141"; static int port = 502;
         public ModbusClient modbusClient = new ModbusClient(PLC_IP, port);
 
         //Bit ranges
