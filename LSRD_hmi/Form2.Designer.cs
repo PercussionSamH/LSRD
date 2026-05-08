@@ -51,7 +51,6 @@
             this.drawing_in_progress = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.put_yo_paper = new System.Windows.Forms.Panel();
@@ -421,19 +420,6 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.label3.Location = new System.Drawing.Point(240, 295);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 45);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "PLACEHOLDER PIC";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -449,7 +435,6 @@
             // put_yo_paper
             // 
             this.put_yo_paper.BackColor = System.Drawing.Color.DimGray;
-            this.put_yo_paper.Controls.Add(this.label3);
             this.put_yo_paper.Controls.Add(this.pictureBox3);
             this.put_yo_paper.Controls.Add(this.label8);
             this.put_yo_paper.Controls.Add(this.popup_scav_text);
@@ -681,7 +666,6 @@
         private System.Windows.Forms.Panel drawing_in_progress;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.Panel put_yo_paper;
