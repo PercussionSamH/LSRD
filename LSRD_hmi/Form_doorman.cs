@@ -42,24 +42,36 @@ namespace LSRD_hmi
             //Propagate events
             for (int i = 0; i < Form1.Event_strings.Count; i++)
             {
+                
+                
                 RichTextBox b = new RichTextBox();
+                b.AutoSize = false;
+                
                 b.Height = b.PreferredHeight;
-                b.Text = Form1.Event_strings[i]; //sets text
+                
                 b.Font = new Font("Verdana", 12, b.Font.Style); //font and text size
-                b.MinimumSize = new Size(326,100);
+
+                
+                b.MinimumSize = new Size(326, 10);
+
+
+
+                //b.Size = new Size(326,b.PreferredHeight);
                 b.BorderStyle = BorderStyle.FixedSingle;
                 b.Margin = new Padding(5, 8, 5, 5);
-                //b.AutoSize = true;
-
+                
+                
                 //Select the first line
                 b.SelectionStart = 0;
-                b.SelectionLength = b.Lines[0].Length;
-                //Make it bold
-                b.SelectionFont = new Font("Verdana", 12+2, FontStyle.Bold);
-                //Reset selection to end
-                b.SelectionStart = b.TextLength;
-                b.SelectionLength = 0;
-                
+
+                b.ScrollBars = 0;
+                b.Text = Form1.Event_strings[i]; //sets text
+
+                b.ContentsResized += (sender, e) => {
+                    RichTextBox rtb = (RichTextBox)sender;
+                    // Add a little padding to prevent scrollbars (e.g., + 10)
+                    rtb.Height = e.NewRectangle.Height + 10;
+                };
 
 
                 Scrollable_Events_Box.Controls.Add(b); //add each item to list
