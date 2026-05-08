@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PB square cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB square cancel3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PB gray Draw a fish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB gray Draw a fish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Title text CFREGOLD fish machine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Title text CFREGOLD fish machine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,9 +133,6 @@
   <data name="PB square door staff desk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door staff desk3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PB square confirm3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB square confirm3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cfre_logo_circle_notext_fix1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cfre_logo_circle_notext_fix1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,20 +142,23 @@
   <data name="doorman_bkg_blueish_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doorman_bkg_blueish_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="the_fish_machine_gold2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\the_fish_machine_gold2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scavenger_hunt_background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scavenger_hunt_background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sea_Lamprey_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sea_Lamprey_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toggle on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle on2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PB disabled scavenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB disabled scavenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="PB square door discovery lab1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door discovery lab3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scavenger_hunt_background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scavenger_hunt_background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zooplankton_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Zooplankton_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="colored_LogoBright1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\colored_LogoBright1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +187,8 @@
   <data name="PB disabled drawing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB disabled drawing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zooplankton_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Zooplankton_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PB disabled scavenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB disabled scavenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Atlantic_Salmon_250_180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Atlantic_Salmon_250_180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,20 +196,23 @@
   <data name="button left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doosan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doosan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="PB gray doorman demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB gray doorman demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PB square door discovery lab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB square door discovery lab2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PB wave demo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB wave demo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slideshow_texture_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slideshow_texture_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB back wide1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB back wide1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB square door work cafe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door work cafe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doosan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doosan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB square door partner suites singleLine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door partner suites singleLine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,20 +229,23 @@
   <data name="placeholder_scavenger_instruct" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\placeholder_scavenger_instruct.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PB square cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB square cancel3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PB square enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square enter5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB back wide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB back wide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PB wave demo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PB wave demo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="scav_arrow2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scav_arrow2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="slideshow_texture_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slideshow_texture_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PB square door discovery lab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB square door discovery lab2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PB square confirm3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB square confirm3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PB square door partner suites" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door partner suites1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,7 +268,7 @@
   <data name="PB square door get directions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PB square door get directions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="the_fish_machine_gold2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\the_fish_machine_gold2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PB square door work cafe offices" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB square door work cafe offices.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

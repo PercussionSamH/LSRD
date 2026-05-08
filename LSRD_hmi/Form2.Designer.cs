@@ -272,7 +272,7 @@
             this.Fish_desc2.AutoSize = true;
             this.Fish_desc2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Fish_desc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fish_desc2.Location = new System.Drawing.Point(782, 277);
+            this.Fish_desc2.Location = new System.Drawing.Point(779, 277);
             this.Fish_desc2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Fish_desc2.MaximumSize = new System.Drawing.Size(210, 0);
             this.Fish_desc2.MinimumSize = new System.Drawing.Size(210, 0);

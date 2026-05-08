@@ -29,7 +29,7 @@ namespace LSRD_hmi
     {
         // -----Debug----- 
         public static bool DEBUG_MODE = false; //turn on to enable debug mode
-        public static bool ENABLE_SCALING = true; //
+        public static bool ENABLE_SCALING = false; //
 
         //IP address
         static string PLC_IP = "10.104.5.184"; static int port = 502;
@@ -60,6 +60,8 @@ namespace LSRD_hmi
         public static List<string> Event_strings = new List<string>();
         public static DateTime t_event_start;
         public static DateTime t_event_end;
+        public static DateTime t_event_start_text;
+        public static DateTime t_event_end_text;
 
         //io bits
         public static bool demo_idle = true;
@@ -182,7 +184,7 @@ namespace LSRD_hmi
                 }
             }
 
-
+            Get_Calendar_Events();
             // I HAVE FINALLY TRACKED DOWN THE SCALING ISSUE FOR FORMS
             // the forms must be set to AutoScaleMode = None
             // for some reason it by default will set this to Font as the scaling method
@@ -220,6 +222,11 @@ namespace LSRD_hmi
                 modbusClient.WriteSingleCoil(13, demo_active_scavenger);
                 modbusClient.WriteSingleCoil(14, demo_active_wave); //Wave should be active
 
+                modbusClient.WriteSingleCoil(15, GlobalData.discovery_lab);
+                modbusClient.WriteSingleCoil(16, GlobalData.partner_suites);
+                modbusClient.WriteSingleCoil(17, GlobalData.seminar_room);
+                modbusClient.WriteSingleCoil(18, GlobalData.work_cafe);
+
                 modbusClient.WriteSingleCoil(20, cancel_active_demo);
 
                 modbusClient.WriteSingleCoil(22, drawing_paper_in_place);
@@ -230,6 +237,8 @@ namespace LSRD_hmi
                 modbusClient.WriteSingleCoil(27, GlobalData.plankton);
                 modbusClient.WriteSingleCoil(28, GlobalData.nymph);
                 modbusClient.WriteSingleCoil(29, GlobalData.left);
+
+
 
                 int i = 0;
                 bool[] boolAlpha = new bool[26];
@@ -309,19 +318,6 @@ namespace LSRD_hmi
             }
         }
 
-        //Old tests
-        private void PB_Draw_Fish1_Click(object sender, EventArgs e)
-        {
-            //QX_Coils[16] = true; //set 2.0
-            modbusClient.WriteSingleCoil(16, true);
-        
-        }
-        private void PB_Draw_Square_Click(object sender, EventArgs e)
-        {
-            //QX_Coils[17] = true; //set 2.1
-            modbusClient.WriteSingleCoil(17, true);
-        } 
-
 
         private void PB_doorman_mode_Click(object sender, EventArgs e)
         {
@@ -369,7 +365,7 @@ namespace LSRD_hmi
                 request.TimeMin = DateTime.Now;
                 request.ShowDeleted = false;
                 request.SingleEvents = true;
-                request.MaxResults = 50;
+                request.MaxResults = 10;
                 request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
                 var events = request.Execute().Items;
@@ -400,19 +396,21 @@ namespace LSRD_hmi
                                     t_event_start = DateTime.Parse(ev.Start.DateTimeDateTimeOffset.ToString());
                                     t_event_end = DateTime.Parse(ev.End.DateTimeDateTimeOffset.ToString());
                                 }
-
                             }
+                            t_event_start_text = DateTime.Parse(ev.Start.DateTimeDateTimeOffset.ToString());
+                            t_event_end_text = DateTime.Parse(ev.End.DateTimeDateTimeOffset.ToString());
+
                             if (DEBUG_MODE) System.Diagnostics.Debug.WriteLine("event found with name: " + title);
 
-                            string event_start = t_event_start.ToString("ddd. MM/dd/yy hh:mm tt");
-                            string event_end = t_event_end.ToString("hh:mm tt"); //default case
-                            if (t_event_start.Day != t_event_end.Day) //if multi day event, display shorthand for end day along with time
+                            string event_start = t_event_start_text.ToString("ddd. MM/dd/yy \r\n hh:mm tt");
+                            string event_end = t_event_end_text.ToString("hh:mm tt"); //default case
+                            if (t_event_end_text.Day != t_event_end.Day) //if multi day event, display shorthand for end day along with time
                             {
-                                event_end = t_event_end.ToString("ddd. hh:mm tt");
+                                event_end = t_event_end_text.ToString("ddd. hh:mm tt");
                             }
                             Event_strings.Add(title + "\n\r" +
                                               "Time: " + event_start + " - " + event_end + "\n\r" +
-                                              "\n\nAbout: " + description);
+                                              "\n\nAbout: " + description + "\r\n                                                                               ");
                             i++;
                         }
                     }
@@ -585,6 +583,11 @@ namespace LSRD_hmi
         public static bool left = false;
         public static bool check1 = false;
         public static bool check2 = false;
+
+        public static bool discovery_lab = false;
+        public static bool partner_suites = false;
+        public static bool seminar_room = false;
+        public static bool work_cafe = false;
 
         //Alphabet dict
         public static Dictionary<char, bool> alphabet = new Dictionary<char, bool>();

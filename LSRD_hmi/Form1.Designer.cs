@@ -105,7 +105,7 @@
             // 
             this.Picture_LSRD_Logo.BackColor = System.Drawing.Color.Transparent;
             this.Picture_LSRD_Logo.Image = global::LSRD_hmi.Properties.Resources.colored_LogoBright1;
-            this.Picture_LSRD_Logo.Location = new System.Drawing.Point(108, 185);
+            this.Picture_LSRD_Logo.Location = new System.Drawing.Point(108, 195);
             this.Picture_LSRD_Logo.Margin = new System.Windows.Forms.Padding(2);
             this.Picture_LSRD_Logo.Name = "Picture_LSRD_Logo";
             this.Picture_LSRD_Logo.Size = new System.Drawing.Size(180, 167);
@@ -117,7 +117,7 @@
             // 
             this.PB_doorman_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_doorman_mode.Image = global::LSRD_hmi.Properties.Resources.PB_gray_doorman_demo;
-            this.PB_doorman_mode.Location = new System.Drawing.Point(129, 430);
+            this.PB_doorman_mode.Location = new System.Drawing.Point(129, 450);
             this.PB_doorman_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_doorman_mode.Name = "PB_doorman_mode";
             this.PB_doorman_mode.Size = new System.Drawing.Size(208, 105);
@@ -129,8 +129,8 @@
             // PB_drawing_mode
             // 
             this.PB_drawing_mode.BackColor = System.Drawing.Color.Transparent;
-            this.PB_drawing_mode.Image = global::LSRD_hmi.Properties.Resources.PB_gray_Drawing_demo;
-            this.PB_drawing_mode.Location = new System.Drawing.Point(408, 430);
+            this.PB_drawing_mode.Image = global::LSRD_hmi.Properties.Resources.PB_gray_Draw_a_fish;
+            this.PB_drawing_mode.Location = new System.Drawing.Point(408, 450);
             this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_drawing_mode.Name = "PB_drawing_mode";
             this.PB_drawing_mode.Size = new System.Drawing.Size(208, 105);
@@ -143,7 +143,7 @@
             // 
             this.PB_scavenger_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_scavenger_mode.Image = ((System.Drawing.Image)(resources.GetObject("PB_scavenger_mode.Image")));
-            this.PB_scavenger_mode.Location = new System.Drawing.Point(695, 430);
+            this.PB_scavenger_mode.Location = new System.Drawing.Point(695, 450);
             this.PB_scavenger_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_scavenger_mode.Name = "PB_scavenger_mode";
             this.PB_scavenger_mode.Size = new System.Drawing.Size(208, 105);
@@ -170,7 +170,7 @@
             // 
             this.PB_staff_controls.BackColor = System.Drawing.Color.Transparent;
             this.PB_staff_controls.Image = ((System.Drawing.Image)(resources.GetObject("PB_staff_controls.Image")));
-            this.PB_staff_controls.Location = new System.Drawing.Point(749, 38);
+            this.PB_staff_controls.Location = new System.Drawing.Point(749, 39);
             this.PB_staff_controls.Margin = new System.Windows.Forms.Padding(2);
             this.PB_staff_controls.Name = "PB_staff_controls";
             this.PB_staff_controls.Size = new System.Drawing.Size(208, 105);
@@ -183,7 +183,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.the_fish_machine_gold2;
-            this.pictureBox1.Location = new System.Drawing.Point(297, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(297, 36);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(430, 408);
@@ -233,7 +233,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(92, 340);
+            this.label3.Location = new System.Drawing.Point(92, 350);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 88);
@@ -245,7 +245,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LSRD_hmi.Properties.Resources.cfre_logo_circle_notext_fix1;
-            this.pictureBox2.Location = new System.Drawing.Point(763, 202);
+            this.pictureBox2.Location = new System.Drawing.Point(763, 212);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(180, 132);
@@ -257,7 +257,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::LSRD_hmi.Properties.Resources.Eng_logo_blue;
-            this.pictureBox3.Location = new System.Drawing.Point(36, 36);
+            this.pictureBox3.Location = new System.Drawing.Point(36, 43);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(246, 97);
@@ -271,7 +271,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(706, 346);
+            this.label4.Location = new System.Drawing.Point(706, 356);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(294, 88);
@@ -300,7 +300,7 @@
             this.login_panel.Controls.Add(this.PB_Back_To_Home);
             this.login_panel.Controls.Add(this.label2);
             this.login_panel.Controls.Add(this.label5);
-            this.login_panel.Location = new System.Drawing.Point(453, 403);
+            this.login_panel.Location = new System.Drawing.Point(646, 567);
             this.login_panel.Name = "login_panel";
             this.login_panel.Size = new System.Drawing.Size(460, 300);
             this.login_panel.TabIndex = 23;

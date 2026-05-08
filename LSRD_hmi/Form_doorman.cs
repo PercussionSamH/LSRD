@@ -17,9 +17,10 @@ namespace LSRD_hmi
     public partial class Form_doorman : Form
     {
         //Global vars
-        public string[] Room_names = {"Discovery Lab", "Partner Suites", "Seminar Room", "Work Cafe"};
+        public string[] Room_names = {"Discovery Lab", "Partner Suites", "Seminar Room", "Work Cafe && Staff Offices"};
         public Dictionary<string, string> Room_Desc = new Dictionary<string, string>();
         public string room_selection = null;
+        public int int_room_selection = 0;
         public bool popup_open = false;
         public Form_doorman()
         {
@@ -30,14 +31,13 @@ namespace LSRD_hmi
             Hide_Popup(); //make sure popup with directions is hidden
 
             //Using a dictionary mostly to keep the code legible for long blocks of text
-            Room_Desc.Add(Room_names[0], "• Classroom \r\n• Conference Room\r\n");
+            Room_Desc.Add(Room_names[0], "• Classroom Lab\r\n• Conference Room\r\n");
             Room_Desc.Add(Room_names[1], "• Faculty Offices\r\n• USCG Great Lakes Oil Spill \r\n   Center of Expertise\r\n• Michigan Sea Grant\r\n• HeadWaters North \r\n");
             Room_Desc.Add(Room_names[2], "• Classroom\r\n• Conference Room\r\n");
-            Room_Desc.Add(Room_names[3], "• Reception\r\n •Faculty and Administative\r\n  Offices\r\n• Conference Room 110\r\n• All deliveries \r\n");
+            Room_Desc.Add(Room_names[3], "• Reception\r\n• Faculty and Administative\r\n   Offices\r\n• Conference Room 110\r\n• All deliveries \r\n");
 
             //default to work cafe
             PB_door_work_cafe_Click(this, new EventArgs());
-
 
             //Propagate events
             for (int i = 0; i < Form1.Event_strings.Count; i++)
@@ -52,13 +52,13 @@ namespace LSRD_hmi
                 b.Font = new Font("Verdana", 12, b.Font.Style); //font and text size
 
                 
-                b.MinimumSize = new Size(326, 10);
+                b.MinimumSize = new Size(313, 0);
 
-
+                //b.MinimumSize = new Size(313, 1000);
 
                 //b.Size = new Size(326,b.PreferredHeight);
                 b.BorderStyle = BorderStyle.FixedSingle;
-                b.Margin = new Padding(5, 8, 5, 5);
+                b.Margin = new Padding(3, 8, 3, 5);
                 
                 
                 //Select the first line
@@ -116,7 +116,7 @@ namespace LSRD_hmi
         {
             if (popup_open == false)
             {
-                room_selection = "Work Cafe";
+                room_selection = "Work Cafe && Staff Offices";
                 lbl_room_info.Text = "\t" + room_selection + "\n\r" + Room_Desc[room_selection];
                 button_room_info_Click(this, new EventArgs());
             }
@@ -151,8 +151,6 @@ namespace LSRD_hmi
 
             
         }
-
-
 
 
         private void button_events_Click(object sender, EventArgs e)
@@ -190,42 +188,55 @@ namespace LSRD_hmi
             popup_back.Visible = true;
             popup_border.Visible = true;
             popup_pb_close.Visible = true;
-            popup_pb_enter.Visible = true;
+            PB_robot_get_directions.Visible = true;
             popup_text.Visible = true;
             popup_title.Visible = true;
             popup_title.BringToFront();
             popup_text.BringToFront();
             popup_pb_close.BringToFront();
-            popup_pb_enter.BringToFront();
+            PB_robot_get_directions.BringToFront();
             //public string[] Room_names = { "Discovery Lab", "Partner Suites", "Seminar Room", "Work Cafe" };
             //launch popups
 
             popup_title.Text = room_selection;
-            if (room_selection == Room_names[0])//Discovery_Lab
+            if (room_selection == Room_names[0])
             {
-                popup_text.Text = "--sample--\n" +
-                    "Facing towards the discovery center, take the door forward and to your left\n" +
-                    "go up the stairs and to the left\n";
+                //Discovery_Lab
+                popup_text.Text = "Room 202 (Upstairs)\n\n" +
+                    "• Face towards the discovery center\n" +
+                    "• Take the stairs located forward and to your left\n" +
+                    "(just past the donor wall display)\n" +
+                    "• Go up the stairs and down the hall and take the next door on your left\n";
 
             }
-            else if (room_selection == Room_names[1])//Partner_Suites
+            else if (room_selection == Room_names[1])
             {
-                popup_text.Text = "--sample--\n" +
-                    "Partner_Suites Facing towards the discovery center, take the door forward and to your left\n" +
-                    "go up the stairs and to the left\n";
+                //Partner_Suites
+                popup_text.Text = "Right above you! (Upstairs)\n\n" +
+                    "• Face towards the discovery center\n" +
+                    "• Take the stairs located forward and to your left\n" +
+                    "(just past the donor wall display)\n"+
+                    "• Go up the stairs and take the first door on your right\n";
             }
-            else if (room_selection == Room_names[2])//Seminar_Room
+            else if (room_selection == Room_names[2])
             {
-                popup_text.Text = "--sample--\n" +
-                   "Seminar_Room Facing towards the discovery center, take the door forward and to your left\n" +
-                   "go up the stairs and to the left\n";
+                //Seminar_Room
+                popup_text.Text = "Room 102 (Ground floor)\n\n" +
+                    "• Face towards the discovery center\n" +
+                    "• Go forward and down the hall to your right\n" +
+                    "• Take the first door on your left\n\n" +
+                    "It is the conference room with glass walls\n" +
+                    "that sits on the corner of the discovery center\n";
+
 
             }
-            else if (room_selection == Room_names[3]) //Work_Cafe
+            else if (room_selection == Room_names[3])
             {
-                popup_text.Text = "--sample--\n" +
-                     "Work_Cafe Facing towards the discovery center, take the door forward and to your left\n" +
-                     "go up the stairs and to the left\n";
+                //Work_Cafe
+                popup_text.Text = "Offices (Ground floor)\n\n" +
+                    "• Face towards the discovery center\n" +
+                    "• Go forward and down the hall to your right past the seminar room\n" +
+                    "• The staff offices and work cafe will be on the left\n";
             }
         }
         private void Hide_Popup()
@@ -235,7 +246,7 @@ namespace LSRD_hmi
             popup_title.Visible = false;
             popup_text.Visible = false;
             popup_pb_close.Visible = false;
-            popup_pb_enter.Visible = false;
+            PB_robot_get_directions.Visible = false;
             popup_border.Visible = false;
             popup_back.Visible = false;
 
@@ -245,6 +256,53 @@ namespace LSRD_hmi
         private void popup_pb_close_Click(object sender, EventArgs e)
         {
             Hide_Popup();
+        }
+
+        private void PB_robot_get_directions_Click(object sender, EventArgs e)
+        {
+            Dooron(room_selection);
+            //room_selection == Room_names[0]
+            wait(1000);
+            Dooroff();
+        }
+
+        public void Dooron(string s)
+        {
+            //{"Discovery Lab", "Partner Suites", "Seminar Room", "Work Cafe"};
+            GlobalData.discovery_lab = (s == Room_names[0]);
+            GlobalData.partner_suites = (s == Room_names[1]);
+            GlobalData.seminar_room = (s == Room_names[2]);
+            GlobalData.work_cafe = (s == Room_names[3]);
+        }
+        public void Dooroff()
+        {
+            //{"Discovery Lab", "Partner Suites", "Seminar Room", "Work Cafe"};
+            GlobalData.discovery_lab = false;
+            GlobalData.partner_suites = false;
+            GlobalData.seminar_room = false;
+            GlobalData.work_cafe = false;
+        }
+        public void wait(int milliseconds)
+        {
+            var timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
+
+            // Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                // Console.WriteLine("stop wait timer");
+            };
+
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
+            }
         }
     }
 }

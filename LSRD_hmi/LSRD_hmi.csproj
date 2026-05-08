@@ -586,6 +586,8 @@
     <None Include="Resources\PB square get directions1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\PB gray Draw a fish.png" />
+    <None Include="Resources\PB square door work cafe offices.png" />
     <Content Include="Resources\Triple_dipper.png" />
     <None Include="Resources\PB wave demo2.png" />
     <None Include="Resources\the_fish_machine_gold2.png" />
