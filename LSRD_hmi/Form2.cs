@@ -44,17 +44,17 @@ namespace LSRD_hmi
             D_fish_tag.Add("Zooplankton", "Tiny drifters with a big role");
             D_fish_tag.Add("Mayfly Nymph", "A sign of clean water");
 
-            D_fish_desc.Add("Lake Sturgeon", "Lake sturgeon can live for more than 100 years.");
-            D_fish_desc.Add("Atlantic Salmon", "Originally from the Atlantic coast, the Atlantic salmon are now a popular Great Lakes sport fish.");
-            D_fish_desc.Add("Sea Lamprey", "This jawless fish attaches to other fish with a suction-cup mouth and feeds on them.");
-            D_fish_desc.Add("Zooplankton", "Zooplankton—small animals like this daphnia—float through freshwater feeding on algae.");
-            D_fish_desc.Add("Mayfly Nymph", "Mayflies spend most of their lives underwater as nymphs.");
+            D_fish_desc.Add("Lake Sturgeon", "Lake sturgeon can live for more than 100 years.\n ");
+            D_fish_desc.Add("Atlantic Salmon", "Originally from the Atlantic coast, the Atlantic salmon are now a popular Great Lakes sport fish.\n ");
+            D_fish_desc.Add("Sea Lamprey", "This jawless fish attaches to other fish with a suction-cup mouth and feeds on them.\n ");
+            D_fish_desc.Add("Zooplankton", "Zooplankton—small animals like this daphnia—float through freshwater feeding on algae.\n ");
+            D_fish_desc.Add("Mayfly Nymph", "Mayflies spend most of their lives underwater as nymphs.\n ");
 
-            D_fish_desc2.Add("Lake Sturgeon", "Lake sturgeon also have whisker-like barbels to search the river bottom for food.\n");
-            D_fish_desc2.Add("Atlantic Salmon", "Each year, CFRE raises thousands for release into the St. Marys River.\n");
-            D_fish_desc2.Add("Sea Lamprey", "In the Great Lakes, scientists work to control sea lamprey.\n");
-            D_fish_desc2.Add("Zooplankton", "They are an important food source for many young fish.\n");
-            D_fish_desc2.Add("Mayfly Nymph", "Finding them in a stream or river usually means the water is healthy.\n");
+            D_fish_desc2.Add("Lake Sturgeon", "Lake sturgeon also have whisker-like barbels to search the river bottom for food.\n \n");
+            D_fish_desc2.Add("Atlantic Salmon", "Each year, CFRE raises thousands for release into the St. Marys River.\n \n");
+            D_fish_desc2.Add("Sea Lamprey", "In the Great Lakes, scientists work to control sea lamprey.\n \n");
+            D_fish_desc2.Add("Zooplankton", "They are an important food source for many young fish.\n \n");
+            D_fish_desc2.Add("Mayfly Nymph", "Finding them in a stream or river usually means the water is healthy.\n \n");
 
 
             //Load initial fish image, text and descs
