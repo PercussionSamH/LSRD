@@ -67,6 +67,10 @@
             this.drawingactive = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tmr_wave_countdown = new System.Windows.Forms.Timer(this.components);
+            this.debug_connection = new System.Windows.Forms.Label();
+            this.debug_cred_text = new System.Windows.Forms.Label();
+            this.debug_events = new System.Windows.Forms.Label();
+            this.update_events = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_LSRD_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_doorman_mode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_drawing_mode)).BeginInit();
@@ -527,12 +531,57 @@
             this.tmr_wave_countdown.Interval = 1000;
             this.tmr_wave_countdown.Tick += new System.EventHandler(this.tmr_wave_countdown_Tick);
             // 
+            // debug_connection
+            // 
+            this.debug_connection.AutoSize = true;
+            this.debug_connection.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debug_connection.Location = new System.Drawing.Point(52, 43);
+            this.debug_connection.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.debug_connection.Name = "debug_connection";
+            this.debug_connection.Size = new System.Drawing.Size(112, 24);
+            this.debug_connection.TabIndex = 31;
+            this.debug_connection.Text = "Connection:";
+            this.debug_connection.Visible = false;
+            // 
+            // debug_cred_text
+            // 
+            this.debug_cred_text.AutoSize = true;
+            this.debug_cred_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debug_cred_text.Location = new System.Drawing.Point(49, 67);
+            this.debug_cred_text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.debug_cred_text.Name = "debug_cred_text";
+            this.debug_cred_text.Size = new System.Drawing.Size(104, 24);
+            this.debug_cred_text.TabIndex = 30;
+            this.debug_cred_text.Text = "Credentials";
+            this.debug_cred_text.Visible = false;
+            // 
+            // debug_events
+            // 
+            this.debug_events.AutoSize = true;
+            this.debug_events.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debug_events.Location = new System.Drawing.Point(52, 91);
+            this.debug_events.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.debug_events.Name = "debug_events";
+            this.debug_events.Size = new System.Drawing.Size(67, 24);
+            this.debug_events.TabIndex = 32;
+            this.debug_events.Text = "Events";
+            this.debug_events.Visible = false;
+            // 
+            // update_events
+            // 
+            this.update_events.Enabled = true;
+            this.update_events.Interval = 2000;
+            this.update_events.Tick += new System.EventHandler(this.update_events_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::LSRD_hmi.Properties.Resources.home_background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.debug_events);
+            this.Controls.Add(this.debug_connection);
+            this.Controls.Add(this.debug_cred_text);
             this.Controls.Add(this.drawingactive);
             this.Controls.Add(this.label_formsize3);
             this.Controls.Add(this.label_formsize2);
@@ -624,6 +673,10 @@
         private System.Windows.Forms.Label drawingactive;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Timer tmr_wave_countdown;
+        private System.Windows.Forms.Label debug_connection;
+        private System.Windows.Forms.Label debug_cred_text;
+        private System.Windows.Forms.Label debug_events;
+        private System.Windows.Forms.Timer update_events;
     }
 }
 

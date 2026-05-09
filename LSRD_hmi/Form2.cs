@@ -50,7 +50,7 @@ namespace LSRD_hmi
             D_fish_desc.Add("Zooplankton", "Zooplankton—small animals like this daphnia—float through freshwater feeding on algae.\n ");
             D_fish_desc.Add("Mayfly Nymph", "Mayflies spend most of their lives underwater as nymphs.\n ");
 
-            D_fish_desc2.Add("Lake Sturgeon", "Lake sturgeon also have whisker-like barbels to search the river bottom for food.\n \n");
+            D_fish_desc2.Add("Lake Sturgeon", "Lake sturgeon also have whisker-like barbels to search the river bottom for food.\n \n \n");
             D_fish_desc2.Add("Atlantic Salmon", "Each year, CFRE raises thousands for release into the St. Marys River.\n \n");
             D_fish_desc2.Add("Sea Lamprey", "In the Great Lakes, scientists work to control sea lamprey.\n \n");
             D_fish_desc2.Add("Zooplankton", "They are an important food source for many young fish.\n \n");
@@ -168,12 +168,14 @@ namespace LSRD_hmi
             drawing_in_progress.Visible = true;
             
             drawing_in_progress.BringToFront();
-            
-            
+
 
             drawing_in_progress.Width = this.Width; drawing_in_progress.Height = this.Height;
             drawing_in_progress.Location = new Point(0, 0);
+            fish_drawn_border.Size = new Size(pictureBox2.Width+13, pictureBox2.Height+13);
             pictureBox2.Location = new Point((drawing_in_progress.Width - pictureBox2.Width) / 2, (drawing_in_progress.Height - pictureBox2.Height) / 2);
+            fish_drawn_border.Location = new Point((drawing_in_progress.Width - fish_drawn_border.Width) / 2, (drawing_in_progress.Height - fish_drawn_border.Height) / 2);
+            
             label2.Location = new Point((drawing_in_progress.Width - label2.Width) / 2, pictureBox2.Location.Y + pictureBox2.Height + margin);
             pictureBox2.Image = fish_pictures[fish_selection];
 

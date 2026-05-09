@@ -139,9 +139,10 @@
             // 
             // lbl_room_info
             // 
+            this.lbl_room_info.BackColor = System.Drawing.Color.White;
             this.lbl_room_info.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_room_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_room_info.Location = new System.Drawing.Point(434, 482);
+            this.lbl_room_info.Location = new System.Drawing.Point(433, 482);
             this.lbl_room_info.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_room_info.Name = "lbl_room_info";
             this.lbl_room_info.Padding = new System.Windows.Forms.Padding(4, 12, 0, 6);
@@ -166,7 +167,7 @@
             // 
             // lbl_room_info_back
             // 
-            this.lbl_room_info_back.BackColor = System.Drawing.Color.White;
+            this.lbl_room_info_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.lbl_room_info_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_room_info_back.Location = new System.Drawing.Point(418, 464);
             this.lbl_room_info_back.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);

@@ -49,27 +49,27 @@ namespace LSRD_hmi
         private void Popup_Hide()
         {
             //popup_open = false;
-
-            popup_scav_text.Visible = false;
-            popup_pb_close.Visible = false;
-            popup_pb_confirm.Visible = false;
-            popup_scav_border.Visible = false;
-            popup_scav_back.Visible = false;
+            popup_scav.Visible = false;
+            //popup_scav_text.Visible = false;
+            //popup_pb_close.Visible = false;
+            //popup_pb_confirm.Visible = false;
+            //popup_scav_border.Visible = false;
+            //popup_scav_back.Visible = false;
         }
 
         private void Popup_Show()
         {
             //popup_open = false;
 
-
-            popup_scav_text.Visible = true;
-            popup_pb_close.Visible = true;
-            popup_pb_confirm.Visible = true;
-            popup_scav_border.Visible = true;
-            popup_scav_back.Visible = true;
-            popup_scav_text.BringToFront();
-            popup_pb_close.BringToFront();
-            popup_pb_confirm.BringToFront();
+            popup_scav.Visible = true;
+            //popup_scav_text.Visible = true;
+            //popup_pb_close.Visible = true;
+            //popup_pb_confirm.Visible = true;
+            //popup_scav_border.Visible = true;
+            //popup_scav_back.Visible = true;
+            //popup_scav_text.BringToFront();
+            //popup_pb_close.BringToFront();
+            //popup_pb_confirm.BringToFront();
         }
 
         private void popup_pb_confirm_Click(object sender, EventArgs e)

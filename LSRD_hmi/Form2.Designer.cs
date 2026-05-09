@@ -64,6 +64,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pb_confirm_take = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.fish_drawn_border = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Fish_preview_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_fish_select_right)).BeginInit();
@@ -86,10 +87,11 @@
             this.Label_Fish_Type_Text.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_Fish_Type_Text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Label_Fish_Type_Text.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Label_Fish_Type_Text.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Label_Fish_Type_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Fish_Type_Text.Location = new System.Drawing.Point(420, 61);
+            this.Label_Fish_Type_Text.Location = new System.Drawing.Point(419, 61);
             this.Label_Fish_Type_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label_Fish_Type_Text.MaximumSize = new System.Drawing.Size(188, 41);
             this.Label_Fish_Type_Text.MinimumSize = new System.Drawing.Size(188, 41);
@@ -102,7 +104,7 @@
             // Fish_preview_picture
             // 
             this.Fish_preview_picture.BackColor = System.Drawing.Color.White;
-            this.Fish_preview_picture.Location = new System.Drawing.Point(397, 153);
+            this.Fish_preview_picture.Location = new System.Drawing.Point(396, 153);
             this.Fish_preview_picture.Margin = new System.Windows.Forms.Padding(19, 20, 19, 20);
             this.Fish_preview_picture.Name = "Fish_preview_picture";
             this.Fish_preview_picture.Padding = new System.Windows.Forms.Padding(8);
@@ -115,7 +117,7 @@
             // 
             this.PB_fish_select_left.BackColor = System.Drawing.Color.Transparent;
             this.PB_fish_select_left.Image = global::LSRD_hmi.Properties.Resources.button_left;
-            this.PB_fish_select_left.Location = new System.Drawing.Point(299, 194);
+            this.PB_fish_select_left.Location = new System.Drawing.Point(307, 194);
             this.PB_fish_select_left.Margin = new System.Windows.Forms.Padding(2);
             this.PB_fish_select_left.MaximumSize = new System.Drawing.Size(90, 90);
             this.PB_fish_select_left.Name = "PB_fish_select_left";
@@ -129,7 +131,7 @@
             // 
             this.PB_fish_select_right.BackColor = System.Drawing.Color.Transparent;
             this.PB_fish_select_right.Image = global::LSRD_hmi.Properties.Resources.button_right;
-            this.PB_fish_select_right.Location = new System.Drawing.Point(657, 194);
+            this.PB_fish_select_right.Location = new System.Drawing.Point(649, 194);
             this.PB_fish_select_right.Margin = new System.Windows.Forms.Padding(2);
             this.PB_fish_select_right.MaximumSize = new System.Drawing.Size(90, 90);
             this.PB_fish_select_right.Name = "PB_fish_select_right";
@@ -143,7 +145,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LSRD_hmi.Properties.Resources.Frame_250_180;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 133);
+            this.pictureBox1.Location = new System.Drawing.Point(378, 133);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(273, 227);
@@ -169,7 +171,7 @@
             this.Text_enter_initials_prompt.BackColor = System.Drawing.Color.Transparent;
             this.Text_enter_initials_prompt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Text_enter_initials_prompt.ForeColor = System.Drawing.Color.Black;
-            this.Text_enter_initials_prompt.Location = new System.Drawing.Point(375, 362);
+            this.Text_enter_initials_prompt.Location = new System.Drawing.Point(374, 362);
             this.Text_enter_initials_prompt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Text_enter_initials_prompt.Name = "Text_enter_initials_prompt";
             this.Text_enter_initials_prompt.Size = new System.Drawing.Size(278, 28);
@@ -181,7 +183,7 @@
             // 
             this.PB_drawing_mode.BackColor = System.Drawing.Color.Transparent;
             this.PB_drawing_mode.Image = global::LSRD_hmi.Properties.Resources.PB_square_enter;
-            this.PB_drawing_mode.Location = new System.Drawing.Point(434, 477);
+            this.PB_drawing_mode.Location = new System.Drawing.Point(433, 477);
             this.PB_drawing_mode.Margin = new System.Windows.Forms.Padding(2);
             this.PB_drawing_mode.MaximumSize = new System.Drawing.Size(160, 80);
             this.PB_drawing_mode.Name = "PB_drawing_mode";
@@ -197,6 +199,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Fish_desc.AutoSize = true;
+            this.Fish_desc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.Fish_desc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Fish_desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fish_desc.Location = new System.Drawing.Point(779, 182);
@@ -211,6 +214,7 @@
             // 
             // Fish_tagline
             // 
+            this.Fish_tagline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.Fish_tagline.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Fish_tagline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Fish_tagline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -240,16 +244,18 @@
             // 
             // label6
             // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(35, 197);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(3, 6, 6, 6);
-            this.label6.Size = new System.Drawing.Size(205, 323);
+            this.label6.Size = new System.Drawing.Size(205, 360);
             this.label6.TabIndex = 20;
-            this.label6.Text = "-Select a fish\r\nusing the arrows\r\n\r\n-Press enter\r\n\r\n-Follow popup\r\ninstructions f" +
-    "or\r\nnext steps\r\n";
+            this.label6.Text = "-Select a fish\r\nusing the arrows\r\n\r\n-Enter initials\r\n(use down arrow)\r\n\r\n-Press e" +
+    "nter\r\n\r\n-Follow popup\r\ninstructions for\r\nnext steps\r\n\r\n- Press Back \r\nto return " +
+    "to main";
             // 
             // label7
             // 
@@ -270,6 +276,7 @@
             // 
             this.Fish_desc2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Fish_desc2.AutoSize = true;
+            this.Fish_desc2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.Fish_desc2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Fish_desc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fish_desc2.Location = new System.Drawing.Point(779, 277);
@@ -290,7 +297,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(448, 24);
+            this.label1.Size = new System.Drawing.Size(446, 33);
             this.label1.TabIndex = 23;
             this.label1.Text = "Debug";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,7 +308,7 @@
             this.modoutput.BackColor = System.Drawing.Color.Transparent;
             this.modoutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modoutput.ForeColor = System.Drawing.Color.Black;
-            this.modoutput.Location = new System.Drawing.Point(291, 103);
+            this.modoutput.Location = new System.Drawing.Point(290, 103);
             this.modoutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.modoutput.Name = "modoutput";
             this.modoutput.Size = new System.Drawing.Size(447, 28);
@@ -394,7 +401,8 @@
             this.drawing_in_progress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(145)))), ((int)(((byte)(205)))));
             this.drawing_in_progress.Controls.Add(this.label2);
             this.drawing_in_progress.Controls.Add(this.pictureBox2);
-            this.drawing_in_progress.Location = new System.Drawing.Point(533, 319);
+            this.drawing_in_progress.Controls.Add(this.fish_drawn_border);
+            this.drawing_in_progress.Location = new System.Drawing.Point(169, 124);
             this.drawing_in_progress.Name = "drawing_in_progress";
             this.drawing_in_progress.Size = new System.Drawing.Size(636, 474);
             this.drawing_in_progress.TabIndex = 28;
@@ -403,7 +411,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.8F);
-            this.label2.Location = new System.Drawing.Point(153, 406);
+            this.label2.Location = new System.Drawing.Point(153, 423);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(344, 36);
             this.label2.TabIndex = 2;
@@ -441,7 +449,7 @@
             this.put_yo_paper.Controls.Add(this.popup_pb_close);
             this.put_yo_paper.Controls.Add(this.popup_pb_confirm);
             this.put_yo_paper.Controls.Add(this.label4);
-            this.put_yo_paper.Location = new System.Drawing.Point(235, 24);
+            this.put_yo_paper.Location = new System.Drawing.Point(243, 31);
             this.put_yo_paper.Name = "put_yo_paper";
             this.put_yo_paper.Size = new System.Drawing.Size(541, 526);
             this.put_yo_paper.TabIndex = 64;
@@ -461,7 +469,7 @@
             // 
             // popup_scav_text
             // 
-            this.popup_scav_text.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.popup_scav_text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.popup_scav_text.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.popup_scav_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popup_scav_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
@@ -521,7 +529,7 @@
             this.take_fish.Controls.Add(this.label11);
             this.take_fish.Controls.Add(this.pb_confirm_take);
             this.take_fish.Controls.Add(this.label12);
-            this.take_fish.Location = new System.Drawing.Point(229, 62);
+            this.take_fish.Location = new System.Drawing.Point(235, 75);
             this.take_fish.Name = "take_fish";
             this.take_fish.Size = new System.Drawing.Size(556, 462);
             this.take_fish.TabIndex = 29;
@@ -540,7 +548,7 @@
             // 
             // label11
             // 
-            this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
@@ -577,6 +585,17 @@
             this.label12.TabIndex = 71;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // fish_drawn_border
+            // 
+            this.fish_drawn_border.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.fish_drawn_border.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fish_drawn_border.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(142)))), ((int)(((byte)(112)))));
+            this.fish_drawn_border.Location = new System.Drawing.Point(63, 25);
+            this.fish_drawn_border.Name = "fish_drawn_border";
+            this.fish_drawn_border.Size = new System.Drawing.Size(529, 389);
+            this.fish_drawn_border.TabIndex = 73;
+            this.fish_drawn_border.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -585,8 +604,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 600);
             this.ControlBox = false;
-            this.Controls.Add(this.take_fish);
             this.Controls.Add(this.put_yo_paper);
+            this.Controls.Add(this.take_fish);
             this.Controls.Add(this.drawing_in_progress);
             this.Controls.Add(this.drawingactive);
             this.Controls.Add(this.domainUpDown2);
@@ -679,5 +698,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pb_confirm_take;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label fish_drawn_border;
     }
 }

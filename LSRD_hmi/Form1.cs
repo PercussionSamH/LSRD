@@ -29,10 +29,10 @@ namespace LSRD_hmi
     {
         // -----Debug----- 
         public static bool DEBUG_MODE = false; //turn on to enable debug mode
-        public static bool ENABLE_SCALING = true; //
+        public static bool ENABLE_SCALING = false; //
 
         //IP address
-        static string PLC_IP = "10.205.1.141"; static int port = 502;
+        static string PLC_IP = "192.168.55.96"; static int port = 502;
         public ModbusClient modbusClient = new ModbusClient(PLC_IP, port);
 
         //Bit ranges
@@ -106,6 +106,9 @@ namespace LSRD_hmi
             label_formsize2.Visible = DEBUG_MODE;
             label_formsize3.Visible = DEBUG_MODE;
             drawingactive.Visible = DEBUG_MODE;
+            debug_connection.Visible = DEBUG_MODE;
+            debug_cred_text.Visible = DEBUG_MODE;
+            debug_events.Visible = DEBUG_MODE;
             //-------------------------------------
 
             
@@ -124,7 +127,7 @@ namespace LSRD_hmi
             {
                 System.Diagnostics.Debug.WriteLine("\nConnecting to " + PLC_IP + " on port " + port);
                 modbusClient.Connect();
-
+                debug_connection.Text = "Connection: Connected!";
                 System.Diagnostics.Debug.WriteLine("Connected!!\n");
 
                 //start timer for push/pull sync
@@ -139,6 +142,7 @@ namespace LSRD_hmi
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine("\nConnection to " + PLC_IP + " on port " + port + " failed...");
+                debug_connection.Text = "Connection: Failed";
                 System.Diagnostics.Debug.WriteLine("ERROR: ", ex.Message);
                 //throw;
             }
@@ -218,7 +222,7 @@ namespace LSRD_hmi
                 //Set all individual outputs, see google sheet for full list
                 modbusClient.WriteSingleCoil(10, demo_idle);
                 modbusClient.WriteSingleCoil(11, GlobalData.demo_active_drawing);
-                modbusClient.WriteSingleCoil(12, demo_active_doorman);
+                modbusClient.WriteSingleCoil(12, GlobalData.demo_active_doorman);
                 modbusClient.WriteSingleCoil(13, demo_active_scavenger);
                 modbusClient.WriteSingleCoil(14, demo_active_wave); //Wave should be active
 
@@ -289,8 +293,8 @@ namespace LSRD_hmi
             else //if an event is scheduled
             {
                 //This could be a single if statement but the mess of having a 4 line if condidition makes it hardly readable
-                if ((((t_event_start <= t_10_min) && (t_event_pre > t_now)) //10 minutes before an event til 5 minutes after start
-                   || ((t_event_end < t_10_min) && (t_event_post > t_now))) && enabled_wave) //10 minutes after event ends til 10 minutes after)
+                if (((t_event_start <= t_10_min) && (t_event_pre > t_now))) //10 minutes before an event til 5 minutes after start
+                   // ((t_event_end < t_10_min) && (t_event_post > t_now))) && enabled_wave) //10 minutes after event ends til 10 minutes after)
                 {
                     start_wave_demo();
                     if (DEBUG_MODE)
@@ -325,8 +329,10 @@ namespace LSRD_hmi
             {
                 //Open new window
                 Get_Calendar_Events(); //fetch events
+                GlobalData.demo_active_doorman = true;
                 Form_doorman form_doorman = new Form_doorman();
                 form_doorman.ShowDialog();
+                GlobalData.demo_active_doorman = false;
                 form_doorman = null;
             }
         }
@@ -344,6 +350,7 @@ namespace LSRD_hmi
 
                 string credPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "credentials.json");
                 System.Diagnostics.Debug.WriteLine("Trying to fetch credentials...");
+                debug_cred_text.Text = "Fetching...";
                 using (var stream = new FileStream(credPath, FileMode.Open, FileAccess.Read))
                 {
                     credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
@@ -354,6 +361,7 @@ namespace LSRD_hmi
                         new FileDataStore("token.json", true));
                 }
                 System.Diagnostics.Debug.WriteLine("Credentials found\n");
+                debug_cred_text.Text = "Credentials found";
                 var service = new CalendarService(new BaseClientService.Initializer()
                 {
                     HttpClientInitializer = credential,
@@ -391,11 +399,11 @@ namespace LSRD_hmi
                             if (i == 0)
                             {
                                 DateTime t10 = t_event_end.AddMinutes(10);
-                                if (t10 < DateTime.Now)
-                                {
+                                //if (t10 < DateTime.Now)
+                                //{
                                     t_event_start = DateTime.Parse(ev.Start.DateTimeDateTimeOffset.ToString());
                                     t_event_end = DateTime.Parse(ev.End.DateTimeDateTimeOffset.ToString());
-                                }
+                                //}
                             }
                             t_event_start_text = DateTime.Parse(ev.Start.DateTimeDateTimeOffset.ToString());
                             t_event_end_text = DateTime.Parse(ev.End.DateTimeDateTimeOffset.ToString());
@@ -412,12 +420,14 @@ namespace LSRD_hmi
                                               "Time: " + event_start + " - " + event_end + "\n\r" +
                                               "\n\nAbout: " + description + "\r\n                                                                               ");
                             i++;
+                            debug_events.Text = "Events: found event";
                         }
                     }
                     else
                     {
                         //writer.WriteLine("No upcoming events found.");
                         System.Diagnostics.Debug.WriteLine("No events found :(");
+                        debug_events.Text = "Events: none found";
                         Event_strings.Add("No upcoming events");
 
                     }
@@ -557,6 +567,7 @@ namespace LSRD_hmi
                 Scavenger_hunt scavenger_Hunt = new Scavenger_hunt();
                 scavenger_Hunt.ShowDialog();
                 scavenger_Hunt = null;
+                demo_active_scavenger = false;
             }
         }
         private void tmr_wave_countdown_Tick(object sender, EventArgs e)
@@ -570,6 +581,14 @@ namespace LSRD_hmi
                 wave_scheduled = false;
             }
         }
+
+        private void update_events_Tick(object sender, EventArgs e)
+        {
+            if (demo_idle)
+            {
+                Get_Calendar_Events();
+            }
+        }
     }
 
     public static class GlobalData
@@ -580,6 +599,7 @@ namespace LSRD_hmi
         public static bool plankton = false;
         public static bool lamprey = false;
         public static bool demo_active_drawing = false;
+        public static bool demo_active_doorman = false;
         public static bool left = false;
         public static bool check1 = false;
         public static bool check2 = false;
