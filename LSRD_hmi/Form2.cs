@@ -164,7 +164,10 @@ namespace LSRD_hmi
 
             //sets the popup while drawing
 
-
+            while (GlobalData.wave_active)
+            {
+                await Task.Delay(100);
+            }
             drawing_in_progress.Visible = true;
             
             drawing_in_progress.BringToFront();

@@ -209,6 +209,7 @@ namespace LSRD_hmi
                 QX_Coils = modbusClient.ReadCoils(0, QX_length);
                 GlobalData.check1 = QX_Coils[30];
                 GlobalData.check2 = QX_Coils[31];
+                GlobalData.wave_active = QX_Coils[32];
             }
             catch { }
             
@@ -603,41 +604,17 @@ namespace LSRD_hmi
         public static bool left = false;
         public static bool check1 = false;
         public static bool check2 = false;
+        public static bool wave_active = false;
 
         public static bool discovery_lab = false;
         public static bool partner_suites = false;
         public static bool seminar_room = false;
         public static bool work_cafe = false;
 
+
         //Alphabet dict
         public static Dictionary<char, bool> alphabet = new Dictionary<char, bool>();
 
-        //public static bool A = false;
-        //public static bool B = false;
-        //public static bool C = false;
-        //public static bool D = false;
-        //public static bool E = false;
-        //public static bool F = false;
-        //public static bool G = false;
-        //public static bool H = false;
-        //public static bool I = false;
-        //public static bool J = false;
-        //public static bool K = false;
-        //public static bool L = false;
-        //public static bool M = false;
-        //public static bool N = false;
-        //public static bool O = false;
-        //public static bool P = false;
-        //public static bool Q = false;
-        //public static bool R = false;
-        //public static bool S = false;
-        //public static bool T = false;
-        //public static bool U = false;
-        //public static bool V = false;
-        //public static bool W = false;
-        //public static bool X = false;
-        //public static bool Y = false;
-        //public static bool Z = false;
     }
 
 }
