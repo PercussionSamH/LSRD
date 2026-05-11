@@ -201,7 +201,7 @@
             this.test_textbox.Location = new System.Drawing.Point(11, 423);
             this.test_textbox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.test_textbox.Name = "test_textbox";
-            this.test_textbox.Size = new System.Drawing.Size(44, 16);
+            this.test_textbox.Size = new System.Drawing.Size(41, 15);
             this.test_textbox.TabIndex = 4;
             this.test_textbox.Text = "label1";
             // 
@@ -216,7 +216,7 @@
             this.debug_wave_active.Location = new System.Drawing.Point(11, 444);
             this.debug_wave_active.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.debug_wave_active.Name = "debug_wave_active";
-            this.debug_wave_active.Size = new System.Drawing.Size(44, 16);
+            this.debug_wave_active.Size = new System.Drawing.Size(41, 15);
             this.debug_wave_active.TabIndex = 16;
             this.debug_wave_active.Text = "label1";
             this.debug_wave_active.Visible = false;
@@ -227,7 +227,7 @@
             this.debug_wave_scheduled.Location = new System.Drawing.Point(11, 463);
             this.debug_wave_scheduled.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.debug_wave_scheduled.Name = "debug_wave_scheduled";
-            this.debug_wave_scheduled.Size = new System.Drawing.Size(44, 16);
+            this.debug_wave_scheduled.Size = new System.Drawing.Size(41, 15);
             this.debug_wave_scheduled.TabIndex = 17;
             this.debug_wave_scheduled.Text = "label2";
             this.debug_wave_scheduled.Visible = false;
